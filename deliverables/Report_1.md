@@ -29,7 +29,7 @@ Saturday/Sunday mornings virtual
 
 ## Roles
 
-**Noah** - minute taker / other thing
+**Noah** - minute taker / quality assurance
 
 **Izaac** - Presenter
 
