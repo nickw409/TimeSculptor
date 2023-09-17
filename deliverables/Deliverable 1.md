@@ -6,90 +6,56 @@ Group Members: Izaac Molina, Joey Banazsak, Kimberly Allison, Nicholas Wiley, Ga
 
 ## 1. Introduction
 
-In a world rich with information, there's no reason you should be suprised by an accident in your neighborhood, a rain squall on your walk to work, or a natural disaster approaching your community. Don’t Panic is an application platform designed to prevent accidents by providing timely, geo-targeted warnings, alongside resources to help people navigate the worst of times. Users opt in to receive push notifications or SMS. Users receive advice when they may be a) approaching a high-risk area or b) entering a high-risk time period. (E.g. weather bulletins, breaking news, seasonal risks) Future work may include suppression of notifications when geolocation data indicates the user is moving at motor-vehicle speeds, creation of opt-in channels for content selection, notification filtering by tag, and API design to allow approved local/regional/national partners to post warnings in real time
-
 ## 2. Initial value proposition and consumer segments
 
 **IVP:**
 
-Don’t Panic is a free, lightweight application designed to help anyone safely navigate life’s many pitfalls in a way that matters to you.
 
 **Initial Consumer Segments:**
 
-- Non-smartphone user
-- Parent
-- Outdoorspeople
-- safety-oriented people
-- preppers
-- People who commute through/live in dangerous areas
-- Victims of Environmental Disaster/People at risk thereof
-- Property Managers/Landlords?
-- Emergency Services Technicians?
+
 
 ## 3. Interviews summary
 
 ### Interview 1:
 
-**Summary:** Found lack of info and delay between people. Discussed area specific concerns (animals in area). Ice warnings on roads. Simple app for portability. Straight forward with apps purpose. Dummy proof, FOR EVERYONE. Customizable interface (Light and Dark mode). Simple notification leading to the app, where the info is posted.
-
-**Interviewer:** Drew\
-**Interviewee:** April Alger\
-**When:** 2/13/2020\
-**Consumer Segments:** Outdoorspeople
+**Summary:** 
+**Interviewer:** \
+**Interviewee:** \
+**When:** \
+**Consumer Segments:** 
 
 **Key insights**
-  - Product description must be accurate
-  - Ads better than cost upfront
-  - Simple notification UI with link to app/url
+  
 
  **Representative quotes**
-  - “I don’t want settings to be buried in the menu”
-  - “I want the app to be simple.”
-  - “Lack of communication and delay of information prevent me from keeping others safe”
-  - “I want the app to be functional, and needed”
-
+  
  **Hypotheses that were validated**
-  - She wanted the app to be as simple as possible
-  - Her values and priorities were different than my own/what I was expecting
-
+  
  **Assessment: Must have / Nice to have / Don’t care**
-  - Wildlife notifications based on warnings (Nice)
-  - Ice warnings (Must)
-  - Simple Menu (Must)
-  - Select Subjects (Nice)
-  - Graphs (Don’t Care)
-
+  
 ### Interview 2:
 
-**Summary:** Traffic is a concern for many. User friendly. Preferences. Notifications over SMS. Consolidated into one app will draw people in.
+**Summary:** 
 
-**Interviewer:** Brandon Click\
-**Interviewee:** Stasy Click\
-**When:**  2/11/2020\
+**Interviewer:** \
+**Interviewee:** \
+**When:**  \
 **Consumer segment:**
-- Parent
-- safety-oriented people
+
 
 **Key insights:**
-  - Traffic and local news are highly important
-  - Customizability and user friendly design are highly important.
-  - Push notifications are vastly prefered to any other form of contact.
-  - Interview questions can be seen as too open ended for people to give a good answer to.
-
+ 
 **Representative quotes:**
-  - “It's annoying having to look through all (news) apps in the morning just to check the traffic and the weather”
+  
 
 **Hypotheses that were validated:**
-  - To many news apps are bothersome to look through 
-  - Not being able to just be notified about what you care about is a nuisance
-  - Having something to compile all relevant data at the start of the day would be beneficial in speeding up morning routines.
-
-**Assessment:** Nice to have
+  
+**Assessment:** 
 
 ### Interview 3:
 
-**Summary:** Too many pop ups will lead to uninstall. Preferences (also notification spacing.) Traffic is a concern. Concise. If done properly, it can be a must have
-
+**Summary:** 
 **Interviewer:** Brandon Click\
 **Interviewee:** James Click\
 **When:** 2/11/2020\
@@ -168,38 +134,30 @@ Consumer segments:
 
 ### Interview 6:
 
-**Summary:** Traffic. Forewarning of crisis. Felt the benefit of the app. But tone is important. Opt out/filter is key component. If done well she would download.
-**Interviewer:** Chris Keefe\
-**Interviewee:** Caitlin Keefe\
-**When:** 2/14/20\
+**Summary:** 
+**Interviewer:** Noah Schwartz\
+**Interviewee:** Erica Schwartz\
+**When:** 9/15/23\
 **Consumer Segment:**
-- People who commute through/live in dangerous areas
-- Victims of Environmental Disaster/People at risk thereof
+-Adult who has the need for scheduling their day
 
 **Key Insights:**
-   - Crisis events must be handled more generously - more, earlier notifications, robust resources
-   - Opt-in to channels, and filter unwanted notifications
+   - In theory, this is a cool concept but doesn't seem all too new and original
+   - The idea of being able to compare schedules to see free time easier is best feature
 
 **Representative quotes:**
-   - “Being able to be prepared in advance would help. I don’t like uncertainty - that’s the most terrifying for me. Having a clear map to “maybe you should start getting toilet paper”... that would be great. That would help me mentally.”
+   - “Especially for our Shabbat Group, it is very hard even to schedule one night a month to get together, having the ability to see everyone's free time right away by comparing schedules sounds like a very useful thing.”
 
 **Hypotheses that were validated:**
-   - Notifications should have linked resources for further investigation
-
+   - People feel the need for a scheduling app that makes hanging out easier.
 **Assessment:**
-   - Must have - non-alarming tone
-   - Must have - significant lead time on crisis events
-   - Must have - channel opt in
-   - Nice to have - filter unwanted notifications
-   - Nice to have - a communication/checkin tool\
+   - Nice to have: Most features of a scheduling app
+   - Nice to have: Comparison of schedules.
 
 ## 4. Final value proposition and consumer segments
 
 **Final Value Proposition:**
-Don't Panic is a free, minimal app that lets any American stay informed about the pitfalls in your life in a way you care about.
+
 
 **Consumer segments:**
-- Commuters
-- Parents
-- People in locations at risk of natural or human-caused disaster
-- Property Owners
+
