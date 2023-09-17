@@ -46,7 +46,7 @@ Group Members: Izaac Molina, Joey Banazsak, Kimberly Allison, Nicholas Wiley, Ga
 
 ### Interview 2:
 
-**Summary:** For most people, the current calendar apps suffice. Thus, we need to shift our target demographic toward a more specific demographic (likely people with ADHD)
+**Summary:** For most people, the current calendar apps suffice. Thus, we need to shift our target demographic toward a more specific demographic (likely people with ADHD)\
 **Interviewer:** Izaac Molina\
 **Interviewee:** Christopher Edwards\
 **When:** 9/14/23\
