@@ -122,7 +122,114 @@ Group Members: Izaac Molina, Joey Banazsak, Kimberly Allison, Nicholas Wiley, Ga
    - Nice to have: Most features of a scheduling app
    - Nice to have: Comparison of schedules.
 
+### Interview 7:
 
+**Summary:**
+Found that this particular student was very interested in an app that does the scheduling for you and that ADHD &/or ADD may be a factor in why
+
+**Interviewer:** Joey Banaszak\
+**Interviewee:** Kiri Strack\
+**When:** 9/14/2023\
+**Consumer Segments:** -Mathematics grad student with ADHD & ADD
+
+**Key insights:**
+
+ - Color Coding for events is nice
+ - Setting recurring events is a very helpful feature
+ - apps like google calendars have a limited color selection
+ - Something that does the scheduling for you would be very helpful
+
+ **Representative Quotes:**
+ - “If it seems too overwhelming then I won't do it"
+ 
+**Hypotheses that were validated:**
+
+ - She would use a scheduling app that lays everything out for her 
+ - She has a hard time scheduling her daily activities
+ - She does have trouble scheduling meetings with colleagues 
+
+**Assessment: Must have / Nice to have / Don’t care**
+
+ - Import your schedule from LOUIE (Must)
+ - Web App (Don't care)
+ - multiple color options (nice)
+
+###Interview 8:
+**Summary:**\ 
+Found that this particular student was not very interested in an app that does the scheduling for you
+
+**Interviewer:** Joey Banaszak\
+**Interviewee:** Peyton Correllia\ 
+**When:** 9/14/2023\
+**Consumer Segments:** neurotypical Civil Engineering major (undergraduate student)
+
+**Key insights / Representative quotes:**
+
+ - The ability to schedule efficiently is dependent on what software the person is familiar with 
+ Setting recurring events is definitely nice to have but she prefers using Microsoft Excel
+ - apps like google calendars have a limited color selection but excel has a wide variety for color coding 
+ - Something that does the scheduling for you would be very helpful
+ - Likes using Microsoft Excel because everything is "All in one place"
+
+**Hypotheses that were validated:**
+
+ - She does have trouble scheduling meetings with colleagues 
+
+**Assessment**: Must have / Nice to have / Don’t care
+
+ - Import your schedule from LOUIE (nice)
+ - Web App (Don't care)
+ - multiple color options (Don't care)
+
+### Interview 9:
+**Summary:**
+Found that this student doesn't really have any difficulty scheduling her events and doesn't seem very interested in the product
+
+**Interviewer:** Joey Banaszak\
+**Interviewee:** Olivia Deja\
+**When:** 9/14/2023\
+**Consumer Segments:** neurotypical Communication Sciences & Disorders major (undergraduate student)
+
+**Key insights:**
+
+ - Seeing the events scheduled in google calendar can be difficult sometimes
+ - Setting recurring events is a very helpful feature
+ - Something that does the scheduling for you would be very helpful
+
+**Hypotheses that were validated:**
+
+ - She would use a scheduling app that lays everything out for her 
+
+**Assessment:** Must have / Nice to have / Don’t care
+
+ - Import your schedule from LOUIE (Nice)
+ - Web App (Don't care)
+ - multiple color options (Don't care)
+
+### Interview 10:
+**Summary:**
+Found that this student had absolutely no interest in using the app, she was very steadfast in using a physical planner because it helps her retain her schedule better 
+
+**Interviewer:** Joey Banaszak\
+**Interviewee:** Abby Foth\
+**When:** 9/14/2023\
+**Consumer Segments:** neurotypical Secondary Education Mathematics major (undergraduate student)
+
+**Key insights / Representative quotes:**
+
+ - She uses a physical planner and had no interest in using any app
+ - She was not likely to use the app that input her schedule for her "or else I won't remember"
+ - She didn't show much interest in an app that input events faster and more efficiently 
+
+**Hypotheses that were validated:**
+
+**None** 
+
+**Assessment:** Must have / Nice to have / Don’t care
+
+ - Import your schedule from LOUIE (Don't care)
+ - Web App (Don't care)
+ - multiple color options (Don't care)
 
 ## 4. Final Value Proposition
 
