@@ -19,68 +19,58 @@ Group Members: Izaac Molina, Joey Banazsak, Kimberly Allison, Nicholas Wiley, Ga
 
 ### Interview 1:
 
-**Summary:** 
-**Interviewer:** \
-**Interviewee:** \
-**When:** \
-**Consumer Segments:** 
+**Summary:** Students don't always use calendar apps to make their schedule, they can use other systems like note apps.
 
-**Key insights**
-  
-
- **Representative quotes**
-  
- **Hypotheses that were validated**
-  
- **Assessment: Must have / Nice to have / Don’t care**
-  
-### Interview 2:
-
-**Summary:** 
-
-**Interviewer:** \
-**Interviewee:** \
-**When:**  \
+**Interviewer:** Izaac Molina\
+**Interviewee:** Zoey Lasch\
+**When:**  9/17/2023\
 **Consumer segment:**
+- Student
+- Working
+
+**Key insights:**
+  - UI design and not "hiding features" is really important for calendar apps.
+  - Scheduling friendly meetings is difficult.
+  - Apps other than calendar apps can be used to help people schedule.
 
 
 **Key insights:**
  
 **Representative quotes:**
-  
+  - "Planning is extremely hard to do on phone screens since most calendar apps have an awkward phone layout"
 
 **Hypotheses that were validated:**
-  
-**Assessment:** 
+  - People have trouble scheduling more casual events.
 
-### Interview 3:
+**Assessment:** Nice to have
 
-**Summary:** 
-**Interviewer:** 
-**Interviewee:** 
-**When:**
+### Interview 2:
+
+**Summary:** For most people, the current calendar apps suffice. Thus, we need to shift our target demographic toward a more specific demographic (likely people with ADHD)
+**Interviewer:** Izaac Molina\
+**Interviewee:** Christopher Edwards\
+**When:** 9/14/23\
 **Consumer segments:**
+- Professor
+- Working
 
 **Key Insights:**
-   
+   - The vast majority of people are satisfied with their current calendar app
+   - People who are working often choose a calendar app just based on what their work uses
+   - Scheduling more casual meetings is difficult, software is usually not used
+   - There is little interconnectivity between pre existing apps
 
 **Representative quotes:**
-  
+   - “Calendar apps are abundant on the market, including from the biggest players in tech, you’re going to need to be unique”
+   - “I would really like an app that combines doodle and calendly and automatically populates with my schedule”
 
 **Hypotheses that were validated:**
-   
+   - Scheduling more casual meetings is difficult
 
-**Assessment:**
-
-### Interview 4: 
-**Summary:** 
-**Interviewer:** 
-**Interviewee:** 
-**When:**  
-
-**Consumer segments:**
+**Assessment:** Don't Care
 
 
+### Interview 3:
 **Key Insights:**
 
 **Representative quotes:**
@@ -132,7 +122,7 @@ Group Members: Izaac Molina, Joey Banazsak, Kimberly Allison, Nicholas Wiley, Ga
    - Nice to have: Most features of a scheduling app
    - Nice to have: Comparison of schedules.
 
-## 4. Final value proposition and consumer segments
+
 
 **Final Value Proposition:**
 
