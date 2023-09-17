@@ -124,8 +124,8 @@ Group Members: Izaac Molina, Joey Banazsak, Kimberly Allison, Nicholas Wiley, Ga
 
 
 
-**Final Value Proposition:**
+## 4. Final Value Proposition:
 
 
-**Consumer segments:**
+## 5. Consumer segments:
 
