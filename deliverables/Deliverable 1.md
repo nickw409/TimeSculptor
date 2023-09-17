@@ -28,178 +28,54 @@ Don’t Panic is a free, lightweight application designed to help anyone safely 
 
 ## 3. Interviews summary
 
-### Interview 1:
+### Interview Y:
 
-**Summary:** Found lack of info and delay between people. Discussed area specific concerns (animals in area). Ice warnings on roads. Simple app for portability. Straight forward with apps purpose. Dummy proof, FOR EVERYONE. Customizable interface (Light and Dark mode). Simple notification leading to the app, where the info is posted.
+**Summary:** Students don't always use calendar apps to make their schedule, they can use other systems like note apps.
 
-**Interviewer:** Drew\
-**Interviewee:** April Alger\
-**When:** 2/13/2020\
-**Consumer Segments:** Outdoorspeople
-
-**Key insights**
-  - Product description must be accurate
-  - Ads better than cost upfront
-  - Simple notification UI with link to app/url
-
- **Representative quotes**
-  - “I don’t want settings to be buried in the menu”
-  - “I want the app to be simple.”
-  - “Lack of communication and delay of information prevent me from keeping others safe”
-  - “I want the app to be functional, and needed”
-
- **Hypotheses that were validated**
-  - She wanted the app to be as simple as possible
-  - Her values and priorities were different than my own/what I was expecting
-
- **Assessment: Must have / Nice to have / Don’t care**
-  - Wildlife notifications based on warnings (Nice)
-  - Ice warnings (Must)
-  - Simple Menu (Must)
-  - Select Subjects (Nice)
-  - Graphs (Don’t Care)
-
-### Interview 2:
-
-**Summary:** Traffic is a concern for many. User friendly. Preferences. Notifications over SMS. Consolidated into one app will draw people in.
-
-**Interviewer:** Brandon Click\
-**Interviewee:** Stasy Click\
-**When:**  2/11/2020\
+**Interviewer:** Izaac Molina\
+**Interviewee:** Zoey Lasch\
+**When:**  9/17/2023\
 **Consumer segment:**
-- Parent
-- safety-oriented people
+- Student
+- Working
 
 **Key insights:**
-  - Traffic and local news are highly important
-  - Customizability and user friendly design are highly important.
-  - Push notifications are vastly prefered to any other form of contact.
-  - Interview questions can be seen as too open ended for people to give a good answer to.
+  - UI design and not "hiding features" is really important for calendar apps.
+  - Scheduling friendly meetings is difficult.
+  - Apps other than calendar apps can be used to help people schedule.
 
 **Representative quotes:**
-  - “It's annoying having to look through all (news) apps in the morning just to check the traffic and the weather”
+  - "Planning is extremely hard to do on phone screens since most calendar apps have an awkward phone layout"
 
 **Hypotheses that were validated:**
-  - To many news apps are bothersome to look through 
-  - Not being able to just be notified about what you care about is a nuisance
-  - Having something to compile all relevant data at the start of the day would be beneficial in speeding up morning routines.
+  - People have trouble scheduling more casual events.
 
 **Assessment:** Nice to have
 
-### Interview 3:
+### Interview X:
 
-**Summary:** Too many pop ups will lead to uninstall. Preferences (also notification spacing.) Traffic is a concern. Concise. If done properly, it can be a must have
+**Summary:** For most people, the current calendar apps suffice. Thus, we need to shift our target demographic toward a more specific demographic (likely people with ADHD)
 
-**Interviewer:** Brandon Click\
-**Interviewee:** James Click\
-**When:** 2/11/2020\
+**Interviewer:** Izaac Molina\
+**Interviewee:** Christopher Edwards\
+**When:** 9/14/23\
 **Consumer segments:**
-- Parent
-- Outdoorspeople
-- safety-oriented people
+- Professor
+- Working
 
 **Key Insights:**
-   - To many pop ups will become annoying if they appear to often
-   - Being able to choose when and what is presented is key to its desirability
-   - A priority system for what to be notified about is needed so that the notifications don't get cluttered 
-   - Traffic information is a priority concern for what is often checked say to day
+   - The vast majority of people are satisfied with their current calendar app
+   - People who are working often choose a calendar app just based on what their work uses
+   - Scheduling more casual meetings is difficult, software is usually not used
+   - There is little interconnectivity between pre existing apps
 
 **Representative quotes:**
-   - “I don't need to know about a small earthquake half a state away in the middle of the night, that can wait until I wake up”
-   - “I don't want to keep getting updates though the day, just a few times are really what I need”
+   - “Calendar apps are abundant on the market, including from the biggest players in tech, you’re going to need to be unique”
+   - “I would really like an app that combines doodle and calendly and automatically populates with my schedule”
 
 **Hypotheses that were validated:**
-   - Checking through news is annoying to do throughout the day
-   - Being able to pick what is important, and how important, is of high demand to the end user
+   - Scheduling more casual meetings is difficult
 
-**Assessment:** Must have
+**Assessment:** Don't Care
 
-### Interview 4: 
-**Summary:** Roommate. 22 year old. Very outdoors. First impulse was negative, “Don't tell me what to do” Tone is important. MUST be customizable. Emergency communication area is a MUST. Filter out what she wants. Tags that can denote severity or subject matter. Social impact.
-**Interviewer:** Chris Keefe
-**Interviewee:** Laura No Puckett
-**When:**  2/13/20
 
-**Consumer segments:**
-- Outdoorspeople
-
-**Key Insights:**
-- Risk-management information may not be perceived as a need
-- Some people may “not want to be told what to do”
-- Notifications must be customized/customizable or we risk alienating independence-focused users
-
-**Representative quotes:**
-- “I don’t want some external thing telling me to panic. I like to be in control - I don’t want something else telling me what to do”
-- “I want to be notified about when people are contacting me - but not much else. I don’t want notifications, unless its people. …. But If there’s a major flood, I don’t care how often it notifies me.”
-
-**Hypotheses that were validated:**
-- Users find value in notifications of major risks/inconveniences
-- Users prefer a customizable notification stream
-
-**Assessment:**
-- Must have - minimal channel of relevant emergency notifications
-- Nice to have - additional channels
-- Nice to have - filtering by flags in addition to per-channel opt-in
-
-### Interview 5: 
-**Summary:** If there is no value, no one will care. Did not sound interested. OPT IN over opt out. I don't want more apps sending them things. Crisis only channel that comes with, everything else is opt in. Worry fuel. Battery lose issue
-Interviewer: Chris Keefe
-Interviewee: Heidi Rodenhizer
-When: 2/13/19
-Consumer segments:
-- Outdoorspeople
-- Property Managers/Landlords
-        
-**Key Insights:**
-- “Choosing channels that you’re interested in would be best”
-- Users might need encouragement to sign up - doesn’t seem critical or particularly useful to them
-- Performance/battery loss might be a stopper
-
-**Representative quotes**
-- “I’d only use it if I thought there was a reason to use it. If there’s some obvious indicator that there’s something happening (if there’s a really huge storm happening, if I just felt the ground shake)”
-
-**Hypotheses that were validated**
-- Users will not actively check a clearinghouse like this, but would appreciate notifications
-- Performance/battery loss might be a stopper
-
-**Assessment:**
-- Must have - lightweight
-- Must have - possible to provide only useful notifications
-
-### Interview 6:
-
-**Summary:** Traffic. Forewarning of crisis. Felt the benefit of the app. But tone is important. Opt out/filter is key component. If done well she would download.
-**Interviewer:** Chris Keefe\
-**Interviewee:** Caitlin Keefe\
-**When:** 2/14/20\
-**Consumer Segment:**
-- People who commute through/live in dangerous areas
-- Victims of Environmental Disaster/People at risk thereof
-
-**Key Insights:**
-   - Crisis events must be handled more generously - more, earlier notifications, robust resources
-   - Opt-in to channels, and filter unwanted notifications
-
-**Representative quotes:**
-   - “Being able to be prepared in advance would help. I don’t like uncertainty - that’s the most terrifying for me. Having a clear map to “maybe you should start getting toilet paper”... that would be great. That would help me mentally.”
-
-**Hypotheses that were validated:**
-   - Notifications should have linked resources for further investigation
-
-**Assessment:**
-   - Must have - non-alarming tone
-   - Must have - significant lead time on crisis events
-   - Must have - channel opt in
-   - Nice to have - filter unwanted notifications
-   - Nice to have - a communication/checkin tool\
-
-## 4. Final value proposition and consumer segments
-
-**Final Value Proposition:**
-Don't Panic is a free, minimal app that lets any American stay informed about the pitfalls in your life in a way you care about.
-
-**Consumer segments:**
-- Commuters
-- Parents
-- People in locations at risk of natural or human-caused disaster
-- Property Owners
