@@ -6,29 +6,18 @@ Group Members: Izaac Molina, Joey Banazsak, Kimberly Allison, Nicholas Wiley, Ga
 
 ## 1. Introduction
 
-In a world rich with information, there's no reason you should be suprised by an accident in your neighborhood, a rain squall on your walk to work, or a natural disaster approaching your community. Don’t Panic is an application platform designed to prevent accidents by providing timely, geo-targeted warnings, alongside resources to help people navigate the worst of times. Users opt in to receive push notifications or SMS. Users receive advice when they may be a) approaching a high-risk area or b) entering a high-risk time period. (E.g. weather bulletins, breaking news, seasonal risks) Future work may include suppression of notifications when geolocation data indicates the user is moving at motor-vehicle speeds, creation of opt-in channels for content selection, notification filtering by tag, and API design to allow approved local/regional/national partners to post warnings in real time
-
 ## 2. Initial value proposition and consumer segments
 
 **IVP:**
 
-Don’t Panic is a free, lightweight application designed to help anyone safely navigate life’s many pitfalls in a way that matters to you.
 
 **Initial Consumer Segments:**
 
-- Non-smartphone user
-- Parent
-- Outdoorspeople
-- safety-oriented people
-- preppers
-- People who commute through/live in dangerous areas
-- Victims of Environmental Disaster/People at risk thereof
-- Property Managers/Landlords?
-- Emergency Services Technicians?
+
 
 ## 3. Interviews summary
 
-### Interview Y:
+### Interview 1:
 
 **Summary:** Students don't always use calendar apps to make their schedule, they can use other systems like note apps.
 
@@ -44,6 +33,9 @@ Don’t Panic is a free, lightweight application designed to help anyone safely 
   - Scheduling friendly meetings is difficult.
   - Apps other than calendar apps can be used to help people schedule.
 
+
+**Key insights:**
+ 
 **Representative quotes:**
   - "Planning is extremely hard to do on phone screens since most calendar apps have an awkward phone layout"
 
@@ -52,10 +44,9 @@ Don’t Panic is a free, lightweight application designed to help anyone safely 
 
 **Assessment:** Nice to have
 
-### Interview X:
+### Interview 2:
 
 **Summary:** For most people, the current calendar apps suffice. Thus, we need to shift our target demographic toward a more specific demographic (likely people with ADHD)
-
 **Interviewer:** Izaac Molina\
 **Interviewee:** Christopher Edwards\
 **When:** 9/14/23\
@@ -78,4 +69,63 @@ Don’t Panic is a free, lightweight application designed to help anyone safely 
 
 **Assessment:** Don't Care
 
+
+### Interview 3:
+**Key Insights:**
+
+**Representative quotes:**
+
+**Hypotheses that were validated:**
+
+
+**Assessment:**
+
+
+### Interview 5: 
+**Summary:** 
+**Interviewer:** 
+**Interviewee:** 
+**When:** 
+**Consumer segments:**
+
+        
+**Key Insights:**
+
+**Representative quotes**
+
+
+**Hypotheses that were validated**
+
+
+**Assessment:**
+
+
+### Interview 6:
+
+**Summary:** 
+**Interviewer:** Noah Schwartz\
+**Interviewee:** Erica Schwartz\
+**When:** 9/15/23\
+**Consumer Segment:**
+-Adult who has the need for scheduling their day
+
+**Key Insights:**
+   - In theory, this is a cool concept but doesn't seem all too new and original
+   - The idea of being able to compare schedules to see free time easier is best feature
+
+**Representative quotes:**
+   - “Especially for our Shabbat Group, it is very hard even to schedule one night a month to get together, having the ability to see everyone's free time right away by comparing schedules sounds like a very useful thing.”
+
+**Hypotheses that were validated:**
+   - People feel the need for a scheduling app that makes hanging out easier.
+**Assessment:**
+   - Nice to have: Most features of a scheduling app
+   - Nice to have: Comparison of schedules.
+
+
+
+**Final Value Proposition:**
+
+
+**Consumer segments:**
 
