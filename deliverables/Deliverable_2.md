@@ -52,6 +52,7 @@ TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provide
 - Easily move around and create new events
 - Save and load schedules
 - Plans specified events without user input
+- Sends notifications to users with reminders
 
 ## 6. Use Cases:
 
