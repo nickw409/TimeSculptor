@@ -38,6 +38,8 @@ Missing participants: None
 
 **Noah**
 
+-Worked on the Positioning for project deliverable 2. 
+
 ## Project Retrospective
 
 **Appreciations:** Everyone did what they were assigned to do.
