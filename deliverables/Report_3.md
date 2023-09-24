@@ -45,7 +45,7 @@ Missing participants: None
 
 **Barriers:** None at this time
 
-**What We Should Try Next Time** 
+**What We Should Try Next Time:** 
 
 Submit Report and possible Deliverables by Saturday night. We also want to start editing the branches on our own machines, as we have just been editing the branches on GitHub.
 
