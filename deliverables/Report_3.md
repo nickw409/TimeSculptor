@@ -22,7 +22,9 @@ Missing participants: None
 
 **Joey**
 
-**Kimberlyn**
+**Kimberly**
+
+- Listed stakeholders involved in our project for project deliverable 2
 
 **Nick**
 
