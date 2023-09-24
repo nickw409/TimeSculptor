@@ -37,6 +37,7 @@ Missing participants: None
 - Set up Report_3.md and Deliverable_2.md
 
 **Noah**
+
 -Worked on the Positioning for project deliverable 2. 
 
 ## Project Retrospective
