@@ -21,6 +21,8 @@ Missing participants: None
 - Handled room reservations
 
 **Joey**
+ - Wrote out a use case diagram for the project
+ - worked with Izaac to complete the user stories portion of deliverable 2
 
 **Kimberly**
 
@@ -37,13 +39,13 @@ Missing participants: None
 
 **Appreciations:** Everyone did what they were assigned to do.
 
-**Successes:**
+**Successes:** Communication has remained consistent, it still feels like everyone is contributing equally
 
-**Failures:**
+**Failures:** Team was un a rush to turn in everything by Sunday, we should consider setting a "soft" deadline 
 
-**Barriers:**
+**Barriers:** None at this time
 
-**What We Should Try Next Time**
+**What We Should Try Next Time** 
 
 Submit Report and possible Deliverables by Saturday night. We also want to start editing the branches on our own machines, as we have just been editing the branches on GitHub.
 
