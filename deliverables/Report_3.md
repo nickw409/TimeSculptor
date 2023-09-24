@@ -14,6 +14,9 @@ Missing participants: None
 
 **Gabriel**
 
+-Researched functional and non-functional requirements
+-Listed a small number of potential requirements for our program
+
 **Izaac**
 
 - Conducted 2 additional interviews
@@ -50,8 +53,13 @@ Missing participants: None
 Submit Report and possible Deliverables by Saturday night. We also want to start editing the branches on our own machines, as we have just been editing the branches on GitHub.
 
 ## Next Steps
+     1. Begin looking into JS and SQL/SQLite
+     2. Begin planning the different pages of the website (login, calendar, etc...)
+     3. Finish up the different remaining components of deliverable 2
 
-Setting a soft deadline for reports/deliverables on the Saturday before they are due.
+## Decisions
+
+-Setting a soft deadline for reports/deliverables on the Saturday before they are due.
 
 The following members will be investigating front end(React):
 
