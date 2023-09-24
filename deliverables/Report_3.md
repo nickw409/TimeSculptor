@@ -14,8 +14,8 @@ Missing participants: None
 
 **Gabriel**
 
--Researched functional and non-functional requirements
--Listed a small number of potential requirements for our program
+- Researched functional and non-functional requirements
+- Listed a small number of potential requirements for our program
 
 **Izaac**
 
