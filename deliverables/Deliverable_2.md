@@ -29,6 +29,7 @@ Group 4: **TimeSculptor**
 - Easily move around and create new events
 - Save and load schedules
 - Plans specified events without user input
+- Sends notifications to users with reminders
 
 ## 6. Use Cases:
 
