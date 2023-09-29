@@ -34,8 +34,7 @@ Google Calendar, handwritten notes, etc.
 is accessible via the Web, etc.
 
 **Value Proposition**
-TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provides a much easier and accessible interface for those people and **iv) why your product is unique.**
-
+TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provides a much easier and accessible interface for those people and features ADHD friendly User Interface.
 
 ## 2. Stakeholders:
 
