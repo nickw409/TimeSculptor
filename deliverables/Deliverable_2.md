@@ -59,4 +59,8 @@ As a person with ADHD, I want the scheduling app to automatically place specifie
 
 As a user with ADHD, I want to create multiple schedules so that I can remember the schedules of others.
 
+As a user unfamiliar with scheduling apps, I want an easy to use interface so that I can easily and quickly add events to my calendar.
+
+As a person belonging to many different organizations, I want a nice color-coding system so that I can differentiate between my groups' activities.
+
 ## 8. Issue Tracker
