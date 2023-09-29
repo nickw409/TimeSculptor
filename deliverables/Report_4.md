@@ -27,6 +27,9 @@ Missing participants: None
 - Created one Use Case and two User Stories
 
 **Noah:**
+
+- Created Problem Statement
+- Researched some Backend Development Frameworks (Node.js, React.js, SQLite, possibly ExpressJs or Koa...)
   
 ## **Project Retrospective**
 
