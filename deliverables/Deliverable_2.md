@@ -4,46 +4,31 @@ Group 4: **TimeSculptor**
 
 **Date and Location:** September 22, 2023
 
-### Group Members: 
-- Gabriel Valentin 
-- Izaac Molina 
-- Joey Banazsak 
+**Group Members:**
+
+- Gabriel Valentin
+- Izaac Molina
+- Joey Banazsak
 - Kimberly Allison
 - Nicholas Wiley
-- Noah Schwartz  
+- Noah Schwartz
 
-## 1. Positioning:
-**The problem of**
-disorganization and lack of prioritization of tasks in any given day 
-**affects** 
-those of us with ADHD or those that lack Executive Function skills
-**the impact of which is**
-losing out or missing important tasks or commitments in one's life.
+## 1. Positioning
 
-**For**
-those who struggle with ADHD or Executive Function
-**Who**
-could greatly benefit from a scheduling app designed specifically with their needs in mind
-**The TimeSculptor**
-**TimeSculptor** is a scheduling application
-**That**
-will greatly assist in organizing one's life who struggles to do it themself
-**Unlike**
-Google Calendar, handwritten notes, etc.
-**Our product**
-is accessible via the Web, etc.
+The problem of disorganization and lack of prioritization of tasks in any given day affects those of us with ADHD or those that lack Executive Function skills the impact of which is losing out or missing important tasks or commitments in one's life.
+
+For those who struggle with ADHD or Executive Function who could greatly benefit from a scheduling app designed specifically with their needs in mind TimeSculptor is a scheduling application that will greatly assist in organizing one's life who struggles to do it themself. Unlike Google Calendar, handwritten notes, etc. our product is accessible via the Web, etc.
 
 **Value Proposition**
 TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provides a much easier and accessible interface for those people and **iv) why your product is unique.**
 
+## 2. Stakeholders
 
-## 2. Stakeholders:
+## 3. Functional Requirements
 
-## 3. Functional Requirements:
+## 4. Non-functional Requirements
 
-## 4. Non-functional Requirements:
-
-## 5. Minimum Viable Product:
+## 5. Minimum Viable Product
 
 **MVP Features:**
 
@@ -54,9 +39,8 @@ TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provide
 - Plans specified events without user input
 - Sends notifications to users with reminders
 
-## 6. Use Cases:
+## 6. Use Cases
 
-## 7. User Stories:
+## 7. User Stories
 
-## 8. Issue Tracker:
-
+## 8. Issue Tracker
