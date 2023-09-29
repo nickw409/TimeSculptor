@@ -2,7 +2,7 @@
 
 Group 4: **TimeSculptor**
 
-Date and Location: 09/29/2023, Cline Library Room 185
+Date and Location: 09/29/2023, Cline Library Room 183
 
 Present Participants: Izaac Molina, Gabriel Valentin, Nicholas Wiley, Kimberly Allison, Joey Banaszak, Noah Schwartz
 
@@ -12,29 +12,33 @@ Missing participants: None
 
 ## **Summary of Activities**
 
-### Gabriel
+**Gabriel:**
 
-### Izaac
+**Izaac:**
 
-### Joey
+**Joey:**
   
-### Kimberly
+**Kimberly:**
 
-### Nick
-  
-### Noah
+**Nick:**
+
+- Created Report_4.md
+- Created Minimum Viable Product
+- Created one Use Case and two User Stories
+
+**Noah:**
   
 ## **Project Retrospective**
 
-### Appreciations
+**Appreciations:**
 
-### Successes
+**Successes:**
 
-### Failures
+**Failures:**
 
-### Barriers
+**Barriers:**
 
-### What We Should Try Next Time
+**What We Should Try Next Time:**
 
 ## **Next Steps**
 
