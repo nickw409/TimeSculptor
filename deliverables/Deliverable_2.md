@@ -41,10 +41,10 @@ TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provide
 
 ## 6. Use Cases
 
-|Use Case 1 | Adding a new automatic scheduling event |
+|Use Case 1 | Adding a new event |
 |:---|:---|
 **Actor** | **User** |
-**Basic Flow** | **User loads the desired schedule. Then they add a new schedule element. Then they set the element to be scheduled by the program. Then the program automatically places the element in the schedule.** |
+**Basic Flow** | **User loads the desired schedule. Then they add a new schedule element. Then they set the time the event happens and a name and description of the event.** |
 
 ## 7. User Stories
 
