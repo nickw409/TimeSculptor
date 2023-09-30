@@ -13,6 +13,7 @@ Missing participants: None
 ## **Summary of Activities**
 
 **Gabriel:**
+- Tried to learn some HTML and Javascript in an effort to understand how to use React.
 
 **Izaac:**
 
@@ -34,15 +35,17 @@ Missing participants: None
 ## **Project Retrospective**
 
 **Appreciations:**
-
+- Everyone made a sincere effort to learn the assigned technologies.
 **Successes:**
-
+- Communication has remained consistent, it still feels as if everyone is still contributing. Additionally, Report was turned in on the set soft deadline.
 **Failures:**
-
+- Some of us could have worked more on Deliverable 2 as a team
 **Barriers:**
-
+- Unsure of the pace that we need to work at/how strong our sense of urgency should be.
 **What We Should Try Next Time:**
-
+- Try to get most of Deliverable 3 done by October 7th. Ask Dr. Palmer what we all need for the Midterm presentation near the end of October.
 ## **Next Steps**
-
+- Continue learning assigned technologies
+- Plan the different pages of the website (login, calendar, etc...)
 ## **Decisions**
+- Continue researching our coding languages and programs
