@@ -75,7 +75,7 @@ TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provide
 **Setup Notifcations** | **Once logged in, the user goes to the settings menu and selects "Notifications". Upon doing this, the user will be brought to a Notifications settings page where they can decide what time interval for receiving notifications, such as daily, weekly, etc. The user then selects "Confirm", which stores the user's notification settings. After this, the user will then receive notifcations to update their schedule based on the time interval they selected** |
 **Update Notifications** | **Once logged in, the user goes to the settings menu and selects "Notifications". Upon doing this, the user will be brought to a Notifications settings page where they can change what time interval for receiving notifcations. The user then selects "Confirm", which updates the user's notification settings. After this, the user will then receive notifcations to update their schedule based on the updated time interval they selected.** |
 
-![Notification Settings UI](/TimeSculptor/assets/Notification_UI.jpg)
+![Notification Settings UI](../assets/Notification_UI.jpg)
 
 ## 7. User Stories
 
