@@ -16,8 +16,12 @@ Missing participants: None
 
 **Izaac:**
 
+- Started following a tutorial series on React, started playing around with event listeners and formatting with CSS in React.
+- Wrote a use case description for Setting up Notifications.
+- Handled room reservations
+
 **Joey:**
-  
+
 **Kimberly:**
 
 **Nick:**
@@ -30,12 +34,12 @@ Missing participants: None
 
 - Created Problem Statement
 - Researched some Backend Development Frameworks (Node.js, React.js, SQLite, possibly ExpressJs or Koa...)
-  
+
 ## **Project Retrospective**
 
-**Appreciations:**
+**Appreciations:** Everyone made a sincere effort to learn the assigned technologies.
 
-**Successes:**
+**Successes:** Communication has remained consistent, it still feels as if everyone is still contributing. Additionally, Report was turned in on the set soft deadline.
 
 **Failures:**
 
