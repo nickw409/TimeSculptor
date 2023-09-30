@@ -83,4 +83,8 @@ As a person belonging to many different organizations, I want a nice color-codin
 
 (Gabe) As a working parent of two attention deficit children, I want help creating a routine so that I can keep them on track in school.
 
+As a student with ADHD, I want my schedule to immediately populate with my classes so that it’s as easy as possible to keep track of them.
+
+As a worker with ADHD, I want my scheduling app to remind me to update it, so that I don’t forget and lose track of my schedule.
+
 ## 8. Issue Tracker
