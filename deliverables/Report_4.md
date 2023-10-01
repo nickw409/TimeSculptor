@@ -25,6 +25,11 @@ Missing participants: None
 
 **Kimberly:**
 
+- Worked on stakeholders involved in our project for project deliverable 2
+- Started to learn React
+- Wrote use case for deliverable 2
+
+
 **Nick:**
 
 - Created Report_4.md
