@@ -99,4 +99,8 @@ As a student with ADHD, I want my schedule to immediately populate with my class
 
 As a worker with ADHD, I want my scheduling app to remind me to update it, so that I don’t forget and lose track of my schedule.
 
+As a person with ADHD, who struggles with time management, I was something that will schedule the small things for me and tell me when to do them.
+
+As a person with ADHD, I want an app that can reminds me to do the menial tasks I normally put off. 
+
 ## 8. Issue Tracker
