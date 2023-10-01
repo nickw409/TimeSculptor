@@ -23,6 +23,9 @@ Missing participants: None
 
 **Joey:**
 
+- Looked into node.js for back end use
+- Looked into sql / sqlite for back end use  
+
 **Kimberly:**
 
 - Worked on stakeholders involved in our project for project deliverable 2
