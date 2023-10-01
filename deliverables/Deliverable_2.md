@@ -85,12 +85,9 @@ The dedicated users of other competing apps will be the critics of our applicati
 |:---|:---|
 **Actors** | **User / TimeSculptor Application** |
 **Save Schedule** | **Once user is logged in and has found their way to the homepage, they will be able to generate/edit their schedule. Once finished, they will be given the option to save their schedule. This will offer a confitmation and overwrite their previous save file.** |
-
-![Notification Settings UI](../assets/LoadSchedule.jpg)
-
 **Load Schedule** | **Once user is logged in and has found their way to the homepage, their previously saved schedule will be automatically loaded and brought up into their calendar.** |
-
-![Notification Settings UI](../assets/SaveSchedule.jpg)
+![Save-Schedule](../assets/SaveSchedule.jpg)
+![Load-Schedule](../assets/SaveSchedule.jpg)
 
 |Use Case 4 | Notifications Settings |
 |:---|:---|
