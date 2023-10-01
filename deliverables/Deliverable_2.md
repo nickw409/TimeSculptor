@@ -69,7 +69,15 @@ TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provide
 |:---|:---|
 **Actors** | **User / TimeSculptor Application** |
 **Save Schedule** | **Once user is logged in and has found their way to the homepage, they will be able to generate/edit their schedule. Once finished, they will be given the option to save their schedule. This will offer a confitmation and overwrite their previous save file.** |
-**Load Schedule** | **Once user is logged in and has found their way to the homepage, their previously saved schedule will be automatically loaded and brought up into their calendar** |
+**Load Schedule** | **Once user is logged in and has found their way to the homepage, their previously saved schedule will be automatically loaded and brought up into their calendar.** |
+
+|Use Case 4 | Notifications Settings |
+|:---|:---|
+**Actors** | **User / TimeSculptor Application** |
+**Setup Notifcations** | **Once logged in, the user goes to the settings menu and selects "Notifications". Upon doing this, the user will be brought to a Notifications settings page where they can decide what time interval for receiving notifications, such as daily, weekly, etc. The user then selects "Confirm", which stores the user's notification settings. After this, the user will then receive notifcations to update their schedule based on the time interval they selected** |
+**Update Notifications** | **Once logged in, the user goes to the settings menu and selects "Notifications". Upon doing this, the user will be brought to a Notifications settings page where they can change what time interval for receiving notifcations. The user then selects "Confirm", which updates the user's notification settings. After this, the user will then receive notifcations to update their schedule based on the updated time interval they selected.** |
+
+![Notification Settings UI](../assets/Notification_UI.jpg)
 
 ## 7. User Stories
 
@@ -84,5 +92,9 @@ As a person belonging to many different organizations, I want a nice color-codin
 (Gabe) As someone who grew up around people with attention deficit, I want a convenient way to make a schedule for them so that they can stay productive and focused.
 
 (Gabe) As a working parent of two attention deficit children, I want help creating a routine so that I can keep them on track in school.
+
+As a student with ADHD, I want my schedule to immediately populate with my classes so that it’s as easy as possible to keep track of them.
+
+As a worker with ADHD, I want my scheduling app to remind me to update it, so that I don’t forget and lose track of my schedule.
 
 ## 8. Issue Tracker
