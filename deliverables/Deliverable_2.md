@@ -53,6 +53,8 @@ TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provide
 
 ## 6. Use Cases
 
+![USE-CASE_DIAGRAM](../assets/UseCaseDiagram.jpg)
+
 |Use Case 1 | Adding a new event |
 |:---|:---|
 **Actor** | **User** |
@@ -80,6 +82,15 @@ TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provide
 **Update Notifications** | **Once logged in, the user goes to the settings menu and selects "Notifications". Upon doing this, the user will be brought to a Notifications settings page where they can change what time interval for receiving notifcations. The user then selects "Confirm", which updates the user's notification settings. After this, the user will then receive notifcations to update their schedule based on the updated time interval they selected.** |
 
 ![Notification Settings UI](../assets/Notification_UI.jpg)
+
+|Use Case 5 | Generating a new schedule |
+|:---|:---|
+**Actors** | **User / TimeSculptor Application** |
+**creating a new schedule** | **An option in a corner of the screen will allow the user the option to create a new schedule. Once choosing this option a prompt will be given to the user for one of two things.** |
+**Adding a new event to the schedule** | **The User will have the primary option of adding a new event to their schedule, they will need to input a time, a day, the type of event as well as if the event is recurring or not to automatically fill this to the users schedule.** |
+**Uploading schedule from LOUIE** | **The other option the user will have will be to upload their schedule from LOUIE, then from this the user will be taken through the Duo Security steps to log into their NAU account and then the user will have their class schedule ported over for them** |
+![Generating-Schedule-Image](../assets/generateNewScheduleUI.jpeg)
+
 
 ## 7. User Stories
 
