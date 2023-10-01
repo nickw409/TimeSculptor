@@ -24,6 +24,19 @@ TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provide
 
 ## 2. Stakeholders
 
+**Students:**
+Students are the group of individuals who we anticipate will use our product. Our product is designed to meet the wants and needs of these users, including our list of main product features.
+
+**Rival Calendar Apps:**
+Our competitors include calendar apps that have similar functionality and share similar features as our product. Our product aims to provide functionality that they do not.
+
+**Team Members:**
+Our team members are responsible for building the product. This includes constructing our calendar, implementing needed features, and fixing bugs throughout the development process.
+
+**Dedicated Users of Rival Calendar Apps:** 
+The dedicated users of other competing apps will be the critics of our application. Our developers will respond to this by providing reasonable updates to our application.
+
+
 ## 3. Functional Requirements
 
 - Calendar app that schedules events for you
@@ -79,6 +92,14 @@ TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provide
 
 ![Notification Settings UI](../assets/Notification_UI.jpg)
 
+|Use Case 5 | Notifications Settings |
+|:---|:---|
+**Actors** | **Two Users / TimeSculptor Application** |
+**Find Other Schedules** | **Once the user is logged in, they will navigate to a “compare schedules” button above their calendar. There they will enter another user's email address. Then, a request email will be sent to the other user, who can either decline or accept. When the request to see the other user’s schedule is accepted, they will be granted access to the other user’s schedule.** |
+**Compare Side By Side** | **Once the user’s request to see the other user’s schedule is accepted, the user will be able to use a “Compare Side by Side” button. This button will allow the user to see the schedules side by side and compare specific days.** |
+
+![CompareSchedule_UI](../assets/CompareSchedule_UI.jpg)
+
 ## 7. User Stories
 
 As a person with ADHD, I want the scheduling app to automatically place specified events in my schedule so that I am not overwhelmed with planning.
@@ -96,5 +117,9 @@ As a person belonging to many different organizations, I want a nice color-codin
 As a student with ADHD, I want my schedule to immediately populate with my classes so that it’s as easy as possible to keep track of them.
 
 As a worker with ADHD, I want my scheduling app to remind me to update it, so that I don’t forget and lose track of my schedule.
+
+As a busy student, I want to be able to compare my schedule to my friends so we can easily make plans together.
+
+As a parent of a student, I’d like to be able to see my child’s schedule so that I know what they’re up to when they’re away at school.
 
 ## 8. Issue Tracker
