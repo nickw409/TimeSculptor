@@ -15,12 +15,14 @@ Group 4: **TimeSculptor**
 
 ## 1. Positioning
 
+**Problem Statement:**\
 The problem of disorganization and lack of prioritization of tasks in any given day affects those of us with ADHD or those that lack Executive Function skills the impact of which is losing out or missing important tasks or commitments in one's life.
 
+**Product Position Statement:**\
 For those who struggle with ADHD or Executive Function who could greatly benefit from a scheduling app designed specifically with their needs in mind TimeSculptor is a scheduling application that will greatly assist in organizing one's life who struggles to do it themself. Unlike Google Calendar, handwritten notes, etc. our product is accessible via the Web, etc.
 
-**Value Proposition**
-TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provides a much easier and accessible interface for those people and features ADHD friendly User Interface.
+**Value Proposition:**\
+TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provides a much easier and accessible interface for those people and features ADHD friendly User Interface. The expected consumer segment are individuals suffering from ADHD.
 
 ## 2. Stakeholders
 
@@ -55,7 +57,7 @@ TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provide
 |:---|:---|
 **Actor** | **User** |
 **Basic Flow** | **User loads the desired schedule. Then they add a new schedule element. Then they set the time the event happens and a name and description of the event.** |
-
+![Add-Event-Image](../assets/deliverable_2_ui.jpg)
 
 |Use Case 2 | Register/Login |
 |:---|:---|
@@ -89,9 +91,9 @@ As a user unfamiliar with scheduling apps, I want an easy to use interface so th
 
 As a person belonging to many different organizations, I want a nice color-coding system so that I can differentiate between my groups' activities.
 
-(Gabe) As someone who grew up around people with attention deficit, I want a convenient way to make a schedule for them so that they can stay productive and focused.
+As someone who grew up around people with attention deficit, I want a convenient way to make a schedule for them so that they can stay productive and focused.
 
-(Gabe) As a working parent of two attention deficit children, I want help creating a routine so that I can keep them on track in school.
+As a working parent of two attention deficit children, I want help creating a routine so that I can keep them on track in school.
 
 As a student with ADHD, I want my schedule to immediately populate with my classes so that it’s as easy as possible to keep track of them.
 
