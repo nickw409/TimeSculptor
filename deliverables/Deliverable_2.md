@@ -26,6 +26,18 @@ TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provide
 
 ## 2. Stakeholders
 
+**Students:**
+Students are the group of individuals who we anticipate will use our product. Our product is designed to meet the wants and needs of these users, including our list of main product features.
+
+**Rival Calendar Apps:**
+Our competitors include calendar apps that have similar functionality and share similar features as our product. Our product aims to provide functionality that they do not.
+
+**Team Members:**
+Our team members are responsible for building the product. This includes constructing our calendar, implementing needed features, and fixing bugs throughout the development process.
+
+**Dedicated Users of Rival Calendar Apps:** 
+The dedicated users of other competing apps will be the critics of our application. Our developers will respond to this by providing reasonable updates to our application.
+
 ## 3. Functional Requirements
 
 - Calendar app that schedules events for you
@@ -91,6 +103,13 @@ TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provide
 **Uploading schedule from LOUIE** | **The other option the user will have will be to upload their schedule from LOUIE, then from this the user will be taken through the Duo Security steps to log into their NAU account and then the user will have their class schedule ported over for them** |
 ![Generating-Schedule-Image](../assets/generateNewScheduleUI.jpeg)
 
+|Use Case 6 | Compare Schedules |
+|:---|:---|
+**Actors** | **Two Users / TimeSculptor Application** |
+**Find Other Schedules** | **Once the user is logged in, they will navigate to a “compare schedules” button above their calendar. There they will enter another user's email address. Then, a request email will be sent to the other user, who can either decline or accept. When the request to see the other user’s schedule is accepted, they will be granted access to the other user’s schedule.** |
+**Compare Side By Side** | **Once the user’s request to see the other user’s schedule is accepted, the user will be able to use a “Compare Side by Side” button. This button will allow the user to see the schedules side by side and compare specific days.** |
+
+![CompareSchedule_UI](../assets/CompareSchedule_UI.jpg)
 
 ## 7. User Stories
 
@@ -114,4 +133,11 @@ As a person with ADHD, who struggles with time management, I was something that 
 
 As a person with ADHD, I want an app that can reminds me to do the menial tasks I normally put off. 
 
+As a busy student, I want to be able to compare my schedule to my friends so we can easily make plans together.
+
+As a parent of a student, I’d like to be able to see my child’s schedule so that I know what they’re up to when they’re away at school.
+
 ## 8. Issue Tracker
+
+Issue Tracker: [Here](https://github.com/nickw409/TimeSculptor/issues)
+![IssueTracker](../assets/IssueTrackerDev2.png)
