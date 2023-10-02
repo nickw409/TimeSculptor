@@ -26,6 +26,7 @@ TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provide
 
 ## 2. Stakeholders
 
+
 **Students:**
 Students are the group of individuals who we anticipate will use our product. Our product is designed to meet the wants and needs of these users, including our list of main product features.
 
