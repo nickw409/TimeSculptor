@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+# Junk
+*.pdf
+.DS_Store
+.git
