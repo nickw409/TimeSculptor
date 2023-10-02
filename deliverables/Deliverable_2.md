@@ -90,7 +90,7 @@ The dedicated users of other competing apps will be the critics of our applicati
 **Load Schedule** | **Once user is logged in and has found their way to the homepage, their previously saved schedule will be automatically loaded and brought up into their calendar.** |
 
 ![Save-Schedule](../assets/SaveSchedule.jpg)
-![Load-Schedule](../assets/SaveSchedule.jpg)
+![Load-Schedule](../assets/LoadSchedule.jpg)
 
 |Use Case 4 | Notifications Settings |
 |:---|:---|
