@@ -71,6 +71,7 @@ The dedicated users of other competing apps will be the critics of our applicati
 |:---|:---|
 **Actor** | **User** |
 **Basic Flow** | **User loads the desired schedule. Then they add a new schedule element. Then they set the time the event happens and a name and description of the event.** |
+
 ![Add-Event-Image](../assets/deliverable_2_ui.jpg)
 
 |Use Case 2 | Register/Login |
@@ -78,6 +79,7 @@ The dedicated users of other competing apps will be the critics of our applicati
 **Actors** | **User,** **TimeSculptor Web Application** |
 **Register** | **The user navigates to the web application's homepage. On the homepage, the user clicks on the "Sign Up” button to start the registration process. The web application presents a registration form, which will probably includes fields such as: Full Name, Email Address, Password, Confirm Password. The user completes the registration form. If the input is valid, the web application creates a new user account and stores the provided information in the database. The web application sends a confirmation email to the user's provided email address containing a verification link. The user checks their email inbox, clicks on the verification link, and confirms their email address. Upon successful email verification, the web application displays a confirmation message to the user, informing them that their registration is complete.** |
 **Login** | **The user navigates to the web application's homepage. On the homepage, the user clicks on the "Login" button to start the login process. The web application presents a login form, requesting the user's login info. The user enters their information into the login form. The web application verifies the entered credentials against the stored user data in the database. If the entered credentials are correct, the web application authenticates the user and grants access to their account. The user is redirected to the application's main dashboard or landing page.** |
+
 ![Sign-Up-Image](../assets/SignUp_UI.jpg)
 ![Log-In-Image](../assets/Login_UI.jpg)
 
@@ -86,6 +88,7 @@ The dedicated users of other competing apps will be the critics of our applicati
 **Actors** | **User / TimeSculptor Application** |
 **Save Schedule** | **Once user is logged in and has found their way to the homepage, they will be able to generate/edit their schedule. Once finished, they will be given the option to save their schedule. This will offer a confitmation and overwrite their previous save file.** |
 **Load Schedule** | **Once user is logged in and has found their way to the homepage, their previously saved schedule will be automatically loaded and brought up into their calendar.** |
+
 ![Save-Schedule](../assets/SaveSchedule.jpg)
 ![Load-Schedule](../assets/SaveSchedule.jpg)
 
@@ -103,6 +106,7 @@ The dedicated users of other competing apps will be the critics of our applicati
 **creating a new schedule** | **An option in a corner of the screen will allow the user the option to create a new schedule. Once choosing this option a prompt will be given to the user for one of two things.** |
 **Adding a new event to the schedule** | **The User will have the primary option of adding a new event to their schedule, they will need to input a time, a day, the type of event as well as if the event is recurring or not to automatically fill this to the users schedule.** |
 **Uploading schedule from LOUIE** | **The other option the user will have will be to upload their schedule from LOUIE, then from this the user will be taken through the Duo Security steps to log into their NAU account and then the user will have their class schedule ported over for them** |
+
 ![Generating-Schedule-Image](../assets/generateNewScheduleUI.jpeg)
 
 |Use Case 6 | Compare Schedules |
