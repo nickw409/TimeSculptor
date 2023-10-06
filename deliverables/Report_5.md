@@ -24,6 +24,7 @@ Missing participants: Gabriel Valentin, Noah Schwartz
 **Kimberly:**
 
 - Worked on learning react
+- Researched possible pivot for project audience
 
 **Nick:**
 
@@ -35,7 +36,7 @@ Missing participants: Gabriel Valentin, Noah Schwartz
 
 ## **Project Retrospective**
 
-**Appreciations:** 
+**Appreciations:** Everyone continued learning their assigned technologies and contributed to the research for a new value proposition
 
 **Successes:** 
 
