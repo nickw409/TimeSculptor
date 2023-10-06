@@ -22,7 +22,7 @@ Missing participants: Gabriel Valentin, Noah Schwartz
 
 
 **Kimberly:**
-
+- worked on learning react
 
 **Nick:**
 
