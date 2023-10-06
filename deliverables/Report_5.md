@@ -22,10 +22,13 @@ Missing participants: Gabriel Valentin, Noah Schwartz
 
 
 **Kimberly:**
-- worked on learning react
+
+- Worked on learning react
 
 **Nick:**
 
+- Worked on NodeJS and setting up remote servers.
+- Created Report_5.md and CONTRIBUTING.md to help the team.
 
 **Noah:**
 
