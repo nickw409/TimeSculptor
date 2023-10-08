@@ -38,7 +38,9 @@ Missing participants: Gabriel Valentin, Noah Schwartz
 - Created Report_5.md and CONTRIBUTING.md to help the team.
 
 **Noah:**
-
+- Researched accessibility of websites for people with learning disabilities such as ADHD and Dyslexia
+- Continued researching backend development tools 
+- continued working with different development languages (ie JavaScript) to get more comfortable coding with them
 
 ## **Project Retrospective**
 
