@@ -17,6 +17,9 @@ Missing participants: Gabriel Valentin, Noah Schwartz
 
 **Izaac:**
 
+- Continued tutorial series on React.
+- Researched accessibility needs in UI.
+- Handled room reservations.
 
 **Joey:**
 
