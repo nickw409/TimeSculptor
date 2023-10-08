@@ -13,7 +13,8 @@ Missing participants: Gabriel Valentin, Noah Schwartz
 ## **Summary of Activities**
 
 **Gabriel:**
-
+- Continued trying to learn HTML and Javascript.
+- Researched effects of consistency and making schedules for people with attention deficit disorders.
 
 **Izaac:**
 
