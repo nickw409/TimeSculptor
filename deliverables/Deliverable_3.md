@@ -1,23 +1,23 @@
 # Gabriel
 
-## User
+### User
 
-## Schedule
+### Schedule
 
 # Nick
 
-## Event
+### Event
 
-## Recurring - sublclass of event
+### Recurring - sublclass of event
 
-#Noah
+# Noah
 
-## Notification
+### Notification
 
-## Settings
+### Settings
 
 # Kimberly
 
-## Compare Requests
+### Compare Requests
 
-## Day
+### Day
