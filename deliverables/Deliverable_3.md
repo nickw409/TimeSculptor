@@ -8,7 +8,7 @@
 
 ### Event
 
-### Recurring - sublclass of event
+### Recurring - subclass of event
 
 # Noah
 
