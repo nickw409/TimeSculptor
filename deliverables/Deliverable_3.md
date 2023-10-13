@@ -25,14 +25,20 @@ Make UML class diagrams of:
 # Gabriel
 
 ### User
-  Attributes :
+  **Attributes :**
   - Username : String
   - UserID : Int
 
+  **Methods :**
+  - +CreateUsername()
+  - +CreateUserID()
+
 ### Schedule
-  Attributes :
+  **Attributes :**
   - Name : String
 
+  **Methods :**
+  - +CreateScheduleName()
   
 # Nick
 
