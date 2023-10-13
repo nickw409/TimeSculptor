@@ -20,6 +20,8 @@ Missing participants: None
 
 **Joey:**
 
+ - Made the UML Class diagram for the given class descriptions from the other group members
+ - Continued looking into node.js, and sqlite
 
 **Kimberly:**
 
