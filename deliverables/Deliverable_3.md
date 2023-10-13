@@ -37,8 +37,22 @@ Make UML class diagrams of:
 # Nick
 
 ### Event
+  **Attributes:**
+    - Name: String
+    - Date: Date
+  
+  **Methods:**
+    - +CreateEvent()
+    - +RemoveEvent()
+    - +EditEvent()
 
 ### Recurring - subclass of event
+  Extends Event
+  **Attributes:**
+    - RecurrenceInterval: Data
+  
+  **Methods:**
+    - +CreateRecurringEvent()
 
 # Noah
 
