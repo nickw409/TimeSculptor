@@ -25,9 +25,15 @@ Make UML class diagrams of:
 # Gabriel
 
 ### User
+  Attributes :
+  - Username : String
+  - UserID : Int
 
 ### Schedule
+  Attributes :
+  - 
 
+  
 # Nick
 
 ### Event
