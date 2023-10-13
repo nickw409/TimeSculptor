@@ -31,6 +31,7 @@ Make UML class diagrams of:
 
   **Methods :**
   - +CreateUsername()
+  - +EditUsername()
   - +CreateUserID()
 
 ### Schedule
@@ -39,7 +40,8 @@ Make UML class diagrams of:
 
   **Methods :**
   - +CreateScheduleName()
-  
+  - +EditScheduleName()
+
 # Nick
 
 ### Event
