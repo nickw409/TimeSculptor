@@ -13,7 +13,7 @@ Missing participants: None
 ## **Summary of Activities**
 
 **Gabriel:**
-
+- Contributed to Deliverable 3 but still working on it.
 
 **Izaac:**
 
