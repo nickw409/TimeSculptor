@@ -1,4 +1,4 @@
-# Report for Week 5 Meeting
+# Report for Week 6 Meeting
 
 Group 4: **TimeSculptor**
 
@@ -14,6 +14,8 @@ Missing participants: None
 
 **Gabriel:**
 
+- Contributed to Deliverable 3 but still working on it.
+
 **Izaac:**
 
 - Continued to follow react tutorials
@@ -22,11 +24,23 @@ Missing participants: None
 
 **Joey:**
 
+- Made the UML Class diagram for the given class descriptions from the other group members
+- Continued looking into node.js, and sqlite
+
 **Kimberly:**
+
+- Made class description for Day and Compare Requests
+- Continued looking into React
 
 **Nick:**
 
+- Made class description for Event and Recurring Event.
+- Learned networking fundamentals for backend.
+
 **Noah:**
+
+- Made the Notification and Setting classes to the best of my ability
+- Continued Udemy JavaScript Course to get comfortable
 
 ## **Project Retrospective**
 
