@@ -24,6 +24,8 @@ Missing participants: None
  - Continued looking into node.js, and sqlite
 
 **Kimberly:**
+- Made class description for Day and Compare Requests
+- Continued looking into React
 
 
 **Nick:**
