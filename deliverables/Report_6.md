@@ -26,6 +26,8 @@ Missing participants: None
 
 **Nick:**
 
+- Made class description for Event and Recurring Event.
+- Learned networking fundamentals for backend.
 
 **Noah:**
 
