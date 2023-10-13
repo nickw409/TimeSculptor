@@ -58,7 +58,25 @@ Make UML class diagrams of:
 
 ### Notification
 
+**Attributes:**
+- Content: String
+- SentDate: Date
+  
+**Methods:**
+- CreateNotification()
+- RemoveNotification()
+- EditNotification()
+- 
 ### Settings
+
+**Attributes:**
+- NotificationPreferences: String
+- ViewOptions: String
+
+**Methods:**
+- CreateSettings()
+- RemoveSettings()
+- EditSettings()
 
 # Kimberly
 
