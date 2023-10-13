@@ -31,7 +31,7 @@ Make UML class diagrams of:
 
 ### Schedule
   Attributes :
-  - 
+  - Insert attributes here
 
   
 # Nick
