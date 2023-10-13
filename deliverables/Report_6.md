@@ -30,6 +30,8 @@ Missing participants: None
 
 
 **Noah:**
+- Made the Notification and Setting classes to the best of my ability
+- Continued Udemy JavaScript Course to get comfortable
 
 ## **Project Retrospective**
 
