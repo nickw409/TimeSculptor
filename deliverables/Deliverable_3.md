@@ -22,6 +22,8 @@ The system requirements for TimeSculptor are defined thusly. First, **users** mu
 
 Make UML class diagrams of:
 
+![UML_Class_Diagram](../assets/Deliverable3_UML_Diagram.pdf)
+
 # Gabriel
 
 ### User
