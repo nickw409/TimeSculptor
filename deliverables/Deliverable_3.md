@@ -22,4 +22,4 @@ The system requirements for TimeSculptor are defined thusly. First, **users** mu
 
 ## 2. Model
 
-![UML_Class_Diagram](../assets/Deliverable3.jpg)
+![UML_Class_Diagram](../assets/Deliverable_3_UML_Diagram.jpg)
