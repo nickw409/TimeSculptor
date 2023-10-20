@@ -24,7 +24,8 @@ Missing participants: Noah Schwartz
 
 **Joey:**
 
-- Started working on the model for the database for the website 
+- Started working on the model for the database for the website
+- Completed slide for the midterm presentation on the UML use case diagram and completed the UML class diagram for the presentation 
 - Continued looking into node.js, and sqlite
 
 **Kimberly:**
