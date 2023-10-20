@@ -27,7 +27,8 @@ Missing participants: Noah Schwartz
 - Continued looking into node.js, and sqlite
 
 **Kimberly:**
-
+- Prepared for midterm presentation
+- Continued to learn React
 
 **Nick:**
 
