@@ -40,6 +40,8 @@ Missing participants: Noah Schwartz
 - Worked on more Javascript backend research, making a server that serves content successfully.
 
 **Noah:**
+- Participated in the group presentation. 
+- Did some more JavaScript practice on Udemy. 
 
 ## **Project Retrospective**
 
