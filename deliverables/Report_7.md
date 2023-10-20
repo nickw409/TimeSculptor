@@ -29,8 +29,8 @@ Missing participants: None
 
 **Kimberly:**
 
-- Made class description for Day and Compare Requests
-- Continued looking into React
+- Prepared for midterm presentation
+- Continued to learn React
 
 **Nick:**
 
