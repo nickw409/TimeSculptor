@@ -14,6 +14,9 @@ Missing participants: Noah Schwartz
 
 **Gabriel:**
 
+- Contributed to presentation and practice.
+- Continued to try to learn Javascript, React, and Node.
+
 **Izaac:**
 
 - Started building web pages in React, some of which could be used for the project.
@@ -22,9 +25,16 @@ Missing participants: Noah Schwartz
 
 **Joey:**
 
+- Started working on the model for the database for the website
+- Completed slide for the midterm presentation on the UML use case diagram and completed the UML class diagram for the presentation
+- Continued looking into node.js, and sqlite
+
 **Kimberly:**
 
 **Nick:**
+
+- Participated in the group presentation.
+- Worked on more Javascript backend research, making a server that serves content successfully.
 
 **Noah:**
 
