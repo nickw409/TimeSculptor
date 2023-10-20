@@ -64,6 +64,5 @@ Missing participants: Noah Schwartz
 
 ## **Decisions**
 
-- Have a meeting on Sunday @ 10AM to go over the slides.
-- Prioritize learning the assigned technologies next week.
-- Write actual code that will be used in the project.
+- Need to have a person dedicated to testing on either front end and/or back end
+- 
