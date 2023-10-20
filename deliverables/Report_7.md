@@ -4,9 +4,9 @@ Group 4: **TimeSculptor**
 
 Date and Location: 10/20/2023, Cline Library Room 182
 
-Present Participants: Izaac Molina, Nicholas Wiley, Kimberly Allison, Joey Banaszak, Gabriel Valentin, Noah Schwartz
+Present Participants: Izaac Molina, Nicholas Wiley, Kimberly Allison, Joey Banaszak, Gabriel Valentin
 
-Missing participants: None
+Missing participants: Noah Schwartz
 
 [Project repo](https://github.com/nickw409/TimeSculptor)
 
@@ -14,12 +14,17 @@ Missing participants: None
 
 **Gabriel:**
 
+- Contributed to presentation and practice.
+- Continued to try to learn Javascript, React, and Node.
 
 **Izaac:**
 
 
 **Joey:**
 
+- Started working on the model for the database for the website
+- Completed slide for the midterm presentation on the UML use case diagram and completed the UML class diagram for the presentation 
+- Continued looking into node.js, and sqlite
 
 **Kimberly:**
 
@@ -48,5 +53,7 @@ Missing participants: None
 
 
 ## **Decisions**
+
+- Need to have a person dedicated to testing on either front end and/or back end
 
 
