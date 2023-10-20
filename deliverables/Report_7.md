@@ -31,6 +31,9 @@ Missing participants: Noah Schwartz
 
 **Kimberly:**
 
+- Prepared for midterm presentation
+- Continued to learn React
+
 **Nick:**
 
 - Participated in the group presentation.
