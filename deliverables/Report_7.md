@@ -14,7 +14,8 @@ Missing participants: Noah Schwartz
 
 **Gabriel:**
 
-- Contributed to Deliverable 3 but still working on it.
+- Contributed to presentation and practice.
+- Continued to try to learn Javascript, React, and Node.
 
 **Izaac:**
 
