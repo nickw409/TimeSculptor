@@ -1,0 +1,17 @@
+.eventsDisplay {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.eventInfo {
+  display: flex;
+  justify-content: space-between; 
+  width: 99vw;
+  align-items: center; 
+}
+
+.eventInfo img {
+  height: 50px;
+  width: 50px;
+}
