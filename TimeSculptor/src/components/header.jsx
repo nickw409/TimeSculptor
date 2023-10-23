@@ -33,7 +33,7 @@ export default function Header() {
                             // sx={{ mr: 2 }} 
                             
                         >        
-                            <img src={Logo} alt="TimeSculptor" width="60" height="40" />
+                            <img src={Logo} alt="TimeSculptor" width="60px" height="40px" />
                         </IconButton> 
                     {/* </Link> */}
                     
