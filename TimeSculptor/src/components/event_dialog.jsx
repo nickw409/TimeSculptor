@@ -5,18 +5,9 @@ import { Button } from "@mui/material";
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 
-const AMorPM = [
-    {
-        value: "Morning",
-        label: "AM",
-    },
-
-    {
-        value: 'Afternoon',
-        label: "PM",
-    }
-];
-
+// This is the dialog box component, 
+// NOTE: addEvent method has been passed in, but not used yet
+// NOTE: close button is working, submit button has no functionality
 export default function EventDialog({open, closeFunction, addEvent})
 {
     return (
@@ -25,17 +16,20 @@ export default function EventDialog({open, closeFunction, addEvent})
             <DialogTitle>Add an Event</DialogTitle>
             <DialogContent>
                 <TextField
+                // text field for event name
                     id="eventName"
                     label="Event Name"
                     fullWidth
                     variant="filled"
                 />
                 <TextField
+                // text field for event date
                     id="date"
                     label="Date"
                     variant="filled"
                 />
                 <TextField
+                // text field for event time
                     id="time"
                     label="Time"
                     variant="filled"
