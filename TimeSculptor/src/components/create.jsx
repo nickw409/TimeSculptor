@@ -6,13 +6,16 @@ import { useState } from 'react';
 
 export default function AddEvent( {addEventFunction} ) { 
 
+    // useState that opens the event dialog component when the state is changed
     const [eventDialogOpen, setEventDialogOpen] = useState(false);
 
+    // passed into the event_dialog component below in order to close the dialog component
     function closeDialog()
     {
         setEventDialogOpen(false);
     }
 
+    // when the button is clicked, the dialog component is opened
     return (
         <Box justifyContent="center" alignItems="center" display="flex" border = "1px solid red" height = "100px" width = "100vw" marginTop="75px">
             <Button variant="contained"
