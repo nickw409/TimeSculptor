@@ -2,7 +2,15 @@
 
 ## Branching
 
-### For each assignment, a new branch needs to be created on the remote and everyone needs to track that branch
+### Standard branching pattern
+
+- Create a new branch as an offshoot from main. Each branch is a feature or\
+something of the likes.
+- Do local commits on this branch. DO NOT push this branch to remote.
+- Once feature is done, merge main branch into local branch to test for \
+breaking changes or merge commits. Once everything is clear only then merge \
+local into main. This is all happening on the local computer.
+- After merging into main, push main to remote and you are done.
   
 **For creating new remote branch that a local branch will track:**\
 git branch \<local-branch>\
