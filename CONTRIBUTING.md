@@ -2,17 +2,15 @@
 
 ## Branching
 
-### For each assignment, a new branch needs to be created on the remote and everyone needs to track that branch
-  
-**For creating new remote branch that a local branch will track:**\
-git branch \<local-branch>\
-git push --set-upstream \<origin> \<local-branch>\
+### The only remote branches will be main and releases. Pull main to local then\
+make a new branch from there and work on feature. Once done, do this:
 
-**For tracking a new remote branch that you are not tracking locally:**\
+git checkout main
+git pull
+git checkout feature-branch
+git merge main
 
-If no local branch exists:\
-git checkout --track \<origin/branch-name>\
+### Fix any problems at this point. Now main and feature-branch point to the \
+same commit. Push main to remote and everything should work out.
 
-If local branch already exists:\
-git checkout \<branch-name>\
-git branch -u \<origin/branch-name>
+## DO NOT COMMIT DIRECTLY TO MAIN EVER!
