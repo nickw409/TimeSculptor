@@ -4,6 +4,23 @@
   flex-direction: column;
 }
 
+.eventsDisplay img {
+  height: 50px;
+  width: 50px;
+}
+
+.statusCol {
+  width: 50px
+}
+
+.imageCol {
+  width: 60px;
+}
+
+td {
+  text-align: center;
+}
+
 .eventInfo {
   display: flex;
   justify-content: space-between; 

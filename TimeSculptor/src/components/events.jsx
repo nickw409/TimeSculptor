@@ -1,23 +1,35 @@
 import React from 'react';
-import Event from './singleEvent'
 import './events.css'
 
-export default function Events( {events} ) {
+export default function EventTable( {events} ) {
     return (
         <div className="eventsDisplay">
-            <h1>
+            <h2>
                 Events
-            </h1>
-
-            {events.map(event => (
-                <Event
-                    key={event.id} 
-                    title={event.title}
-                    date={event.date}
-                    image={event.icon}
-                    time={event.time}
-                />
-            ))}
+            </h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th className='statusCol'>Status</th>
+                        <th className='imageCol'>Image</th>
+                        <th>Title</th>
+                        <th>Time</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {events.map(event => (
+                        <tr key={event.id}>
+                            <td className='statusCol'><input type="checkbox" /></td>
+                            <td className='imageCol'><img src={event.icon} alt={event.id}/></td>
+                            <td>{event.title}</td>
+                            <td>{event.time}</td>
+                            <td>{event.date}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+            
         </div>
 
         

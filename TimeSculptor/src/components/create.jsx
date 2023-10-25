@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import EventDialog from './event_dialog';
 import { useState } from 'react';
 
-export default function AddEvent( {addEventFunction} ) { 
+export default function AddEvent( {addEventFunction}) { 
 
     // useState that opens the event dialog component when the state is changed
     const [eventDialogOpen, setEventDialogOpen] = useState(false);
