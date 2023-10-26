@@ -8,13 +8,11 @@ import { v4 as uuid } from "uuid"
 // This is the dialog box component, 
 // NOTE: addEvent method has been passed in, but not used yet
 // NOTE: close button is working, submit button has no functionality
-export default function EventDialog({open, closeFunction, addEvent})
+export default function EditDialog({open, closeFunction, editEvent, toEdit})
 {
     const [name, setName] = useState("");
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
-
-    const unique_id = uuid();
 
     const nameChange = (event) => {
         setName(event.target.value);
@@ -30,14 +28,14 @@ export default function EventDialog({open, closeFunction, addEvent})
 
     const formSubmit = () => {
         const newEvent = {
-            id: unique_id,
+            id: toEdit,
             title: name,
             date: date,
             time: time,
             icon: "/assets/images/login.png"
         }
 
-        addEvent(newEvent);
+        editEvent(newEvent);
 
         closeFunction();
     };
@@ -45,7 +43,7 @@ export default function EventDialog({open, closeFunction, addEvent})
     return (
         <>
             <Dialog open={open}>
-                <DialogTitle>Add an Event</DialogTitle>
+                <DialogTitle>Edit an Event</DialogTitle>
                 <DialogContent>
                     <TextField
                     // text field for event name

@@ -28,6 +28,23 @@ function App() {
   // this useState dynamically updates our list of events
   // when a new event is added
   const [events, setEvents] = useState(initialEvents);
+
+  const handleDeleteEvent = (targetId) => {
+    setEvents(events.filter(event => event.id !== targetId));
+  };
+
+  const handleEditEvent = (updatedEvent) => {
+    const index = events.findIndex((event) => event.id == updatedEvent.id)
+
+    if (index !== -1) {
+      const newEvents = [...events];
+      newEvents[index] = updatedEvent;
+      setEvents(newEvents);
+    }
+  };
+
+  
+
   const [count, setCount] = useState(0)
 
   // addEvent takes the array of events and updates it with the new event
@@ -42,7 +59,7 @@ function App() {
     <div className='appContainer'>
       <Header />
       <AddEvent addEventFunction={addEvent}/>
-      <Events events={events} />
+      <Events events={events} deleteEvent = {handleDeleteEvent} editEvent = {handleEditEvent}/>
     </div>
   )
 }

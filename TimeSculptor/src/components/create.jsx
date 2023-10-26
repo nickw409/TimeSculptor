@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from "@mui/material/Button";
 import Box from '@mui/material/Box';
-import EventDialog from './event_dialog';
+import AddDialog from './add_dialog'
 import { useState } from 'react';
 
 export default function AddEvent( {addEventFunction}) { 
@@ -26,7 +26,7 @@ export default function AddEvent( {addEventFunction}) {
             }}>
                 Add Event
             </Button>
-            <EventDialog open={eventDialogOpen} closeFunction={closeDialog} addEvent={addEventFunction}/>
+            <AddDialog open={eventDialogOpen} closeFunction={closeDialog} addEvent={addEventFunction}/>
         </Box>
     )
 }
