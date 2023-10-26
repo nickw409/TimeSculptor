@@ -1,18 +1,20 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogTitle, DialogActions, DialogContent } from "@mui/material";
 import { Button } from "@mui/material";
 import TextField from '@mui/material/TextField';
-import { v4 as uuid } from "uuid"
 
-// This is the dialog box component, 
-// NOTE: addEvent method has been passed in, but not used yet
-// NOTE: close button is working, submit button has no functionality
 export default function EditDialog({open, closeFunction, editEvent, toEdit})
 {
     const [name, setName] = useState("");
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
+
+    useEffect(() => {
+        setName(toEdit.title);
+        setDate(toEdit.date);
+        setTime(toEdit.time);
+    }, [toEdit]);
 
     const nameChange = (event) => {
         setName(event.target.value);
@@ -28,7 +30,7 @@ export default function EditDialog({open, closeFunction, editEvent, toEdit})
 
     const formSubmit = () => {
         const newEvent = {
-            id: toEdit,
+            id: toEdit.id,
             title: name,
             date: date,
             time: time,

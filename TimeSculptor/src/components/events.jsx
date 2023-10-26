@@ -1,16 +1,25 @@
 import React from 'react';
-import './events.css'
-import {BsFillTrashFill, BsFillPencilFill} from "react-icons/bs"
-import EditDialog from './edit_dialog'
+import './events.css';
+import {BsFillTrashFill, BsFillPencilFill} from "react-icons/bs";
+import EditDialog from './edit_dialog';
+import DeleteWarning from './delete_warning';
 import { useState } from 'react';
 
 export default function EventTable( {events, deleteEvent, editEvent } ) {
-    function closeDialog()
+    function closeEditDialog()
         {
             setEventDialogOpen(false);
         }
+    
+    function closeWarning()
+        {
+            setDeleteWarningOpen(false);
+        }
 
     const [eventDialogOpen, setEventDialogOpen] = useState(false);
+    const [deleteWarningOpen, setDeleteWarningOpen] = useState(false);
+    const [selectedEvent, setSelectedEvent] = useState({id: "", title: "", time: "", date: "", icon: ""})
+
 
     return (
         <div className="eventsDisplay">
@@ -39,20 +48,24 @@ export default function EventTable( {events, deleteEvent, editEvent } ) {
                             <td className='actionCol'>
                                 <span>
                                     <BsFillTrashFill className="actionButton" onClick={() => {
-                                        deleteEvent(event.id)
+                                        setDeleteWarningOpen(true)
+                                        setSelectedEvent(event)
                                     }}
                                     />
                                     <BsFillPencilFill className="actionButton" onClick = {() => {
                                         setEventDialogOpen(true)
+                                        setSelectedEvent(event)
                                     }}  
-                                    />
-                                    <EditDialog open={eventDialogOpen} closeFunction={closeDialog} editEvent={editEvent} toEdit={event.id}/>
+                                    />   
                                 </span>
                             </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
+
+            <EditDialog open={eventDialogOpen} closeFunction={closeEditDialog} editEvent={editEvent} toEdit={selectedEvent}/>
+            <DeleteWarning open={deleteWarningOpen} close={closeWarning} deleteEvent={deleteEvent} toDelete={selectedEvent}/>
             
         </div>
 
