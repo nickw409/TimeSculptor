@@ -8,7 +8,7 @@ import { v4 as uuid } from "uuid"
 // This is the dialog box component, 
 // NOTE: addEvent method has been passed in, but not used yet
 // NOTE: close button is working, submit button has no functionality
-export default function EventDialog({open, closeFunction, addEvent})
+export default function AddDialog({open, closeFunction, addEvent})
 {
     const [name, setName] = useState("");
     const [date, setDate] = useState("");

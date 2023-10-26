@@ -17,8 +17,21 @@
   width: 60px;
 }
 
+.timeCol, .dateCol {
+  width: 200px
+}
+
+.actionCol {
+  width: 80px;
+}
+
 td {
   text-align: center;
+}
+
+.actionButton {
+  margin: 5px;
+  cursor: pointer;
 }
 
 .eventInfo {
