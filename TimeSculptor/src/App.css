@@ -1,9 +1,9 @@
 * {
-    border: 1px solid red;
-    overflow: hidden
-  }
+  border: 1px solid red;
+  overflow: hidden;
+}
 
-.appContainer, body{
-    height: 100%;
-    width: 100%;
+.appContainer, body {
+  height: 100%;
+  width: 100%;
 }

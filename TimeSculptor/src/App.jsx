@@ -13,7 +13,8 @@ const initialEvents = [
       title: "Eat",
       date: "10/22/23",
       time: "12:00PM",
-      icon: "/assets/images/login.png"
+      icon: "/assets/images/login.png",
+      color: "#ff0000"
   },
 
   {
@@ -21,7 +22,8 @@ const initialEvents = [
       title: "Sleep",
       date: "10/24/23",
       time: "8:00PM",
-      icon: "/assets/images/register.png"
+      icon: "/assets/images/register.png",
+      color: "#008fa4"
   },
 
 ]
