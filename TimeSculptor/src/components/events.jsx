@@ -31,7 +31,6 @@ export default function EventTable( {events, deleteEvent, editEvent } ) {
                     <tr>
                         <th className='statusCol'>Status</th>
                         <th className='imageCol'>Image</th>
-                        <th className='colorCol'>Color</th>
                         <th>Title</th>
                         <th className='timeCol'>Time</th>
                         <th className='dateCol'>Date</th>
@@ -40,7 +39,7 @@ export default function EventTable( {events, deleteEvent, editEvent } ) {
                 </thead>
                 <tbody>
                     {events.map(event => (
-                        <tr key={event.id}>
+                        <tr key={event.id} style={{backgroundColor: event.color}}>
                             <td className='statusCol'><input type="checkbox" /></td>
                             <td className='imageCol'><img src={event.icon} alt={event.id}/></td>
                             <td>{event.title}</td>
