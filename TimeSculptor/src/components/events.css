@@ -4,25 +4,13 @@
   flex-direction: column;
 }
 
-.eventsDisplay img {
+.eventsDisplay img, .eventInfo img {
   height: 50px;
   width: 50px;
 }
 
-.statusCol {
-  width: 50px
-}
-
-.imageCol {
-  width: 60px;
-}
-
-.timeCol, .dateCol {
-  width: 200px
-}
-
-.actionCol {
-  width: 80px;
+.statusCol, .imageCol, .timeCol, .dateCol, .actionCol {
+  width: 50px;
 }
 
 td {
@@ -38,10 +26,5 @@ td {
   display: flex;
   justify-content: space-between; 
   width: 99vw;
-  align-items: center; 
-}
-
-.eventInfo img {
-  height: 50px;
-  width: 50px;
+  align-items: center;
 }
