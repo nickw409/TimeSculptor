@@ -72,6 +72,15 @@ export default function AddDialog({open, closeFunction, addEvent})
                         value={time}
                         onChange={timeChange}
                     />
+                    <TextField
+                    // color picker for color of event
+                        id="color"
+                        label="Color"
+                        type="color" 
+                        variant="filled"
+                        value={color}
+                        onChange={colorChange} 
+                    />
                 </DialogContent>
                 <DialogActions>
                     <Button onClick = {formSubmit}> Submit </Button>
