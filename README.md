@@ -58,7 +58,7 @@ Give an example
 - npm run dev
 
 ## In order to view online:
-Go to this link: [TimeSculptor](http://enginick.com:9000/)
+Go to this link: [TimeSculptor](http://enginick.com:9696/)
 
 ## Built With
 
