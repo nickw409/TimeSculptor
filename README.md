@@ -16,21 +16,12 @@ Software needed:
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+- navigate to the folder that contains package.json
+- open a terminal in that directory
+- input: npm install
+- input: npm run dev
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+If everything worked correctly, there should be a localhost with a port you can open in your preferred web browser for a development view.
 
 ## Running the tests
 
@@ -53,7 +44,7 @@ Give an example
 ```
 
 ## Deployment
-## For local deployment:
+## For local deployment (development):
 - npm install
 - npm run dev
 
