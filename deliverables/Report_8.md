@@ -6,7 +6,7 @@ Date and Location: 10/27/2023, Cline Library Room 183
 
 Present Participants: Izaac Molina, Nicholas Wiley, Kimberly Allison, Joey Banaszak, Gabriel Valentin, Noah Schwartz
 
-Missing participants: None (Hopefully)
+Missing participants: None 
 
 [Project repo](https://github.com/nickw409/TimeSculptor)
 
@@ -23,7 +23,7 @@ Missing participants: None (Hopefully)
 
 **Joey:**
 
-- 
+- developed testing programs in jest for the teams programs 
 
 **Kimberly:**
 
