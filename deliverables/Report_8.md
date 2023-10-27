@@ -27,7 +27,8 @@ Missing participants: None
 
 **Kimberly:**
 
-- 
+- Created dialog component in React
+- Added calendar for user date and time event inputs
 
 **Nick:**
 
