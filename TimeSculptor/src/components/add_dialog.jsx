@@ -13,6 +13,7 @@ export default function AddDialog({open, closeFunction, addEvent})
     const [name, setName] = useState("");
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
+    const [color, setColor] = useState("");
 
     const unique_id = uuid();
 
@@ -28,12 +29,17 @@ export default function AddDialog({open, closeFunction, addEvent})
         setTime(event.target.value)
     };
 
+    const colorChange = (event) => {
+        setColor(event.target.value);
+    }
+
     const formSubmit = () => {
         const newEvent = {
             id: unique_id,
             title: name,
             date: date,
             time: time,
+            color: color,
             icon: "/assets/images/login.png"
         }
 
@@ -73,7 +79,6 @@ export default function AddDialog({open, closeFunction, addEvent})
                         onChange={timeChange}
                     />
                     <TextField
-                    // color picker for color of event
                         id="color"
                         label="Color"
                         type="color" 
