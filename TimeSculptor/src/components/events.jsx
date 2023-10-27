@@ -18,7 +18,7 @@ export default function EventTable( {events, deleteEvent, editEvent } ) {
 
     const [eventDialogOpen, setEventDialogOpen] = useState(false);
     const [deleteWarningOpen, setDeleteWarningOpen] = useState(false);
-    const [selectedEvent, setSelectedEvent] = useState({id: "", title: "", time: "", date: "", icon: ""})
+    const [selectedEvent, setSelectedEvent] = useState({id: "", title: "", time: "", date: "", icon: "", color: ""})
 
 
     return (
@@ -39,12 +39,15 @@ export default function EventTable( {events, deleteEvent, editEvent } ) {
                 </thead>
                 <tbody>
                     {events.map(event => (
-                        <tr key={event.id}>
+                        <tr key={event.id} style={{backgroundColor: event.color}}>
                             <td className='statusCol'><input type="checkbox" /></td>
                             <td className='imageCol'><img src={event.icon} alt={event.id}/></td>
                             <td>{event.title}</td>
                             <td className='timeCol'>{event.time}</td>
                             <td className='dateCol'>{event.date}</td>
+                            <td className='colorCol'>
+                                <div style={{backgroundColor: event.color, width: '100%', height: '100%'}}></div>
+                            </td> 
                             <td className='actionCol'>
                                 <span>
                                     <BsFillTrashFill className="actionButton" onClick={() => {
