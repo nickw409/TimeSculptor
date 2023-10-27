@@ -18,8 +18,8 @@ Software needed:
 
 - navigate to the folder that contains package.json
 - open a terminal in that directory
-- input: npm install
-- input: npm run dev
+- **input:** npm install
+- **input:** npm run dev
 
 If everything worked correctly, there should be a localhost with a port you can open in your preferred web browser for a development view.
 
