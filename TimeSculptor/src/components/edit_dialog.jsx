@@ -4,36 +4,34 @@ import { Dialog, DialogTitle, DialogActions, DialogContent } from "@mui/material
 import { Button } from "@mui/material";
 import TextField from '@mui/material/TextField';
 
+// imports for date/time picker components
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
+
 export default function EditDialog({open, closeFunction, editEvent, toEdit})
 {
     const [name, setName] = useState("");
-    const [date, setDate] = useState("");
-    const [time, setTime] = useState("");
+    const [dateTime, setDateTime] = useState("");
 
     useEffect(() => {
         setName(toEdit.title);
-        setDate(toEdit.date);
-        setTime(toEdit.time);
+        setDateTime(toEdit.dateAndTime);
     }, [toEdit]);
 
     const nameChange = (event) => {
         setName(event.target.value);
     };
 
-    const dateChange = (event) => {
-        setDate(event.target.value);
-    };
-
-    const timeChange = (event) => {
-        setTime(event.target.value)
+    const dateTimeChange = (date) => {
+        setDateTime(date);
     };
 
     const formSubmit = () => {
         const newEvent = {
             id: toEdit.id,
             title: name,
-            date: date,
-            time: time,
+            dateAndTime: dateTime,
             icon: "/assets/images/login.png"
         }
 
@@ -56,22 +54,15 @@ export default function EditDialog({open, closeFunction, editEvent, toEdit})
                         value = {name}
                         onChange={nameChange}
                     />
-                    <TextField
-                    // text field for event date
-                        id="date"
-                        label="Date"
-                        variant="filled"
-                        value={date}
-                        onChange={dateChange}
+                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <DateTimePicker
+                        sx= {{overflow:"visible"}}
+                        label="Event Date/Time"
+                        disablePast
+                        value={dateTime}
+                        onChange={dateTimeChange}
                     />
-                    <TextField
-                    // text field for event time
-                        id="time"
-                        label="Time"
-                        variant="filled"
-                        value={time}
-                        onChange={timeChange}
-                    />
+                    </LocalizationProvider>
                 </DialogContent>
                 <DialogActions>
                     <Button onClick = {formSubmit}> Submit </Button>
