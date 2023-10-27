@@ -76,12 +76,12 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Kimberly Allison** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Joey Banaszak** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Izaac Molina** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Noah Schwartz** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Gabriel Valentin** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Nicholas Wiley** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Kimberly Allison** - *Initial work* - [KimberlyAllison](https://github.com/PurpleBooth)
+* **Joey Banaszak** - *Initial work* - [JoeyBanaszak](https://github.com/PurpleBooth)
+* **Izaac Molina** - *Initial work* - [IzaacMolina](https://github.com/PurpleBooth)
+* **Noah Schwartz** - *Initial work* - [NoahSchwartz](https://github.com/PurpleBooth)
+* **Gabriel Valentin** - *Initial work* - [GabrielValentin](https://github.com/PurpleBooth)
+* **Nicholas Wiley** - *Initial work* - [NicholasWiley](https://github.com/PurpleBooth)
 
 See also the list of [contributors]([https://github.com/your/project/contributors](https://github.com/nickw409/TimeSculptor/graphs/contributors)) who participated in this project.
 
