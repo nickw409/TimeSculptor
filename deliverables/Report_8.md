@@ -14,7 +14,8 @@ Missing participants: None (Hopefully)
 
 **Gabriel:**
 
-- 
+- Created new branches and setup outlines for deliverable 4 and report 8
+- Attempting to create symbols for events in TimeScriptor
 
 **Izaac:**
 
