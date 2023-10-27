@@ -34,7 +34,8 @@ Missing participants: None (Hopefully)
 
 **Noah:**
 
-- 
+- Did some work on the color coding feature for events
+- Will most likely be making the video of the demo and submitting Deliverable 4
 
 ## **Project Retrospective**
 
