@@ -14,15 +14,11 @@ app.use(cors({
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
-
 app.use('/login', jsonParser, cors(), (req, res) => {
   console.log(req.body);
   if(req.body?.username !== undefined && req.body.username === 'admin') {
     if(req.body?.password !== undefined && req.body.password === 'password') {
-      res.setHeader('Access-Control-Allow-Origin', "http://enginick.com:9696");
+      res.setHeader('Access-Control-Allow-Origin', "*");
       res.setHeader('Access-Control-Allow-Headers', true);
       res.setHeader('Access-Control-Allow-Credentials', true);
       res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
