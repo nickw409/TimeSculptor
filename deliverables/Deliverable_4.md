@@ -18,11 +18,61 @@ Group 4: **TimeSculptor**
 Provide a short paragraph that describes your system. This paragraph should contain the value proposition and a description of the main features of the software. 
 At the end of the introduction, include a link to your project on GitHub
 
+TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provides a much easier and accessible interface for those people and features ADHD friendly User Interface. The expected consumer segment are individuals suffering from ADHD. Upon logging in, you are then given the options to create or edit your schedule. You can utilize color coding, and assigning different symbols to your events. 
+
 # Implemented Requirements
 
 List in this section, the requirements and associated pull request that you implemented for this release, following the example below---
 include the description of the requirement, a link to the issue, a link to the pull request(s) that implement the requirement, who implemented the requirement, 
-who approved it, and a print screen that depicts the implemented feature (if applicable). I expect that you implement the features you specified in your MVP (c.f. D.2 Requirements). 
+who approved it, and a print screen that depicts the implemented feature (if applicable). I expect that you implement the features you specified in your MVP (c.f. D.2 Requirements).
+
+Example:
+Requirement: As someone who associates events with pictures, I would like to label events with pictures. 
+Issue: <link to your GitHub issue>
+Pull request: 
+Implemented by: Gabriel Valentin
+Approved by: 
+Print screen: 
+
+Example:
+Requirement:
+Issue: <link to your GitHub issue>
+Pull request: 
+Implemented by: 
+Approved by: 
+Print screen: 
+
+Example:
+Requirement:
+Issue: <link to your GitHub issue>
+Pull request: 
+Implemented by: 
+Approved by: 
+Print screen: 
+
+Example:
+Requirement:
+Issue: <link to your GitHub issue>
+Pull request: 
+Implemented by: 
+Approved by: 
+Print screen: 
+
+Example:
+Requirement:
+Issue: <link to your GitHub issue>
+Pull request: 
+Implemented by: 
+Approved by: 
+Print screen: 
+
+Example:
+Requirement:
+Issue: <link to your GitHub issue>
+Pull request: 
+Implemented by: 
+Approved by: 
+Print screen: 
 
 # Tests
 
