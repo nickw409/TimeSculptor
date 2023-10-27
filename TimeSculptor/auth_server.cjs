@@ -8,7 +8,7 @@ const port = 6969;
 var jsonParser = bodyParser.json();
 
 app.use(cors({
-  origin:['http:enginick.com:9696', 'http://142.11.234.231:9696'],
+  origin:['http:enginick.com:9696', 'http://142.11.234.231:9696', 'http://localhost:9696'],
   credentials:true
 }));
 
@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
-app.use('/login', jsonParser, (req, res) => {
+app.use('/login', jsonParser, cors(), (req, res) => {
   console.log(req.body);
   if(req.body?.username !== undefined && req.body.username === 'admin') {
     if(req.body?.password !== undefined && req.body.password === 'password') {
