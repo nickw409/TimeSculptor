@@ -9,7 +9,9 @@ async function loginUser(credentials) {
          'Content-Type': 'application/json'
       },
       body: JSON.stringify(credentials)
-   }).then(data => data.json())
+   }).then(data => data.json()).catch(err => {
+      console.log("Error fetching token:", err);
+   })
 }
 
 export default function Login({ setToken }) {
