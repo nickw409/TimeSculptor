@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import { redirect, BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/header'
 import AddEvent from './components/create'
 import Events from './components/events'
+import Login from './components/login';
 import './App.css'
 
 // for testing purposes this is used to populate list initially
@@ -28,6 +30,7 @@ function App() {
   // this useState dynamically updates our list of events
   // when a new event is added
   const [events, setEvents] = useState(initialEvents);
+  const [token, setToken] = useState();
 
   const handleDeleteEvent = (targetId) => {
     setEvents(events.filter(event => event.id !== targetId));
@@ -43,8 +46,6 @@ function App() {
     }
   };
 
-  
-
   const [count, setCount] = useState(0)
 
   // addEvent takes the array of events and updates it with the new event
@@ -52,6 +53,12 @@ function App() {
     const oldEvents = [...events];
     oldEvents.push(newEvent);
     setEvents(oldEvents);
+  }
+
+  if (!token) {
+    return <Login setToken={setToken} />
+  } else if (token.token !== 'admin') {
+    return <Login setToken={setToken} />
   }
 
   // main display
