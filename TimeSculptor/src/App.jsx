@@ -12,13 +12,15 @@ const initialEvents = [
       title: "Eat",
       dateAndTime: dayjs(new Date( 2023, 12, 24)),
       icon: "/assets/images/login.png"
+      color: "#ff0000"
   },
 
   {
       id: "2",
-      title: "Sleep",
+      title: "Sleep",      
       dateAndTime: dayjs(new Date( 2023, 11, 16)),
       icon: "/assets/images/register.png"
+      color: "#008fa4"
   },
 
 ]

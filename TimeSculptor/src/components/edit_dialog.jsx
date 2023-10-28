@@ -12,11 +12,13 @@ import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 export default function EditDialog({open, closeFunction, editEvent, toEdit})
 {
     const [name, setName] = useState("");
-    const [dateTime, setDateTime] = useState("");
+    const [dateTime, setDateTime] = useState("");;
+    const [color, setColor] = useState(""); 
 
     useEffect(() => {
         setName(toEdit.title);
         setDateTime(toEdit.dateAndTime);
+        setColor(toEdit.color); 
     }, [toEdit]);
 
     const nameChange = (event) => {
@@ -27,11 +29,16 @@ export default function EditDialog({open, closeFunction, editEvent, toEdit})
         setDateTime(date);
     };
 
+    const colorChange = (event) => { 
+        setColor(event.target.value);
+    };
+
     const formSubmit = () => {
         const newEvent = {
             id: toEdit.id,
             title: name,
             dateAndTime: dateTime,
+            color: color, 
             icon: "/assets/images/login.png"
         }
 
@@ -46,7 +53,6 @@ export default function EditDialog({open, closeFunction, editEvent, toEdit})
                 <DialogTitle>Edit an Event</DialogTitle>
                 <DialogContent>
                     <TextField
-                    // text field for event name
                         id="eventName"
                         label="Event Name"
                         fullWidth
@@ -63,6 +69,14 @@ export default function EditDialog({open, closeFunction, editEvent, toEdit})
                         onChange={dateTimeChange}
                     />
                     </LocalizationProvider>
+                    <TextField
+                        id="color"
+                        label="Color"
+                        type="color" 
+                        variant="filled"
+                        value={color}
+                        onChange={colorChange} 
+                    />
                 </DialogContent>
                 <DialogActions>
                     <Button onClick = {formSubmit}> Submit </Button>

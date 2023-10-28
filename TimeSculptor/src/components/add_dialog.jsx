@@ -17,6 +17,7 @@ export default function AddDialog({open, closeFunction, addEvent})
 {
     const [name, setName] = useState("");
     const [dateTime, setDateTime] = useState("");
+    const [color, setColor] = useState("");
 
     const unique_id = uuid();
 
@@ -28,11 +29,16 @@ export default function AddDialog({open, closeFunction, addEvent})
         setDateTime(date);
     };
 
+    const colorChange = (event) => {
+        setColor(event.target.value);
+    }
+
     const formSubmit = () => {
         const newEvent = {
             id: unique_id,
             title: name,
-            dateAndTime: dateTime,
+            dateAndTime: dateTime,            
+            color: color,
             icon: "/assets/images/login.png"
         }
 
@@ -55,15 +61,22 @@ export default function AddDialog({open, closeFunction, addEvent})
                         value = {name}
                         onChange={nameChange}
                     />
-                    <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <DateTimePicker
-                        label="Event Date/Time"
-                        sx={{overflow:"visible"}}
-                        disablePast
-                        value={dateTime}
-                        onChange={dateTimeChange}
+                    <TextField
+                    // text field for event date
+                        id="date"
+                        label="Date"
+                        variant="filled"
+                        value={date}
+                        onChange={dateChange}
                     />
-                    </LocalizationProvider>
+                    <TextField
+                        id="color"
+                        label="Color"
+                        type="color" 
+                        variant="filled"
+                        value={color}
+                        onChange={colorChange} 
+                    />
                 </DialogContent>
                 <DialogActions>
                     <Button onClick = {formSubmit}> Submit </Button>
