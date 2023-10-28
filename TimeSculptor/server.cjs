@@ -3,11 +3,18 @@ const path = require('path');
 
 const app = express();
 const port = 9696;
+let loggedIn = false;
 
 app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+//app.post("/login", (req, res) => {
+
+//})
+
+app.get("/status", (req, res) => {
+  const status = {"Status":true};
+  res.json(status);
 });
 
 app.listen(port, () => {

@@ -1,30 +1,32 @@
 import React, {useState} from 'react';
-import { PropTypes } from 'prop-types';
 import './login.css';
 
 async function loginUser(credentials) {
-   return fetch('http://localhost:6969/login', {
-      method: 'POST',
+   return fetch('/status', {
+      method: 'GET',
       headers: {
          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(credentials)
-   }).then(data => data.json()).catch(err => {
+      }
+   }).then(data => data.json()).then(data => {
+      console.log(data);
+      return data;
+   }).catch(err => {
       console.log("Error fetching token:", err);
    })
 }
 
-export default function Login({ setToken }) {
+export default function Login({ loggedIn, setLoggedIn }) {
    const [username, setUserName] = useState("");
    const [password, setPassword] = useState("");
 
-   const handleSubmit = async e => {
+   const handleSubmit = async (e) => {
       e.preventDefault();
-      const token = await loginUser({
+      const status = await loginUser({
          username,
          password 
       });
-      setToken(token);
+      console.log(status);
+      setLoggedIn(status.Status);
       setUserName("");
       setPassword("");
    }
@@ -50,8 +52,4 @@ export default function Login({ setToken }) {
          </form>
       </div>
    )
-}
-
-Login.propTypes = {
-   setToken: PropTypes.func.isRequired
 }
