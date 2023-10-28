@@ -33,8 +33,8 @@ Missing participants: None
 **Nick:**
 
 - Added Login Screen implementation, resolving issue #49 on Github.
-- Created authentication server.
-- Created script to deploy necessary servers in one command.
+- Created REST API.
+- Created script to deploy API.
 
 **Noah:**
 
