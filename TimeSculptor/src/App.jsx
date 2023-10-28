@@ -11,7 +11,7 @@ const initialEvents = [
       id: "1",
       title: "Eat",
       dateAndTime: dayjs(new Date( 2023, 12, 24)),
-      icon: "/assets/images/login.png"
+      icon: "/assets/images/login.png",
       color: "#ff0000"
   },
 
@@ -19,7 +19,7 @@ const initialEvents = [
       id: "2",
       title: "Sleep",      
       dateAndTime: dayjs(new Date( 2023, 11, 16)),
-      icon: "/assets/images/register.png"
+      icon: "/assets/images/register.png",
       color: "#008fa4"
   },
 

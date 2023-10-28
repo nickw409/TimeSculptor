@@ -12,7 +12,7 @@ import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 export default function EditDialog({open, closeFunction, editEvent, toEdit})
 {
     const [name, setName] = useState("");
-    const [dateTime, setDateTime] = useState("");;
+    const [dateTime, setDateTime] = useState("");
     const [color, setColor] = useState(""); 
 
     useEffect(() => {
@@ -53,6 +53,7 @@ export default function EditDialog({open, closeFunction, editEvent, toEdit})
                 <DialogTitle>Edit an Event</DialogTitle>
                 <DialogContent>
                     <TextField
+                    // text field for event name
                         id="eventName"
                         label="Event Name"
                         fullWidth
@@ -76,7 +77,7 @@ export default function EditDialog({open, closeFunction, editEvent, toEdit})
                         variant="filled"
                         value={color}
                         onChange={colorChange} 
-                    />
+                    />                    
                 </DialogContent>
                 <DialogActions>
                     <Button onClick = {formSubmit}> Submit </Button>

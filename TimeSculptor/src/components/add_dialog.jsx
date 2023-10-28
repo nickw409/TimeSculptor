@@ -61,14 +61,15 @@ export default function AddDialog({open, closeFunction, addEvent})
                         value = {name}
                         onChange={nameChange}
                     />
-                    <TextField
-                    // text field for event date
-                        id="date"
-                        label="Date"
-                        variant="filled"
-                        value={date}
-                        onChange={dateChange}
+                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <DateTimePicker
+                        label="Event Date/Time"
+                        sx={{overflow:"visible"}}
+                        disablePast
+                        value={dateTime}
+                        onChange={dateTimeChange}
                     />
+                    </LocalizationProvider>
                     <TextField
                         id="color"
                         label="Color"
