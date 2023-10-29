@@ -32,12 +32,12 @@ Implemented by: Gabriel Valentin
 Approved by: 
 Print screen: 
 
-Requirement: change color switcher to preset colors, change red borders to black/no borders (depending on where) 
-Issue: https://github.com/nickw409/TimeSculptor/issues/57
-Pull request: Fixes some CSS and changed the color picker from an HTML5 color pallette to the 3 primary and 3 secondary colors 
-Implemented by: Noah Schwartz
-Approved by: Nick Wiley
-Print screen: 
+**Requirement:** change color switcher to preset colors, change red borders to black/no borders (depending on where) 
+**Issue:** https://github.com/nickw409/TimeSculptor/issues/57
+**Pull request:** Fixes some CSS and changed the color picker from an HTML5 color pallette to the 3 primary and 3 secondary colors 
+**Implemented by:** Noah Schwartz
+**Approved by:** Nick Wiley
+**Print screen:**
 ![Color Code](../assets/colorcode.png)
 
 Example:
