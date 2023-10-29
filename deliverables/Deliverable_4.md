@@ -18,7 +18,9 @@ Group 4: **TimeSculptor**
 Provide a short paragraph that describes your system. This paragraph should contain the value proposition and a description of the main features of the software. 
 At the end of the introduction, include a link to your project on GitHub
 
-TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provides a much easier and accessible interface for those people and features ADHD friendly User Interface. The expected consumer segment are individuals suffering from ADHD. Upon logging in, you are then given the options to create or edit your schedule. You can utilize color coding, and assigning different symbols to your events. 
+TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provides a much easier and accessible interface for those people and features ADHD friendly User Interface. The expected consumer segment are individuals suffering from ADHD. Upon logging in, you are then given the options to create events or edit your schedule's current events. You can utilize color coding, and assigning different symbols to your events. 
+
+[TimeSculptor](https://github.com/nickw409/TimeSculptor)
 
 # Implemented Requirements
 
