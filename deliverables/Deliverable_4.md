@@ -38,7 +38,7 @@ Pull request: Fixes some CSS and changed the color picker from an HTML5 color pa
 Implemented by: Noah Schwartz
 Approved by: Nick Wiley
 Print screen: 
-[Color Code](https://github.com/nickw409/TimeSculptor/tree/deliverable-4/assets)
+[Color Code](https://github.com/nickw409/TimeSculptor/blob/deliverable-4/assets/colorcode.png)
 
 Example:
 Requirement:
