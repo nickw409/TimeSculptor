@@ -10,6 +10,9 @@ import { DateTimePicker, dateTimePickerTabsClasses } from '@mui/x-date-pickers/D
 import MenuItem from '@mui/material/MenuItem';
 
 export default function AddDialog({ open, closeFunction, addEvent }) {
+    // This is the dialog box component, 
+    // NOTE: addEvent method has been passed in, but not used yet
+    // NOTE: close button is working, submit button has no functionality
     const [name, setName] = useState("");
     const [dateTime, setDateTime] = useState("");
     const [color, setColor] = useState("");
