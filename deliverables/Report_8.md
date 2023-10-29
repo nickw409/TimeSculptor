@@ -27,14 +27,23 @@ Missing participants: None
 
 **Joey:**
 
+- developed testing programs in jest for the teams programs
+
 **Kimberly:**
 
+- Created dialog component in React
+- Added calendar for user date and time event inputs
+
 **Nick:**
+
+- Added Login Screen implementation, resolving issue #49 on Github.
+- Created REST API.
+- Created script to deploy API.
 
 **Noah:**
 
 - Did some work on the color coding feature for events
-- Will most likely be making the video of the demo and submitting Deliverable 4
+- Will likely be making the video of the demo and submitting Deliverable 4
 
 ## **Project Retrospective**
 
