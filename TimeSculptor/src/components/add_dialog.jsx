@@ -4,17 +4,15 @@ import { Dialog, DialogTitle, DialogActions, DialogContent } from "@mui/material
 import { Button } from "@mui/material";
 import TextField from '@mui/material/TextField';
 import { v4 as uuid } from "uuid"
-
-// imports for date/time picker components
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
+import { DateTimePicker, dateTimePickerTabsClasses } from '@mui/x-date-pickers/DateTimePicker';
+import MenuItem from '@mui/material/MenuItem';
 
-// This is the dialog box component, 
-// NOTE: addEvent method has been passed in, but not used yet
-// NOTE: close button is working, submit button has no functionality
-export default function AddDialog({open, closeFunction, addEvent})
-{
+export default function AddDialog({ open, closeFunction, addEvent }) {
+    // This is the dialog box component, 
+    // NOTE: addEvent method has been passed in, but not used yet
+    // NOTE: close button is working, submit button has no functionality
     const [name, setName] = useState("");
     const [dateTime, setDateTime] = useState("");
     const [color, setColor] = useState("");
@@ -37,7 +35,7 @@ export default function AddDialog({open, closeFunction, addEvent})
         const newEvent = {
             id: unique_id,
             title: name,
-            dateAndTime: dateTime,            
+            dateAndTime: dateTime,
             color: color,
             icon: "/assets/images/login.png"
         }
@@ -53,34 +51,41 @@ export default function AddDialog({open, closeFunction, addEvent})
                 <DialogTitle>Add an Event</DialogTitle>
                 <DialogContent>
                     <TextField
-                    // text field for event name
                         id="eventName"
                         label="Event Name"
                         fullWidth
                         variant="filled"
-                        value = {name}
+                        value={name}
                         onChange={nameChange}
                     />
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <DateTimePicker
-                        label="Event Date/Time"
-                        sx={{overflow:"visible"}}
-                        disablePast
-                        value={dateTime}
-                        onChange={dateTimeChange}
-                    />
+                        <DateTimePicker
+                            label="Event Date/Time"
+                            sx={{ overflow: "visible" }}
+                            disablePast
+                            value={dateTime}
+                            onChange={dateTimeChange}
+                        />
                     </LocalizationProvider>
                     <TextField
-                        id="color"
-                        label="Color"
-                        type="color" 
-                        variant="filled"
-                        value={color}
-                        onChange={colorChange} 
-                    />
+                          id="color"
+                          select
+                          label="Color"
+                          type="color"
+                          variant="filled"
+                          value={color}
+                          onChange={colorChange}
+                      >
+                          <MenuItem value="#ff0000">Red</MenuItem>
+                          <MenuItem value="#0000ff">Blue</MenuItem>
+                          <MenuItem value="#ffff00">Yellow</MenuItem>
+                          <MenuItem value="#00ff00">Green</MenuItem>
+                          <MenuItem value="#6600ff">Purple</MenuItem>
+                          <MenuItem value="#ff6600">Orange</MenuItem>
+                      </TextField>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick = {formSubmit}> Submit </Button>
+                    <Button onClick={formSubmit}> Submit </Button>
                     <Button onClick={() => closeFunction()}>Close</Button>
                 </DialogActions>
             </Dialog>
