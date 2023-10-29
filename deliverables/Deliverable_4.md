@@ -121,4 +121,4 @@ In retrospective, describe what your team learned during this first release and 
 
 # Demo
 
-Include a link to a video showing the system working.
+[TimeSculptorDemo](https://www.youtube.com/watch?v=-RkIyF8fUwQ)
