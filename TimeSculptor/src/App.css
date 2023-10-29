@@ -1,7 +1,6 @@
 * {
   border: 1px solid red;
-  overflow: hidden;
-}
+  }
 
 .appContainer, body {
   height: 100%;
