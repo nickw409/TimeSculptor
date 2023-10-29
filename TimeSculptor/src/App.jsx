@@ -1,27 +1,29 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { redirect, BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/header'
 import AddEvent from './components/create'
 import Events from './components/events'
+import Login from './components/login';
 import './App.css'
+import dayjs from 'dayjs'
+import { unstable_composeClasses } from '@mui/material';
 
 // for testing purposes this is used to populate list initially
 const initialEvents = [
   {
       id: "1",
       title: "Eat",
-      date: "10/22/23",
-      time: "12:00PM",
+      dateAndTime: dayjs(new Date( 2023, 12, 24)),
       icon: "/assets/images/login.png",
-      color: "#ff0000"
+      color: "#6600ff"
   },
 
   {
       id: "2",
-      title: "Sleep",
-      date: "10/24/23",
-      time: "8:00PM",
+      title: "Sleep",      
+      dateAndTime: dayjs(new Date( 2023, 11, 16)),
       icon: "/assets/images/register.png",
-      color: "#008fa4"
+      color: "#ff6600"
   },
 
 ]
@@ -30,6 +32,7 @@ function App() {
   // this useState dynamically updates our list of events
   // when a new event is added
   const [events, setEvents] = useState(initialEvents);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const handleDeleteEvent = (targetId) => {
     setEvents(events.filter(event => event.id !== targetId));
@@ -45,26 +48,32 @@ function App() {
     }
   };
 
-  
-
   const [count, setCount] = useState(0)
 
+  useEffect(() => {
+    console.log(loggedIn);
+  }, [loggedIn])
+
   // addEvent takes the array of events and updates it with the new event
-  function addEvent( newEvent ) {
+  function addEvent(newEvent) {
     const oldEvents = [...events];
     oldEvents.push(newEvent);
     setEvents(oldEvents);
   }
 
-  // main display
-  return (
-    <div className='appContainer'>
-      <Header />
-      <AddEvent addEventFunction={addEvent}/>
-      <Events events={events} deleteEvent = {handleDeleteEvent} editEvent = {handleEditEvent}/>
-    </div>
-  )
-}
+  if (loggedIn) {
+    // main display
+    return (
+      <div className='appContainer'>
+        <Header />
+        <AddEvent addEventFunction={addEvent} />
+        <Events events={events} deleteEvent={handleDeleteEvent} editEvent={handleEditEvent} />
+      </div>
+    )
+  } else {
+    return <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+  }
 
+}
 
 export default App
