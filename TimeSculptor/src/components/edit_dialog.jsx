@@ -3,34 +3,33 @@ import { useState, useEffect } from "react";
 import { Dialog, DialogTitle, DialogActions, DialogContent } from "@mui/material";
 import { Button } from "@mui/material";
 import TextField from '@mui/material/TextField';
+import MenuItem from '@mui/material/MenuItem';
 
-export default function EditDialog({open, closeFunction, editEvent, toEdit})
-{
+// imports for date/time picker components
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
+
+export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
     const [name, setName] = useState("");
-    const [date, setDate] = useState("");
-    const [time, setTime] = useState("");
-    const [color, setColor] = useState(""); 
+    const [dateTime, setDateTime] = useState("");
+    const [color, setColor] = useState("");
 
     useEffect(() => {
         setName(toEdit.title);
-        setDate(toEdit.date);
-        setTime(toEdit.time);
-        setColor(toEdit.color); 
+        setDateTime(toEdit.dateAndTime);
+        setColor(toEdit.color);
     }, [toEdit]);
 
     const nameChange = (event) => {
         setName(event.target.value);
     };
 
-    const dateChange = (event) => {
-        setDate(event.target.value);
+    const dateTimeChange = (date) => {
+        setDateTime(date.toDate());
     };
 
-    const timeChange = (event) => {
-        setTime(event.target.value)
-    };
-
-    const colorChange = (event) => { 
+    const colorChange = (event) => {
         setColor(event.target.value);
     };
 
@@ -38,9 +37,8 @@ export default function EditDialog({open, closeFunction, editEvent, toEdit})
         const newEvent = {
             id: toEdit.id,
             title: name,
-            date: date,
-            time: time,
-            color: color, 
+            dateAndTime: dateTime,
+            color: color,
             icon: "/assets/images/login.png"
         }
 
@@ -55,38 +53,42 @@ export default function EditDialog({open, closeFunction, editEvent, toEdit})
                 <DialogTitle>Edit an Event</DialogTitle>
                 <DialogContent>
                     <TextField
+                        // text field for event name
                         id="eventName"
                         label="Event Name"
                         fullWidth
                         variant="filled"
-                        value = {name}
+                        value={name}
                         onChange={nameChange}
                     />
-                    <TextField
-                        id="date"
-                        label="Date"
-                        variant="filled"
-                        value={date}
-                        onChange={dateChange}
-                    />
-                    <TextField
-                        id="time"
-                        label="Time"
-                        variant="filled"
-                        value={time}
-                        onChange={timeChange}
-                    />
+                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                        <DateTimePicker
+                            sx={{ overflow: "visible" }}
+                            label="Event Date/Time"
+                            disablePast
+                            value={dateTime}
+                            onChange={dateTimeChange}
+                        />
+                    </LocalizationProvider>
                     <TextField
                         id="color"
+                        select
                         label="Color"
-                        type="color" 
+                        type="color"
                         variant="filled"
                         value={color}
-                        onChange={colorChange} 
-                    />
+                        onChange={colorChange}
+                    >
+                        <MenuItem value="#ff0000">Red</MenuItem>
+                          <MenuItem value="#0000ff">Blue</MenuItem>
+                          <MenuItem value="#ffff00">Yellow</MenuItem>
+                          <MenuItem value="#00ff00">Green</MenuItem>
+                          <MenuItem value="#6600ff">Purple</MenuItem>
+                          <MenuItem value="#ff6600">Orange</MenuItem>
+                    </TextField>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick = {formSubmit}> Submit </Button>
+                    <Button onClick={formSubmit}> Submit </Button>
                     <Button onClick={() => closeFunction()}>Close</Button>
                 </DialogActions>
             </Dialog>
