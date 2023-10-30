@@ -79,12 +79,11 @@ export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
                         value={color}
                         onChange={colorChange}
                     >
-                        <MenuItem value="#ff0000">Red</MenuItem>
-                          <MenuItem value="#0000ff">Blue</MenuItem>
-                          <MenuItem value="#ffff00">Yellow</MenuItem>
-                          <MenuItem value="#00ff00">Green</MenuItem>
-                          <MenuItem value="#6600ff">Purple</MenuItem>
-                          <MenuItem value="#ff6600">Orange</MenuItem>
+                        <MenuItem value="#029356">Green</MenuItem>
+                        <MenuItem value="#009eb0">Cyan</MenuItem>
+                        <MenuItem value="#0073e6">Blue</MenuItem>
+                        <MenuItem value="#606ff3">Purple</MenuItem>
+                        <MenuItem value="#9b8bf4">Lavender</MenuItem>
                     </TextField>
                 </DialogContent>
                 <DialogActions>
