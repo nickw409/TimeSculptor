@@ -13,7 +13,7 @@ Group 4: **TimeSculptor**
 - Nicholas Wiley
 - Noah Schwartz
 
-### Introduction
+# Introduction
 TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provides a much easier and accessible interface for those people and features ADHD friendly User Interface. The expected consumer segment are individuals suffering from ADHD. Upon logging in, you are then given the options to create events or edit your schedule's current events. You can utilize color coding, and assigning different symbols to your events. 
 
 [TimeSculptor](https://github.com/nickw409/TimeSculptor)
@@ -101,7 +101,7 @@ http://enginick.com:9696
 The system is being deployed on a Hostwinds server. The client connects to a Node server listening on port 9696 that servers a static React page
 responsible for all UI. The server is also home to a REST API used to get user authentication.
 
-### Licensing
+# Licensing
 
 Inform the license you adopted for your source code (remember to configure GitHub accordingly). Explain why you adopted this license. For more information, check https://choosealicense.com/.
 
@@ -115,7 +115,7 @@ Inform the license you adopted for your source code (remember to configure GitHu
 - One design choice was to use a color scheme created by [Venngage](https://venngage.com/tools/accessible-color-palette-generator) which is a color pallete creator based on the WCAG guidelines of making websites accessible. Quote pulled from Vennage: "The color pairings follow WCAG 2.1 AA based on a contrast ratio of 4.5:1. The pairings have sufficient contrast for use with normal text, large text and graphics."
 ![Venngage](../assets/venngage.png)
 ![ColorCoded](../assets/eventcolors.png)
-### Lessons Learned
+# Lessons Learned
 
 Throughout the course of creating this first release, we have learned a lot about the use of react.js, node.js, and jest.
 
