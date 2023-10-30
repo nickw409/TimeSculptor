@@ -15,7 +15,7 @@ const initialEvents = [
       title: "Eat",
       dateAndTime: dayjs(new Date( 2023, 12, 24)),
       icon: "/assets/images/login.png",
-      color: "#6600ff"
+      color: "#0073e6"
   },
 
   {
@@ -23,7 +23,7 @@ const initialEvents = [
       title: "Sleep",      
       dateAndTime: dayjs(new Date( 2023, 11, 16)),
       icon: "/assets/images/register.png",
-      color: "#ff6600"
+      color: "#9b8bf4"
   },
 
 ]

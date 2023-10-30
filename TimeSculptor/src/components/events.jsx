@@ -5,6 +5,20 @@ import EditDialog from './edit_dialog';
 import DeleteWarning from './delete_warning';
 import { useState } from 'react';
 
+function getTextColor(hexColor) {
+    const colorMap = {
+        '#029356': '#000000',
+        '#009eb0': '#000000',
+        '#0073e6': '#ffffff',
+        '#606ff3': '#000000',
+        '#9b8bf4': '#000000'
+    };
+
+    return colorMap[hexColor] || '#000000'; 
+}
+
+
+
 export default function EventTable( {events, deleteEvent, editEvent } ) {
     function closeEditDialog()
         {
@@ -39,7 +53,7 @@ export default function EventTable( {events, deleteEvent, editEvent } ) {
                 </thead>
                 <tbody>
                     {events.map(event => (
-                        <tr key={event.id} style={{backgroundColor: event.color}}>
+                        <tr key={event.id} style={{backgroundColor: event.color, color: getTextColor(event.color)}}>
                             <td className='statusCol'><input type="checkbox" /></td>
                             <td className='imageCol'><img src={event.icon} alt={event.id}/></td>
                             <td>{event.title}</td>

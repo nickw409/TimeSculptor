@@ -68,21 +68,20 @@ export default function AddDialog({ open, closeFunction, addEvent }) {
                         />
                     </LocalizationProvider>
                     <TextField
-                          id="color"
-                          select
-                          label="Color"
-                          type="color"
-                          variant="filled"
-                          value={color}
-                          onChange={colorChange}
-                      >
-                          <MenuItem value="#ff0000">Red</MenuItem>
-                          <MenuItem value="#0000ff">Blue</MenuItem>
-                          <MenuItem value="#ffff00">Yellow</MenuItem>
-                          <MenuItem value="#00ff00">Green</MenuItem>
-                          <MenuItem value="#6600ff">Purple</MenuItem>
-                          <MenuItem value="#ff6600">Orange</MenuItem>
-                      </TextField>
+                        id="color"
+                        select
+                        label="Color"
+                        type="color"
+                        variant="filled"
+                        value={color}
+                        onChange={colorChange}
+                    >
+                        <MenuItem value="#029356">Green</MenuItem>
+                        <MenuItem value="#009eb0">Cyan</MenuItem>
+                        <MenuItem value="#0073e6">Blue</MenuItem>
+                        <MenuItem value="#606ff3">Purple</MenuItem>
+                        <MenuItem value="#9b8bf4">Lavender</MenuItem>
+                    </TextField>
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={formSubmit}> Submit </Button>
