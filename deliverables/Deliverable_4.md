@@ -121,4 +121,4 @@ Throughout the course of creating this first release, we have learned a lot abou
 
 # Demo
 
-[TimeSculptorDemo](https://www.youtube.com/watch?v=-RkIyF8fUw)
+TimeSculptorDemo
