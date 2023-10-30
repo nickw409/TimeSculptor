@@ -17,7 +17,7 @@ export default function AddEvent( {addEventFunction}) {
 
     // when the button is clicked, the dialog component is opened
     return (
-        <Box justifyContent="center" alignItems="center" display="flex" border = "1px solid red" height = "100px" width = "100vw" marginTop="75px">
+        <Box justifyContent="center" alignItems="center" display="flex" border = "1px solid black" height = "100px" width = "100vw" marginTop="75px">
             <Button variant="contained"
             onClick={() => setEventDialogOpen(true)}
             sx = {{

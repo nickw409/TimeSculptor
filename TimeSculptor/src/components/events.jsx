@@ -18,7 +18,7 @@ export default function EventTable( {events, deleteEvent, editEvent } ) {
 
     const [eventDialogOpen, setEventDialogOpen] = useState(false);
     const [deleteWarningOpen, setDeleteWarningOpen] = useState(false);
-    const [selectedEvent, setSelectedEvent] = useState({id: "", title: "", time: "", date: "", icon: "", color: ""})
+    const [selectedEvent, setSelectedEvent] = useState({id: "", title: "", dateAndTime:"", icon: "", color: ""})
 
 
     return (
@@ -31,21 +31,20 @@ export default function EventTable( {events, deleteEvent, editEvent } ) {
                     <tr>
                         <th className='statusCol'>Status</th>
                         <th className='imageCol'>Image</th>
-                        <th className='colorCol'>Color</th>
                         <th>Title</th>
-                        <th className='timeCol'>Time</th>
                         <th className='dateCol'>Date</th>
+                        <th className='timeCol'>Time</th>
                         <th className='actionCol'>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     {events.map(event => (
-                        <tr key={event.id}>
+                        <tr key={event.id} style={{backgroundColor: event.color}}>
                             <td className='statusCol'><input type="checkbox" /></td>
                             <td className='imageCol'><img src={event.icon} alt={event.id}/></td>
                             <td>{event.title}</td>
-                            <td className='timeCol'>{event.time}</td>
-                            <td className='dateCol'>{event.date}</td>
+                            <td className='dateCol'>{event.dateAndTime.format('L')}</td>                      
+                            <td className='timeCol'>{event.dateAndTime.format('LT')}</td>
                             <td className='colorCol'>
                                 <div style={{backgroundColor: event.color, width: '100%', height: '100%'}}></div>
                             </td> 
