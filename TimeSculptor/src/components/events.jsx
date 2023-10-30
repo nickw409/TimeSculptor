@@ -4,6 +4,7 @@ import {BsFillTrashFill, BsFillPencilFill} from "react-icons/bs";
 import EditDialog from './edit_dialog';
 import DeleteWarning from './delete_warning';
 import { useState } from 'react';
+import dayjs from 'dayjs';
 
 function getTextColor(hexColor) {
     const colorMap = {
@@ -57,8 +58,8 @@ export default function EventTable( {events, deleteEvent, editEvent } ) {
                             <td className='statusCol'><input type="checkbox" /></td>
                             <td className='imageCol'><img src={event.icon} alt={event.id}/></td>
                             <td>{event.title}</td>
-                            <td className='dateCol'>{event.dateAndTime.format('L')}</td>                      
-                            <td className='timeCol'>{event.dateAndTime.format('LT')}</td>
+                            <td className='dateCol'>{dayjs(event.dateAndTime).format('L')}</td>                      
+                            <td className='timeCol'>{dayjs(event.dateAndTime).format('LT')}</td>
                             <td className='actionCol'>  
                                 <BsFillTrashFill className="actionButton" onClick={() => {
                                     setDeleteWarningOpen(true)
