@@ -33,14 +33,21 @@ Approved by:
 Print screen: 
 
 **Requirement:** change color switcher to preset colors, change red borders to black/no borders (depending on where) 
-**Issue:** https://github.com/nickw409/TimeSculptor/issues/57
+**Issue:** <https://github.com/nickw409/TimeSculptor/issues/57>
 **Pull request:** Fixes some CSS and changed the color picker from an HTML5 color pallette to the 3 primary and 3 secondary colors 
 **Implemented by:** Noah Schwartz
 **Approved by:** Nick Wiley
 **Print screen:**
 ![Color Code](../assets/colorcode.png)
 
-Example:
+**Requirement:** User login with credentials username, password.
+**Issue:** <https://github.com/nickw409/TimeSculptor/issues/49>
+**Pull request:** <https://github.com/nickw409/TimeSculptor/pull/52>
+**Implemented by:** Nick Wiley
+**Approved by:** Izaac Molina
+**Print screen:** ![Login Screen](/assets/login_screen_pic.JPG)
+
+
 Requirement: implement testing for the program
 
 Issue: [54](https://github.com/nickw409/TimeSculptor/issues/54)
@@ -105,13 +112,10 @@ The team used a self directed approach to learning. This entailed learning the f
 
 # Deployment
 
-Provide a link for the system in production and describe how you are deploying your system. 
+http://enginick.com:9696
 
-Some alternatives for deploying your system in the cloud: 
-AWS. AWS Educate offers free credits for students. See the tutorial at https://docker-curriculum.com/ on how to create a container and deploy it on AWS. 
-Digital Ocean or Azzure. As part of the GitHub Education benefits, as a student, you can get $100 at Digital Ocean and $100 at Microsoft Azzure cloud computing platforms (see more details at https://education.github.com/students).
-Oracle Cloud. Oracle offers a free tier in its cloud environment that should be more than enough for your needs.
-Firebase. Firebase can be a good choice if you are building a mobile phone app. 
+The system is being deployed on a Hostwinds server. The client connects to a Node server listening on port 9696 that servers a static React page
+responsible for all UI. The server is also home to a REST API used to get user authentication.
 
 # Licensing
 
