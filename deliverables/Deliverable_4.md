@@ -47,6 +47,21 @@ Print screen:
 **Approved by:** Izaac Molina
 **Print screen:** ![Login Screen](/assets/login_screen_pic.JPG)
 
+
+Requirement: implement testing for the program
+
+Issue: [54](https://github.com/nickw409/TimeSculptor/issues/54)
+
+Pull request: adding the tests [53](https://github.com/nickw409/TimeSculptor/pull/53)
+
+Implemented by: Joey Banaszak
+
+Approved by: Izaac Molina
+
+Print screen: 
+
+![testing-output](../assets/tests_terminal_results.PNG)
+
 Example:
 Requirement:
 Issue: <link to your GitHub issue>
@@ -73,12 +88,16 @@ Print screen:
 
 # Tests
 
-You should implement automated tests that aim to verify the correct behavior of your code. Provide the following information:
+For the testing of our program we decided to use jest as our automated testing software. 
 
-Test framework you used to develop your tests (e.g., JUnit, unittest, pytest, etc.):
-Link to your GitHub folder where your automated unit tests are located.
-An example of a test case. Include in your answer a GitHub link to the class being tested and to the test.
-A print screen showing the result of the execution of the automated tests. 
+An example of one of the test cases is the [events file](https://github.com/nickw409/TimeSculptor/blob/main/TimeSculptor/src/components/events.jsx) being tested by the [events.test file](https://github.com/nickw409/TimeSculptor/blob/main/TimeSculptor/src/components/__tests__/events.test.js). 
+In this test we currently test to see that when an event is added to the users schedule, that it matches the information put in and that the data of the event is properly stored. 
+
+link for testing: [Here](https://github.com/nickw409/TimeSculptor/tree/main/TimeSculptor/src/components/__tests__)
+
+Below is the output of the current tests being ran:
+
+![tests-being-ran](../assets/tests_terminal_results.PNG)
 
 # Adopted Technologies
 
@@ -120,4 +139,4 @@ In retrospective, describe what your team learned during this first release and 
 
 # Demo
 
-Include a link to a video showing the system working.
+[TimeSculptorDemo](https://www.youtube.com/watch?v=-RkIyF8fUwQ)
