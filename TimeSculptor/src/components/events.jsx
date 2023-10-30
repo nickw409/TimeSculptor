@@ -59,22 +59,17 @@ export default function EventTable( {events, deleteEvent, editEvent } ) {
                             <td>{event.title}</td>
                             <td className='dateCol'>{event.dateAndTime.format('L')}</td>                      
                             <td className='timeCol'>{event.dateAndTime.format('LT')}</td>
-                            <td className='colorCol'>
-                                <div style={{backgroundColor: event.color, width: '100%', height: '100%'}}></div>
-                            </td> 
-                            <td className='actionCol'>
-                                <span>
-                                    <BsFillTrashFill className="actionButton" onClick={() => {
-                                        setDeleteWarningOpen(true)
-                                        setSelectedEvent(event)
-                                    }}
-                                    />
-                                    <BsFillPencilFill className="actionButton" onClick = {() => {
-                                        setEventDialogOpen(true)
-                                        setSelectedEvent(event)
-                                    }}  
-                                    />   
-                                </span>
+                            <td className='actionCol'>  
+                                <BsFillTrashFill className="actionButton" onClick={() => {
+                                    setDeleteWarningOpen(true)
+                                    setSelectedEvent(event)
+                                }}
+                                />
+                                <BsFillPencilFill className="actionButton" onClick = {() => {
+                                    setEventDialogOpen(true)
+                                    setSelectedEvent(event)
+                                }}  
+                                />   
                             </td>
                         </tr>
                     ))}

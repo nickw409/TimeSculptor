@@ -42,11 +42,11 @@ export default function Login({ loggedIn, setLoggedIn }) {
             </label>
             <label>
                <p>Password</p>
-               <input type="password" value={password} onChange={e => {
+               <input className='password-box' type="password" value={password} onChange={e => {
                   setPassword(e.target.value) 
                }} />
             </label>
-            <div>
+            <div className='submit-button'>
                <button type="submit">Submit</button>
             </div>
          </form>

@@ -1,16 +1,23 @@
 .eventsDisplay {
   display: flex;
   height: 100vh;
+  width: 100vw;
   flex-direction: column;
+  overflow: auto;
+}
+
+.eventsDisplay * {
+  border: 1px solid rgba(0, 0, 0, 0.306)
 }
 
 .eventsDisplay img, .eventInfo img {
   height: 50px;
   width: 50px;
+  border: none;
 }
 
 .statusCol, .imageCol, .timeCol, .dateCol, .actionCol {
-  width: 50px;
+  width: 50px
 }
 
 td {
@@ -20,11 +27,7 @@ td {
 .actionButton {
   margin: 5px;
   cursor: pointer;
+  border: none;
 }
 
-.eventInfo {
-  display: flex;
-  justify-content: space-between; 
-  width: 99vw;
-  align-items: center;
-}
+

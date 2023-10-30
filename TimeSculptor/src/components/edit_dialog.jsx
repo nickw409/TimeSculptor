@@ -4,6 +4,7 @@ import { Dialog, DialogTitle, DialogActions, DialogContent } from "@mui/material
 import { Button } from "@mui/material";
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
+import './dialog.css'
 
 // imports for date/time picker components
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
@@ -61,30 +62,32 @@ export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
                         value={name}
                         onChange={nameChange}
                     />
-                    <LocalizationProvider dateAdapter={AdapterDayjs}>
-                        <DateTimePicker
-                            sx={{ overflow: "visible" }}
-                            label="Event Date/Time"
-                            disablePast
-                            value={dateTime}
-                            onChange={dateTimeChange}
-                        />
-                    </LocalizationProvider>
-                    <TextField
-                        id="color"
-                        select
-                        label="Color"
-                        type="color"
-                        variant="filled"
-                        value={color}
-                        onChange={colorChange}
-                    >
-                        <MenuItem value="#029356">Green</MenuItem>
-                        <MenuItem value="#009eb0">Cyan</MenuItem>
-                        <MenuItem value="#0073e6">Blue</MenuItem>
-                        <MenuItem value="#606ff3">Purple</MenuItem>
-                        <MenuItem value="#9b8bf4">Lavender</MenuItem>
-                    </TextField>
+                    <div className="bottom-inputs">
+                        <LocalizationProvider dateAdapter={AdapterDayjs}>
+                            <DateTimePicker
+                                sx={{ overflow: "visible" }}
+                                label="Event Date/Time"
+                                disablePast
+                                value={dateTime}
+                                onChange={dateTimeChange}
+                            />
+                        </LocalizationProvider>
+                        <TextField
+                            id="color"
+                            select
+                            label="Color"
+                            type="color"
+                            variant="filled"
+                            value={color}
+                            onChange={colorChange}
+                        >
+                            <MenuItem value="#029356">Green</MenuItem>
+                            <MenuItem value="#009eb0">Cyan</MenuItem>
+                            <MenuItem value="#0073e6">Blue</MenuItem>
+                            <MenuItem value="#606ff3">Purple</MenuItem>
+                            <MenuItem value="#9b8bf4">Lavender</MenuItem>
+                        </TextField>
+                    </div>
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={formSubmit}> Submit </Button>
