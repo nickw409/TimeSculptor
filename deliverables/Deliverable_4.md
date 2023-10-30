@@ -32,54 +32,54 @@ Implemented by: Gabriel Valentin
 Approved by: 
 Print screen: 
 
-**Requirement:** change color switcher to preset colors, change red borders to black/no borders (depending on where) 
-**Issue:** <https://github.com/nickw409/TimeSculptor/issues/57>
-**Pull request:** Fixes some CSS and changed the color picker from an HTML5 color pallette to the 3 primary and 3 secondary colors 
-**Implemented by:** Noah Schwartz
-**Approved by:** Nick Wiley
-**Print screen:**
+**Requirement:** change color switcher to preset colors, change red borders to black/no borders (depending on where)   
+**Issue:** <https://github.com/nickw409/TimeSculptor/issues/57>  
+**Pull request:** Fixes some CSS and changed the color picker from an HTML5 color pallette to the 3 primary and 3 secondary colors   
+**Implemented by:** Noah Schwartz  
+**Approved by:** Nick Wiley  
+**Print screen:**   
 ![Color Code](../assets/colorcode.png)
 
-**Requirement:** User login with credentials username, password.
-**Issue:** <https://github.com/nickw409/TimeSculptor/issues/49>
-**Pull request:** <https://github.com/nickw409/TimeSculptor/pull/52>
-**Implemented by:** Nick Wiley
-**Approved by:** Izaac Molina
-**Print screen:** ![Login Screen](/assets/login_screen_pic.JPG)
+**Requirement:** User login with credentials username, password.  
+**Issue:** <https://github.com/nickw409/TimeSculptor/issues/49>   
+**Pull request:** <https://github.com/nickw409/TimeSculptor/pull/52>   
+**Implemented by:** Nick Wiley   
+**Approved by:** Izaac Molina   
+**Print screen:**    
+![Login Screen](/assets/login_screen_pic.JPG)
 
-
-Requirement: implement testing for the program
-
-Issue: [54](https://github.com/nickw409/TimeSculptor/issues/54)
-
-Pull request: adding the tests [53](https://github.com/nickw409/TimeSculptor/pull/53)
-
-Implemented by: Joey Banaszak
-
-Approved by: Izaac Molina
-
-Print screen: 
-
+**Requirement:** implement testing for the program
+**Issue:** [54](https://github.com/nickw409/TimeSculptor/issues/54)     
+**Pull request:** adding the tests [53](https://github.com/nickw409/TimeSculptor/pull/53)   
+**Implemented by:** Joey Banaszak  
+**Approved by:** Izaac Molina  
+**Print screen:**    
 ![testing-output](../assets/tests_terminal_results.PNG)
 
-Example:
-Requirement: Implement basic UI and Event display Layout
-Issue: [44](https://github.com/nickw409/TimeSculptor/issues/44)
-Pull request: [35](https://github.com/nickw409/TimeSculptor/pull/36)
-Implemented by: Izaac Molina
-Approved by: Nick Wiley
-Print screen: ![basic-layout](../assets/basic-layout.png)
+**Requirement:** Implement basic UI and Event display Layout   
+**Issue:** [44](https://github.com/nickw409/TimeSculptor/issues/44)  
+**Pull request:** [35](https://github.com/nickw409/TimeSculptor/pull/36)  
+**Implemented by:** Izaac Molina  
+**Approved by:** Nick Wiley   
+**Print screen:**   
+![basic-layout](../assets/basic-layout.png)
 
-Example:
-Requirement: Edit and delete events from the display using action buttons
-Issue: [46](https://github.com/nickw409/TimeSculptor/issues/46)
-Pull request: [48](https://github.com/nickw409/TimeSculptor/pull/48)
-Implemented by: Izaac Molina
-Approved by: Nick Wiley
-Print screen: 
+**Requirement:** Edit and delete events from the display using action buttons  
+**Issue:** [46](https://github.com/nickw409/TimeSculptor/issues/46)     
+**Pull request:** [48](https://github.com/nickw409/TimeSculptor/pull/48)   
+**Implemented by:** Izaac Molina   
+**Approved by:** Nick Wiley  
+**Print screen:**    
 ![delete](../assets/delete.png)
 ![edit](../assets/edit.png)
 
+**Requirement:** Added a dropdown calendar for event date and time input           
+**Issue:** [45](https://github.com/nickw409/TimeSculptor/issues/45)                
+**Pull request:** [55](https://github.com/nickw409/TimeSculptor/pull/55)               
+**Implemented by:** Kimberly Allison            
+**Approved by:** Nick Wiley                
+**Print screen:**     
+![calendarInput](../assets/calendarInput.png)
 
 Example:
 Requirement:
