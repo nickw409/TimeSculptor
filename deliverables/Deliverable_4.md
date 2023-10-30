@@ -142,4 +142,4 @@ In retrospective, describe what your team learned during this first release and 
 
 # Demo
 
-[TimeSculptorDemo](https://www.youtube.com/watch?v=-RkIyF8fUwQ)
+[TimeSculptorDemo](https://www.youtube.com/watch?v=-RkIyF8fUw)
