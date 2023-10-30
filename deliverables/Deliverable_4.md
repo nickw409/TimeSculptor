@@ -56,20 +56,23 @@ Print screen:
 ![testing-output](../assets/tests_terminal_results.PNG)
 
 Example:
-Requirement:
-Issue: <link to your GitHub issue>
-Pull request: 
-Implemented by: 
-Approved by: 
-Print screen: 
+Requirement: Implement basic UI and Event display Layout
+Issue: [44](https://github.com/nickw409/TimeSculptor/issues/44)
+Pull request: [35](https://github.com/nickw409/TimeSculptor/pull/36)
+Implemented by: Izaac Molina
+Approved by: Nick Wiley
+Print screen: ![basic-layout](../assets/basic-layout.png)
 
 Example:
-Requirement:
-Issue: <link to your GitHub issue>
-Pull request: 
-Implemented by: 
-Approved by: 
+Requirement: Edit and delete events from the display using action buttons
+Issue: [46](https://github.com/nickw409/TimeSculptor/issues/46)
+Pull request: [48](https://github.com/nickw409/TimeSculptor/pull/48)
+Implemented by: Izaac Molina
+Approved by: Nick Wiley
 Print screen: 
+![delete](../assets/delete.png)
+![edit](../assets/edit.png)
+
 
 Example:
 Requirement:
@@ -94,11 +97,11 @@ Below is the output of the current tests being ran:
 
 # Adopted Technologies
 
-List the adopted technologies with a brief description and justification for choosing them.
+TimeSculptor is built in Javascript using Node.js and React.js, and will implement a SQL database. Node and React are common frameworks for web backend/frontend respectively, so they are not only reliable and have multiple features, but also are easier to learn due to their high level nature and breadth of available resources for learning the technologies. SQL is being used as it is what the group is most familiar with, and is an industry standard for database administration.
 
 # Learning / Training
 
-Describe the strategies employed by the team to learn the adopted technologies. 
+The team used a self directed approach to learning. This entailed learning the fundamentals of Javascript, then applying them to the required frameworks. For example, one tutorial series used was the [React tutorial series by Net Ninja](https://youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d&si=QC_JCSoPEDyJ02JL). Additionally, the team shared what they learned during meetings to solidify the groups' overall understanding of the technologies being used. Overall, this methodology enabled flexibility and approachability that enabled the team to learn the assigned technologies.
 
 # Deployment
 
