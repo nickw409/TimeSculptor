@@ -13,7 +13,7 @@ Group 4: **TimeSculptor**
 - Nicholas Wiley
 - Noah Schwartz
 
-# Introduction
+### Introduction
 TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provides a much easier and accessible interface for those people and features ADHD friendly User Interface. The expected consumer segment are individuals suffering from ADHD. Upon logging in, you are then given the options to create events or edit your schedule's current events. You can utilize color coding, and assigning different symbols to your events. 
 
 [TimeSculptor](https://github.com/nickw409/TimeSculptor)
@@ -23,14 +23,6 @@ TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provide
 List in this section, the requirements and associated pull request that you implemented for this release, following the example below---
 include the description of the requirement, a link to the issue, a link to the pull request(s) that implement the requirement, who implemented the requirement, 
 who approved it, and a print screen that depicts the implemented feature (if applicable). I expect that you implement the features you specified in your MVP (c.f. D.2 Requirements).
-
-Example:
-Requirement: As someone who associates events with pictures, I would like to label events with pictures. 
-Issue: <link to your GitHub issue>
-Pull request: 
-Implemented by: Gabriel Valentin
-Approved by: 
-Print screen: 
 
 **Requirement:** change color switcher to preset colors, change red borders to black/no borders (depending on where)   
 **Issue:** <https://github.com/nickw409/TimeSculptor/issues/57>  
@@ -46,7 +38,7 @@ Print screen:
 **Implemented by:** Nick Wiley   
 **Approved by:** Izaac Molina   
 **Print screen:**    
-![Login Screen](/assets/login_screen_pic.JPG)
+![Login Screen](../assets/login_screen_pic.JPG)
 
 **Requirement:** implement testing for the program
 **Issue:** [54](https://github.com/nickw409/TimeSculptor/issues/54)     
@@ -81,14 +73,6 @@ Print screen:
 **Print screen:**     
 ![calendarInput](../assets/calendarInput.png)
 
-Example:
-Requirement:
-Issue: <link to your GitHub issue>
-Pull request: 
-Implemented by: 
-Approved by: 
-Print screen: 
-
 # Tests
 
 For the testing of our program we decided to use jest as our automated testing software. 
@@ -117,28 +101,23 @@ http://enginick.com:9696
 The system is being deployed on a Hostwinds server. The client connects to a Node server listening on port 9696 that servers a static React page
 responsible for all UI. The server is also home to a REST API used to get user authentication.
 
-# Licensing
+### Licensing
 
 Inform the license you adopted for your source code (remember to configure GitHub accordingly). Explain why you adopted this license. For more information, check https://choosealicense.com/.
 
 # Readme File
-
-You should also prepare your repository for receiving new contributors. You should prepare a Readme.md file. See an example at https://gist.github.com/PurpleBooth/109311bb0361f32d87a2   
-In the Readme file, the current version should be stated. You should follow the Semantic Versioning schema (https://semver.org/). Tag the GitHub repository accordingly (https://git-scm.com/book/en/v2/Git-Basics-Tagging). 
 
 [CODE_OF_CONDUCT.md](https://github.com/nickw409/TimeSculptor/blob/main/CODE_OF_CONDUCT.md)
 [CONTRIBUTING.md](https://github.com/nickw409/TimeSculptor/blob/main/CONTRIBUTING.md)
 
 # Look & Feel
 
-Describe the approach you adopted to design your user interface. Include some screenshots.
-
 - One design choice was to use a color scheme created by [Venngage](https://venngage.com/tools/accessible-color-palette-generator) which is a color pallete creator based on the WCAG guidelines of making websites accessible. Quote pulled from Vennage: "The color pairings follow WCAG 2.1 AA based on a contrast ratio of 4.5:1. The pairings have sufficient contrast for use with normal text, large text and graphics."
 ![Venngage](../assets/venngage.png)
 ![ColorCoded](../assets/eventcolors.png)
-# Lessons Learned
+### Lessons Learned
 
-In retrospective, describe what your team learned during this first release and what you are planning to change for the second release. 
+Throughout the course of creating this first release, we have learned a lot about the use of react.js, node.js, and jest.
 
 # Demo
 
