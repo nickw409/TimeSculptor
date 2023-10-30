@@ -102,8 +102,10 @@ Below is the output of the current tests being ran:
 # Adopted Technologies
 
 List the adopted technologies with a brief description and justification for choosing them.
-NodeJS:
-Express:
+Node.js: When making a Javascript server, it's hard to choose anything but Node.js. It easies the process of receiving data from 
+a client and sending a well-formed response.
+Express: While using purely Node.js is fine for the most part, Express makes setting up a server just that little bit easier.
+Express makes it easier to read request bodies especially with its json parser making it an easy addition ontop of Node.js.
 React:
 
 # Learning / Training
