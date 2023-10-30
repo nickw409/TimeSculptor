@@ -133,6 +133,8 @@ In the Readme file, the current version should be stated. You should follow the 
 
 Describe the approach you adopted to design your user interface. Include some screenshots.
 
+- One design choice was to use a color scheme created by [Venngage](https://venngage.com/tools/accessible-color-palette-generator) which is a color pallete creator based on the WCAG guidelines of making websites accessible. Quote pulled from Vennage: "The color pairings follow WCAG 2.1 AA based on a contrast ratio of 4.5:1. The pairings have sufficient contrast for use with normal text, large text and graphics."
+![Venngage](../assets/venngage.png)
 # Lessons Learned
 
 In retrospective, describe what your team learned during this first release and what you are planning to change for the second release. 
