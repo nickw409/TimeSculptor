@@ -1,7 +1,9 @@
 .eventsDisplay {
   display: flex;
   height: 100vh;
+  width: 100vw;
   flex-direction: column;
+  overflow: auto;
 }
 
 .eventsDisplay img, .eventInfo img {
@@ -10,7 +12,7 @@
 }
 
 .statusCol, .imageCol, .timeCol, .dateCol, .actionCol {
-  width: 50px;
+  width: 50px
 }
 
 td {
@@ -22,9 +24,4 @@ td {
   cursor: pointer;
 }
 
-.eventInfo {
-  display: flex;
-  justify-content: space-between; 
-  width: 99vw;
-  align-items: center;
-}
+
