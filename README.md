@@ -73,7 +73,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **Gabriel Valentin** - *Frontend Development* - [GabrielValentin](https://github.com/gmv53)
 * **Nicholas Wiley** - *Backend Development* - [NicholasWiley](https://github.com/nickw409)
 
-See also the list of [contributors]([https://github.com/your/project/contributors](https://github.com/nickw409/TimeSculptor/graphs/contributors)) who participated in this project.
+See also the list of [contributors](https://github.com/nickw409/TimeSculptor/graphs/contributors) who participated in this project.
 
 ## License
 
