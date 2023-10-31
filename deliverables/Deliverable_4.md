@@ -38,7 +38,7 @@ who approved it, and a print screen that depicts the implemented feature (if app
 **Implemented by:** Nick Wiley   
 **Approved by:** Izaac Molina   
 **Print screen:**    
-![Login Screen](../assets/login_screen_pic.JPG)
+![Login Screen](../assets/login_page.png)
 
 **Requirement:** implement testing for the program
 **Issue:** [54](https://github.com/nickw409/TimeSculptor/issues/54)     
