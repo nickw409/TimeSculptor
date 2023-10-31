@@ -14,15 +14,11 @@ Group 4: **TimeSculptor**
 - Noah Schwartz
 
 # Introduction
-TimeSculptor is a scheduling app; targeted for people who struggle ADHD; provides a much easier and accessible interface for those people and features ADHD friendly User Interface. The expected consumer segment are individuals suffering from ADHD. Upon logging in, you are then given the options to create events or edit your schedule's current events. You can utilize color coding, and assigning different symbols to your events. 
+ TimeSculptor is a scheduling app that aims to provide a seemless and user friendly experience, with a particular emphasis on being accessible for people with learning disabilities. It provides an accessible interface that adheres to guidelines outlined in [Pavlov (2014)](https://www.scirp.org/html/7-9301792_43152.htm) and [Moreno et al. (2023)](https://link.springer.com/article/10.1007/s10209-023-00986-z). The primary expected consumer segment individuals who possess learning disabilities, but this ultimately makes the app accessible for everyone. Upon logging in, you are then given the options to create events or edit your schedule's current events. You can utilize color coding, and assigning different symbols to your events. 
 
 [TimeSculptor](https://github.com/nickw409/TimeSculptor)
 
 # Implemented Requirements
-
-List in this section, the requirements and associated pull request that you implemented for this release, following the example below---
-include the description of the requirement, a link to the issue, a link to the pull request(s) that implement the requirement, who implemented the requirement, 
-who approved it, and a print screen that depicts the implemented feature (if applicable). I expect that you implement the features you specified in your MVP (c.f. D.2 Requirements).
 
 **Requirement:** change color switcher to preset colors, change red borders to black/no borders (depending on where)   
 **Issue:** <https://github.com/nickw409/TimeSculptor/issues/57>  
@@ -104,6 +100,7 @@ responsible for all UI. The server is also home to a REST API used to get user a
 # Licensing
 
 We adopted the MIT License which is the most basic licensing a project can have. Essentially, it allows most distributions and duplications of the project to occur which could be quite helpful as the software develops more. We designed this project with specific learning disabilties in mind so we would like it to be as open to suggestions as possible.
+
 # Readme File
 
 [CODE_OF_CONDUCT.md](https://github.com/nickw409/TimeSculptor/blob/main/CODE_OF_CONDUCT.md)
@@ -115,9 +112,12 @@ We adopted the MIT License which is the most basic licensing a project can have.
 - One design choice was to use a color scheme created by [Venngage](https://venngage.com/tools/accessible-color-palette-generator) which is a color pallete creator based on the [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) guidelines of making websites accessible. Quote pulled from Vennage: "The color pairings follow WCAG 2.1 AA based on a contrast ratio of 4.5:1. The pairings have sufficient contrast for use with normal text, large text and graphics."
 ![Venngage](../assets/venngage.png)
 ![ColorCoded](../assets/eventcolors.png)
+- Additionally, we have an icon for each event that ties in the information to info, improving accessibility. We plan on adding more icons in the future so the user can customize the icon that represents each event.
+![ShowIcon](../assets/showicon.png)
+
 # Lessons Learned
 
-Throughout the course of creating this first release, we have learned a lot about the use of react.js, node.js, and jest.
+Throughout the course of creating this first release, we have learned a lot about the use of react.js, node.js, and jest. In particular, the group learned a great deal about how to design event listeners in React, as well as how to use the React mui library to implement useful features like dropdown menus and add/edit/delete dialogues. In the future, we want to will further improve the UI by thoroughly examining further acessibility requirements and applying them to our design. Additionally, some other immediate next steps for the project are to implement a full user registration and login system, designing a calendar view for events, implementing user settings, and setting up a SQL database for our classes.
 
 # Demo
 
