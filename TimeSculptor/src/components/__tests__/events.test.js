@@ -1,4 +1,4 @@
-const EventTable = require("../events")
+import Event from '../Event';
 
 // create a test event to input into the table 
 const testEvent1 = {
