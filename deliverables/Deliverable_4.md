@@ -103,12 +103,12 @@ responsible for all UI. The server is also home to a REST API used to get user a
 
 # Licensing
 
-Inform the license you adopted for your source code (remember to configure GitHub accordingly). Explain why you adopted this license. For more information, check https://choosealicense.com/.
-
+We adopted the MIT License which is the most basic licensing a project can have. Essentially, it allows most distributions and duplications of the project to occur which could be quite helpful as the software develops more. We designed this project with specific learning disabilties in mind so we would like it to be as open to suggestions as possible.
 # Readme File
 
 [CODE_OF_CONDUCT.md](https://github.com/nickw409/TimeSculptor/blob/main/CODE_OF_CONDUCT.md)
 [CONTRIBUTING.md](https://github.com/nickw409/TimeSculptor/blob/main/CONTRIBUTING.md)
+[LICENSE.md](https://github.com/nickw409/TimeSculptor/blob/main/LICENSE.md)
 
 # Look & Feel
 
