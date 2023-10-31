@@ -69,6 +69,14 @@ Group 4: **TimeSculptor**
 **Print screen:**     
 ![calendarInput](../assets/calendarInput.png)
 
+**Requirement:** Implemented different icons to use for better accessability   
+**Issue:** <https://github.com/nickw409/TimeSculptor/issues/65>  
+**Pull request:** Icons - Worked on implementing different icons to add to the app.   
+**Implemented by:** Gabriel Valentin  
+**Approved by:** Nick Wiley  
+**Print screen:**   
+![firstSixIcons](../assets/firstsixicons.png)
+
 # Tests
 
 For the testing of our program we decided to use jest as our automated testing software. 
