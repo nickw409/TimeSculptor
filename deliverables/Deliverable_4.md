@@ -112,7 +112,7 @@ Inform the license you adopted for your source code (remember to configure GitHu
 
 # Look & Feel
 
-- One design choice was to use a color scheme created by [Venngage](https://venngage.com/tools/accessible-color-palette-generator) which is a color pallete creator based on the WCAG guidelines of making websites accessible. Quote pulled from Vennage: "The color pairings follow WCAG 2.1 AA based on a contrast ratio of 4.5:1. The pairings have sufficient contrast for use with normal text, large text and graphics."
+- One design choice was to use a color scheme created by [Venngage](https://venngage.com/tools/accessible-color-palette-generator) which is a color pallete creator based on the [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) guidelines of making websites accessible. Quote pulled from Vennage: "The color pairings follow WCAG 2.1 AA based on a contrast ratio of 4.5:1. The pairings have sufficient contrast for use with normal text, large text and graphics."
 ![Venngage](../assets/venngage.png)
 ![ColorCoded](../assets/eventcolors.png)
 # Lessons Learned
@@ -121,4 +121,4 @@ Throughout the course of creating this first release, we have learned a lot abou
 
 # Demo
 
-TimeSculptorDemo
+[TimeSculptorDemo](https://us04web.zoom.us/clips/share/BHVzMDQgk0IoAwByjY7bsPfttzbwm0oP82jQwe-Q-KXyR24fzQc)
