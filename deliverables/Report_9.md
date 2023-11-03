@@ -22,7 +22,8 @@ Missing participants: None
 
 **Joey:**
 
--
+- Continuing working on the testing for the program
+- Sent off the tests for deliverable 4
 
 **Kimberly:**
 
