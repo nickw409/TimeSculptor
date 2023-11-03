@@ -27,7 +27,7 @@ Missing participants: None
 
 **Kimberly:**
 
-- 
+- Looked into adding a settings and notification menu 
 
 **Nick:**
 
