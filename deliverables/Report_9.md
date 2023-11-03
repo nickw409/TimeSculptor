@@ -14,7 +14,7 @@ Missing participants: None
 
 **Gabriel:**
 
-- 
+- Looked into use of MySQL for user database
 
 **Izaac:**
 
