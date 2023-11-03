@@ -1,4 +1,6 @@
-const EventTable = require("../events")
+import React from 'react';
+import { render } from '@testing-library/react';
+import Event from '../Event';
 
 // create a test event to input into the table 
 const testEvent1 = {
@@ -14,15 +16,17 @@ const testEvent2 = {
 };
 
 // test to see that an event can be added to the table 
-test("creating an event in the future should work", () => {
-  const{ daTest1 } = EventTable( testEvent1 );
+it("should create a new event with the same data as the created event", () => {
+  const { event1 } = render(<Event {...testEvent1} />);
 
+  // see that the inputted event matches the event created at start
   expect(daTest1).toEqual(testEvent1);
 })
 
 // test to see that a second event also works in the function
-test("creating an event", () => {
-  const{ daTest2 } = EventTable( testEvent2 );
+it("should create an event with matching data", () => {
+  const{ daTest2 } = render(<Event {...testEvent2} />);
 
+  // see that the inputted event matches the event created at start
   expect(daTest2).toEqual(testEvent2);
 })

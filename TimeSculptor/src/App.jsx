@@ -32,7 +32,7 @@ function App() {
   // this useState dynamically updates our list of events
   // when a new event is added
   const [events, setEvents] = useState(initialEvents);
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const handleDeleteEvent = (targetId) => {
     setEvents(events.filter(event => event.id !== targetId));

@@ -1,6 +1,8 @@
 # TimeSculptor
 UI design is often built around the needs of neurotypical people. As a result, many apps miss UI features that improve ease of use for people with learning disabilities. One example of this is with Calendar apps, which, while extensive, often have complex UIs that aren't learning disability friendly. As a result, there should be a calendar app that prioritizes accessibility by following UI guidelines that accomodate those with learning disabilities. For those that have a learning disability who could greatly benefit from a scheduling app designed specifically with their needs in mind, TimeSculptor accommodates these needs by adhering to UI styling guidelines laid out by Pavlov (2014) and Moreno et al. (2023). For example, Pavolv (2014) states that a key aspect of accesibile UIs is to ensure that all ideas have an associated picture. Apps like Google Calendar, Outlook, and Apple Calendar do not prioritize this, as events are typically just shown as text (with some niche exceptions like birthdays in Google Calendar). TimeSculptor will put these needs at the forefront, ensuring that the app adheres as closely as possible to them. Overall, TimeSculptor is a scheduling app built for people with learning disabilities, our expected consumer segment. It provides a much easier and accessible interface that adheres to research based on building UI that is learning disability friendly.
 
+**Version:** 1.0.1-alpha
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -62,7 +64,7 @@ Please read [CONTRIBUTING.md](https://github.com/nickw409/TimeSculptor/blob/main
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/nickw409/TimeSculptor/tags)
 
 ## Authors
 
@@ -73,7 +75,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **Gabriel Valentin** - *Frontend Development* - [GabrielValentin](https://github.com/gmv53)
 * **Nicholas Wiley** - *Backend Development* - [NicholasWiley](https://github.com/nickw409)
 
-See also the list of [contributors]([https://github.com/your/project/contributors](https://github.com/nickw409/TimeSculptor/graphs/contributors)) who participated in this project.
+See also the list of [contributors](https://github.com/nickw409/TimeSculptor/graphs/contributors) who participated in this project.
 
 ## License
 
