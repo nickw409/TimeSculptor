@@ -2,7 +2,7 @@
 
 Group 4: **TimeSculptor**
 
-Date and Location: 11/3/2023, Cline Library Room 182
+Date and Location: 11/3/2023, Cline Library Room 185
 
 Present Participants: Izaac Molina, Nicholas Wiley, Kimberly Allison, Joey Banaszak, Gabriel Valentin, Noah Schwartz
 
@@ -14,7 +14,7 @@ Missing participants: None
 
 **Gabriel:**
 
-- **Izaac:**
+**Izaac:**
 
 - Created calendar template for event calendar view
 - Handled room reservations
@@ -27,9 +27,14 @@ Missing participants: None
 
 **Kimberly:**
 
-- **Nick:**
+- Looked into adding a settings and notification menu
 
-- **Noah:**
+**Nick:**
+
+- Further improvements to RESTful API.
+- Researching database integration into backend.
+
+**Noah:**
 
 - Created Report 9
 - Did some Database Work in MySQL Workbench
