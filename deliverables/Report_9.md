@@ -34,7 +34,8 @@ Missing participants: None
 
 **Noah:**
 
-- 
+- Created Report 9
+- Did some Database Work in MySQL Workbench
 
 ## **Project Retrospective**
 
