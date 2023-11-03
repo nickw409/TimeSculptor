@@ -14,11 +14,11 @@ Missing participants: None
 
 **Gabriel:**
 
-- 
+- **Izaac:**
 
-**Izaac:**
-
-- 
+- Created calendar template for event calendar view
+- Handled room reservations
+- Wrote some descriptions for deliverable 4
 
 **Joey:**
 
@@ -27,33 +27,47 @@ Missing participants: None
 
 **Kimberly:**
 
-- 
+- **Nick:**
 
-**Nick:**
-
-- 
-
-**Noah:**
+- **Noah:**
 
 - Created Report 9
 - Did some Database Work in MySQL Workbench
 
 ## **Project Retrospective**
 
-**Appreciations:** 
+**Appreciations:**
 
-**Successes:** 
+Made it through Deliverable 4, made a lot of progress on the project. Have done a good job of keeping on top of the work.
 
-**Failures:** 
+**Successes:**
 
-**Barriers:** 
+See above
 
-**What We Should Try Next Time:** 
+**Failures:**
+
+N/A
+
+**Barriers:**
+
+Semester continues to ramp up in terms of workload
+
+**What We Should Try Next Time:**
+
+N/A
 
 ## **Next Steps**
 
-- 
+- Work on Deliverable 5 diagrams
+- Continue working on features to be ready for Deliverable 6
+- Refactor code to be more readable/cleaner by following SOLID
 
 ## **Decisions**
 
--
+- Assigned deliverable 5 tasks
+- Joey: Class Diagram
+- Izaac: Architecture
+- Nick: Design Principles
+- Noah: Design Pattern
+- Kimberly: Design Patter
+- Gabriel: Sequence Diagram
