@@ -14,11 +14,8 @@ Missing participants: None
 
 **Gabriel:**
 
-<<<<<<< HEAD
-=======
 - Looked into use of MySQL for user database
 
->>>>>>> 7ae3df2f6c749d5a9cc44b1f5cdfb19c85e70289
 **Izaac:**
 
 - Created calendar template for event calendar view
