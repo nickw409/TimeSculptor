@@ -34,13 +34,10 @@ export default function EventTable( {events, deleteEvent, editEvent } ) {
     const [eventDialogOpen, setEventDialogOpen] = useState(false);
     const [deleteWarningOpen, setDeleteWarningOpen] = useState(false);
     const [selectedEvent, setSelectedEvent] = useState({id: "", title: "", dateAndTime:"", icon: "", color: ""})
+    const [viewType, setViewType] = useState("list")
 
-
-    return (
-        <div className="eventsDisplay">
-            <h2>
-                Events
-            </h2>
+    const renderListView = () => {
+        return (
             <table>
                 <thead>
                     <tr>
@@ -54,28 +51,52 @@ export default function EventTable( {events, deleteEvent, editEvent } ) {
                 </thead>
                 <tbody>
                     {events.map(event => (
-                        <tr key={event.id} style={{backgroundColor: event.color, color: getTextColor(event.color)}}>
+                        <tr key={event.id} style={{ backgroundColor: event.color, color: getTextColor(event.color) }}>
                             <td className='statusCol'><input type="checkbox" /></td>
-                            <td className='imageCol'><img src={event.icon} alt={event.id}/></td>
+                            <td className='imageCol'><img src={event.icon} alt={event.id} /></td>
                             <td>{event.title}</td>
-                            <td className='dateCol'>{dayjs(event.dateAndTime).format('L')}</td>                      
+                            <td className='dateCol'>{dayjs(event.dateAndTime).format('L')}</td>
                             <td className='timeCol'>{dayjs(event.dateAndTime).format('LT')}</td>
-                            <td className='actionCol'>  
+                            <td className='actionCol'>
                                 <BsFillTrashFill className="actionButton" onClick={() => {
-                                    setDeleteWarningOpen(true)
-                                    setSelectedEvent(event)
+                                    setDeleteWarningOpen(true);
+                                    setSelectedEvent(event);
                                 }}
                                 />
-                                <BsFillPencilFill className="actionButton" onClick = {() => {
-                                    setEventDialogOpen(true)
-                                    setSelectedEvent(event)
-                                }}  
-                                />   
+                                <BsFillPencilFill className="actionButton" onClick={() => {
+                                    setEventDialogOpen(true);
+                                    setSelectedEvent(event);
+                                }}
+                                />
                             </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
+        );
+    };
+
+    const renderCalendarView = () => {
+        return (
+            <div>
+                This is the calendar view.
+            </div>
+        );
+    };
+
+
+    return (
+        <div className="eventsDisplay">
+            <h2>
+                Events
+            </h2>
+            <div>
+                <input type="radio" value="List" name="view" defaultChecked onClick={() => {setViewType("list")}}/> List
+                <input type="radio" value="Calendar" name="view" onClick={() => {setViewType("calendar")}}/> Calendar
+            </div>
+            
+            {viewType === "list" ? renderListView() : renderCalendarView()}
+
 
             <EditDialog open={eventDialogOpen} closeFunction={closeEditDialog} editEvent={editEvent} toEdit={selectedEvent}/>
             <DeleteWarning open={deleteWarningOpen} close={closeWarning} deleteEvent={deleteEvent} toDelete={selectedEvent}/>
