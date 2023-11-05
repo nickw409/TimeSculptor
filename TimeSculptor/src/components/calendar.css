@@ -1,0 +1,10 @@
+.eventCalendar {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    align-items: center;
+}
+
+.calendarTable {
+    width: 80vw;
+}

@@ -4,6 +4,13 @@
   width: 100vw;
   flex-direction: column;
   overflow: auto;
+  align-items: center;
+}
+
+
+.listTable {
+  width: 80%;
+  margin-top: 15px;
 }
 
 .eventsDisplay * {

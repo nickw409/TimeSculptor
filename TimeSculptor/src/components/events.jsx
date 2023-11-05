@@ -1,10 +1,11 @@
 import React from 'react';
 import './events.css';
 import {BsFillTrashFill, BsFillPencilFill} from "react-icons/bs";
-import EditDialog from './edit_dialog';
-import DeleteWarning from './delete_warning';
 import { useState } from 'react';
 import dayjs from 'dayjs';
+import EditDialog from './edit_dialog';
+import DeleteWarning from './delete_warning';
+import Calendar from './calendar';
 
 function getTextColor(hexColor) {
     const colorMap = {
@@ -38,7 +39,7 @@ export default function EventTable( {events, deleteEvent, editEvent } ) {
 
     const renderListView = () => {
         return (
-            <table>
+            <table className='listTable'>
                 <thead>
                     <tr>
                         <th className='statusCol'>Status</th>
@@ -78,9 +79,7 @@ export default function EventTable( {events, deleteEvent, editEvent } ) {
 
     const renderCalendarView = () => {
         return (
-            <div>
-                This is the calendar view.
-            </div>
+            <Calendar className="calendarTable"/>
         );
     };
 
