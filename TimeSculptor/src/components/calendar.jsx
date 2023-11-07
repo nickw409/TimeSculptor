@@ -1,25 +1,25 @@
-import moment from 'moment';
 import './calendar.css';
+import dayjs from 'dayjs';
 
-export const getDaysInMonth = monthMoment => {
-    const currMonth = monthMoment.clone();
+export const getDaysInMonth = monthDay => {
+    let currMonth = monthDay.clone();
     currMonth.startOf('month');
 
-    let days = []
+    let days = [];
 
-    while(currMonth.month() === monthMoment.month()) {
+    while(currMonth.month() === monthDay.month()) {
         days.push(currMonth.clone());
-        currMonth.add(1, 'days');
+        currMonth = currMonth.add(1, 'day');
     }
 
     return days;
 }
 
-export const splitWeeks = dayMoments => {
+export const splitWeeks = dayObjects => {
     let weeks = [];
     let currWeek = [];
 
-    for (let day of dayMoments) {
+    for (let day of dayObjects) {
         currWeek.push(day.clone());
 
         if (day.format('dddd') == 'Saturday') {
@@ -45,16 +45,20 @@ const weekBack = (week, padWith = null) => {
 
 const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
-export default function Calendar() {
-    const currMonthMoment = moment();
-    const weeks = splitWeeks(getDaysInMonth(currMonthMoment));
+export default function Calendar({month, year, prevMonth, nextMonth, events}) {
+    const currMonthObject = dayjs(`${year}-${month}-01`, 'YYYY-MM-DD');
+    const weeks = splitWeeks(getDaysInMonth(currMonthObject));
 
     return (
         <div className='eventCalendar'>
-           <h1>
-                {currMonthMoment.format('MMMM YYYY')}
+           <h1 className='monthHeading'>
+                {currMonthObject.format('MMMM YYYY')}
            </h1> 
-
+           <div className='changeMonthButtons'>
+                <button onClick={prevMonth}> Prev </button>
+                <button onClick={nextMonth}> Next </button>
+           </div>
+           
            <table className='calendarTable'>
                 <thead>
                     <tr>{weekDays.map(day => <th key={day}>{day}</th>)}</tr>
@@ -68,10 +72,21 @@ export default function Calendar() {
                             : week;
                         
                         return (
-                            <tr key={i}>
-                                {displayWeek.map((dayMoment, j) => dayMoment
-                                    ? <td key={(dayMoment.format('D'))}>{dayMoment.format('D')}</td>
-                                    : <td key={`${i}${j}`}></td>
+                            <tr key={i} >
+                                {displayWeek.map((dayObject, j) => dayObject
+                                    ? <td className='dayCell'key={(dayObject.format('D'))}>
+                                        {dayObject.format('D')}
+                                        <div className='cellEvents'>
+                                            {events.filter(event => dayObject.isSame(event.dateAndTime, 'day')).map(event =>(
+                                                <div key = {event.id}>
+                                                    {event.title}
+                                                </div>
+                                            )
+                                                
+                                            )}
+                                        </div>
+                                      </td>
+                                    : <td className='nullCell' key={`${i}${j}`}></td>
                                 )}
                             </tr>
                         );

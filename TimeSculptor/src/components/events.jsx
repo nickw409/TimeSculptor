@@ -5,7 +5,7 @@ import { useState } from 'react';
 import dayjs from 'dayjs';
 import EditDialog from './edit_dialog';
 import DeleteWarning from './delete_warning';
-import Calendar from './calendar';
+import CalendarController from './calendar_controller';
 
 function getTextColor(hexColor) {
     const colorMap = {
@@ -79,7 +79,7 @@ export default function EventTable( {events, deleteEvent, editEvent } ) {
 
     const renderCalendarView = () => {
         return (
-            <Calendar className="calendarTable"/>
+            <CalendarController className="calendarTable" events={events}/>
         );
     };
 
