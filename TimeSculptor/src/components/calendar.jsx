@@ -1,6 +1,7 @@
 import './calendar.css';
 import dayjs from 'dayjs';
 
+
 export const getDaysInMonth = monthDay => {
     let currMonth = monthDay.clone();
     currMonth.startOf('month');
@@ -14,6 +15,7 @@ export const getDaysInMonth = monthDay => {
 
     return days;
 }
+
 
 export const splitWeeks = dayObjects => {
     let weeks = [];
@@ -35,17 +37,19 @@ export const splitWeeks = dayObjects => {
     return weeks;
 }
 
+// add "null" days to the front of the week if the week doesn't start on Sunday
 const weekFront = (week, padWith = null) => {
     return [...Array(7 - week.length).fill(padWith), ...week];
 }
 
+// add "null" days to the end of the week if the week doesn't end on Saturday
 const weekBack = (week, padWith = null) => {
     return [...week, ...Array(7 - week.length).fill(padWith)];
 }
 
 const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
-export default function Calendar({month, year, prevMonth, nextMonth, events}) {
+export default function Calendar({month, year, prevMonth, nextMonth, events, getTextColor}) {
     const currMonthObject = dayjs(`${year}-${month}-01`, 'YYYY-MM-DD');
     const weeks = splitWeeks(getDaysInMonth(currMonthObject));
 
@@ -72,13 +76,18 @@ export default function Calendar({month, year, prevMonth, nextMonth, events}) {
                             : week;
                         
                         return (
-                            <tr key={i} >
+                            // process days, showing the day of the month and the events associated with each day
+                            <tr key={i}>
                                 {displayWeek.map((dayObject, j) => dayObject
                                     ? <td className='dayCell'key={(dayObject.format('D'))}>
+
+                                        {/* Print the numerical value of the day */}
                                         {dayObject.format('D')}
+
+                                        {/* Print the events associated with current day */}
                                         <div className='cellEvents'>
                                             {events.filter(event => dayObject.isSame(event.dateAndTime, 'day')).map(event =>(
-                                                <div key = {event.id}>
+                                                <div key = {event.id} style={{ backgroundColor: event.color, color: getTextColor(event.color) }}>
                                                     {event.title}
                                                 </div>
                                             )

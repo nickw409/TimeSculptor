@@ -79,7 +79,7 @@ export default function EventTable( {events, deleteEvent, editEvent } ) {
 
     const renderCalendarView = () => {
         return (
-            <CalendarController className="calendarTable" events={events}/>
+            <CalendarController className="calendarTable" events={events} getTextColor={getTextColor}/>
         );
     };
 

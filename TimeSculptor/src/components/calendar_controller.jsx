@@ -2,7 +2,7 @@ import Calendar from './calendar';
 import {useState} from 'react';
 import dayjs from 'dayjs';
 
-export default function CalendarController({events}) {
+export default function CalendarController({events, getTextColor}) {
     const today = dayjs();
     const [currMonthObject, setCurrMonthObject] = useState(today);
 
@@ -20,6 +20,7 @@ export default function CalendarController({events}) {
             prevMonth={prevMonth} 
             nextMonth={nextMonth} 
             events={events}
+            getTextColor={getTextColor}
         />
     )
 }
