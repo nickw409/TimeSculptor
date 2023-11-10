@@ -10,6 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 Software needed:
+
 - React.js
 - Node.js
 - Vite
@@ -45,11 +46,17 @@ Give an example
 ```
 
 ## Deployment
-## For local deployment (development):
-- npm install
-- npm run dev
 
-## In order to view online:
+## For local deployment (development)
+
+- Move to TimeSculptor directory
+- npm install
+- npm run build
+- Run db_init.sh in build directory
+- npm run api
+
+## In order to view online
+
 Go to this link: [TimeSculptor](http://enginick.com:9696/)
 
 ## Built With
