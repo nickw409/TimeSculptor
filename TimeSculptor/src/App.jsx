@@ -3,7 +3,7 @@ import { redirect, BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/header'
 import AddEvent from './components/create'
 import Events from './components/events'
-import Login from './components/login';
+import Login from './login';
 import './App.css'
 import dayjs from 'dayjs'
 import { unstable_composeClasses } from '@mui/material';
