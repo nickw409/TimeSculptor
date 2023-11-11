@@ -87,7 +87,7 @@ export default function EventTable( {events, deleteEvent, editEvent } ) {
     return (
         <div className="eventsDisplay">
             <h2>
-                Events
+                Events!
             </h2>
             <div>
                 <input type="radio" value="List" name="view" defaultChecked onClick={() => {setViewType("list")}}/> List
