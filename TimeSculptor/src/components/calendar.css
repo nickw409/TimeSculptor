@@ -3,12 +3,12 @@
     flex-direction: column;
     width: 90vw;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .eventCalendar img {
     width:20px;
-    height:20px;
-    margin: 5px 5px 0px 5px;
+    height:100%;
 }
 
 .monthHeading {
@@ -40,11 +40,17 @@
 
 .cellEvent {
     width: 100%; 
-    max-height: 3.8vh; 
-    height: 3.8vh;
+    max-height: 20%; 
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.cellEventText {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    border: none;
 }
 
 .dayCell {

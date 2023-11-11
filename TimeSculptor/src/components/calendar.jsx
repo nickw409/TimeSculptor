@@ -122,7 +122,7 @@ export default function Calendar({month, year, prevMonth, nextMonth, events, get
                                                 {/*match all events that are on the same day, then sort them by time*/}
                                                 {currEvents.map(event =>(
                                                         <div key = {event.id} className='cellEvent' style={{ backgroundColor: event.color, color: getTextColor(event.color) }}>
-                                                           <img src={event.icon} alt={event.id} />{event.title} @ {dayjs(event.dateAndTime).format('LT')}
+                                                           <img src={event.icon} alt={event.id} /> <div className='cellEventText'>{event.title} @ {dayjs(event.dateAndTime).format('LT')}</div>
                                                         </div>
                                                     )
                                                     
