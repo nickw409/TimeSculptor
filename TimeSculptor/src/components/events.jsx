@@ -21,7 +21,7 @@ function getTextColor(hexColor) {
 
 
 
-export default function EventTable( {events, deleteEvent, editEvent } ) {
+export default function EventTable( {events, eventController} ) {
     function closeEditDialog()
         {
             setEventDialogOpen(false);
@@ -97,8 +97,8 @@ export default function EventTable( {events, deleteEvent, editEvent } ) {
             {viewType === "list" ? renderListView() : renderCalendarView()}
 
 
-            <EditDialog open={eventDialogOpen} closeFunction={closeEditDialog} editEvent={editEvent} toEdit={selectedEvent}/>
-            <DeleteWarning open={deleteWarningOpen} close={closeWarning} deleteEvent={deleteEvent} toDelete={selectedEvent}/>
+            <EditDialog open={eventDialogOpen} closeFunction={closeEditDialog} editEvent={eventController.editEvent} toEdit={selectedEvent}/>
+            <DeleteWarning open={deleteWarningOpen} close={closeWarning} deleteEvent={eventController.deleteEvent} toDelete={selectedEvent}/>
             
         </div>
 
