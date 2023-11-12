@@ -14,6 +14,8 @@ Missing participants: None
 
 **Gabriel:**
 
+- Created Sequence Diagram for Deliverable 5
+
 **Izaac:**
 
 - Started implementing calendar view into website
