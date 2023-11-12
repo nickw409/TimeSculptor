@@ -28,7 +28,8 @@ Your system may not be appropriate for any design pattern. In this case, for did
 
 Implement each design pattern in your system and provide GitHub links to the corresponding classes. Example (the links are just illustrative):
 
-- Car: [link](https://github.com/user/repo/blob/master/src/com/proj/main/Car.java)
+- Event [EventClass](https://github.com/nickw409/TimeSculptor/blob/main/TimeSculptor/src/components/events.jsx)
+  [EventFactory](../assets/FactoryDesignPattern.drawio.png)
 - IBreakBehavior: [link](https://github.com/user/repo/blob/master/src/com/proj/main/IBreakBehavior.java)
 - BrakeWithABS: [link](https://github.com/user/repo/blob/master/src/com/proj/main/BrakeWithABS.java)
 - Brake: [link](https://github.com/user/repo/blob/master/src/com/proj/main/Brake.java)
