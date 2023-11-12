@@ -31,6 +31,9 @@ Missing participants: None
 
 
 **Noah:**
+- Made a Design Pattern for Deliverable 5
+- Started implementing logo choosing for events (not completely done yet)
+- Worked some more on implementing SQL Database
 
 
 
