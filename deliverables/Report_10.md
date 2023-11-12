@@ -31,6 +31,10 @@ Missing participants: None
 
 **Nick:**
 
+- Created MySQL database and script to create development database.
+- Added user authentication using the REST API and MySQL database.
+- Worked on SOLID principles for Deliverable 5.
+
 
 **Noah:**
 - Made a Design Pattern for Deliverable 5
