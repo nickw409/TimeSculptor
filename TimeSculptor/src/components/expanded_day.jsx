@@ -8,7 +8,6 @@ import dayjs from 'dayjs';
 
 
 export default function ExpandedDay({open, close, day, events, getTextColor}) {
-    console.log(events)
     
     return (
         <>

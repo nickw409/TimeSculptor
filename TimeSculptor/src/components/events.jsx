@@ -87,7 +87,7 @@ export default function EventTable( {events, eventController} ) {
     return (
         <div className="eventsDisplay">
             <h2>
-                Events!
+                Events
             </h2>
             <div>
                 <input type="radio" value="List" name="view" defaultChecked onClick={() => {setViewType("list")}}/> List
@@ -95,7 +95,6 @@ export default function EventTable( {events, eventController} ) {
             </div>
             
             {viewType === "list" ? renderListView() : renderCalendarView()}
-
 
             <EditDialog open={eventDialogOpen} closeFunction={closeEditDialog} editEvent={eventController.editEvent} toEdit={selectedEvent}/>
             <DeleteWarning open={deleteWarningOpen} close={closeWarning} deleteEvent={eventController.deleteEvent} toDelete={selectedEvent}/>
