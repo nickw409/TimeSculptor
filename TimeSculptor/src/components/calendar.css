@@ -1,0 +1,88 @@
+.eventCalendar {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.eventCalendar img {
+    width:20px;
+    height:100%;
+}
+
+.monthHeading {
+    border: none;
+}
+
+.expandedEvents {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%; 
+}
+
+.expandedEvents img {
+    width:40px;
+    height:40px;
+    padding-right: 5px;
+}
+
+.expandedEvent {
+    height: 25%;
+    margin: 10px;
+    border: 1px solid black;
+    padding: 5px;
+    font-size: large;
+    display: flex; 
+    align-items: center; 
+}
+
+.cellEvent {
+    width: 100%; 
+    max-height: 20%; 
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.cellEventText {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: none;
+}
+
+.dayCell {
+    height: 20vh;
+    width: 11.43vw;  
+    max-width: 11.43vw;
+    vertical-align: top;
+    text-align: left;
+    transition: all 300ms ease-in-out;
+}
+
+.nullCell {
+    height: 20vh;
+    width: 11.43vw;
+}
+
+.dayCell:hover {
+    box-shadow: 0px 8px 30px;
+    cursor: pointer;
+}
+
+.changeMonthButtons {
+    margin-bottom: 10px;
+    width: 200px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 10px;
+    border: none;
+
+}
+
+.calendarTable {
+    width: 90vw;
+    max-width: 100%;
+}
