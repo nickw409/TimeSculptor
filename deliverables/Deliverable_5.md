@@ -17,7 +17,7 @@ TimeSculptor follows a client-server layered architecture. Each layer can only d
 
 # Sequence Diagram
 
-_Grading criteria (5 points): Adequate use of UML; Adequate design of the sequence diagram; Consistency with the class diagram; Consistency with the use case description; Not including the use case description; Over simplistic diagram._
+![Sequence](../assets/Create_Events_Sequence.png)
 
 # Design Patterns
 
