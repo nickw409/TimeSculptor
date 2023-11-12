@@ -26,8 +26,10 @@ Your system may not be appropriate for any design pattern. In this case, for did
 
 Implement each design pattern in your system and provide GitHub links to the corresponding classes. Example (the links are just illustrative):
 
-- Event [EventClass](https://github.com/nickw409/TimeSculptor/blob/main/TimeSculptor/src/components/events.jsx)
-  ![EventFactory](../assets/FactoryDesignPattern.drawio.png)
+### Strategy Design Pattern
+- EventCreationStrategy: [Code](https://github.com/nickw409/TimeSculptor/blob/main/TimeSculptor/src/App.jsx)    
+  ![Strategy](../assets/TimeSculptorStrategy.png)
+
 
 
 ### Singleton Design Pattern
