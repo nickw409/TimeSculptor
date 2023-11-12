@@ -39,14 +39,19 @@ Missing participants: None
 **Appreciations:** 
 Managed our assignments for Deliverable 5 pretty well.
 Izaac implementing classes into our system.
+
 **Successes:**
 Communicated pretty well regardless of missing in person meeting.
+
 **Failures:** 
 N/A
+
 **Barriers:** 
 Veteran's day canceled classes on Friday so there was no in person meeting.
+
 **What We Should Try Next Time:**
 Keep consistant communication in preparation for Deliverable 6.
+
 ## **Next Steps**
 Work on fully testing SQL for the database.
 Refactoring code to make it as object oriented as possible.
