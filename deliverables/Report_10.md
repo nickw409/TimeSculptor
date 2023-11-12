@@ -24,7 +24,9 @@ Missing participants: None
 
 
 **Kimberly:**
-
+- Created a UML diagram demonstrating the application of a design pattern         
+- Started work on implementing a menu for settings and notifications
+  
 
 
 **Nick:**
