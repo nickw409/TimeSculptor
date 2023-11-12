@@ -28,11 +28,12 @@ Implement each design pattern in your system and provide GitHub links to the cor
 
 - Event [EventClass](https://github.com/nickw409/TimeSculptor/blob/main/TimeSculptor/src/components/events.jsx)
   ![EventFactory](../assets/FactoryDesignPattern.drawio.png)
-- IBreakBehavior: [link](https://github.com/user/repo/blob/master/src/com/proj/main/IBreakBehavior.java)
-- BrakeWithABS: [link](https://github.com/user/repo/blob/master/src/com/proj/main/BrakeWithABS.java)
-- Brake: [link](https://github.com/user/repo/blob/master/src/com/proj/main/Brake.java)
 
-*Grading criteria (6 points, 3 for each pattern): Correct use of the design pattern as described in the literature; Adequate choice of the design pattern; Adequate implementation of the design pattern.*
+
+### Singleton Design Pattern
+- EventsController: [Code](https://github.com/nickw409/TimeSculptor/blob/main/TimeSculptor/src/App.jsx)    
+  ![Singleton](../assets/singletonDesignPattern.jpg)
+
 
 # Design Principles
 How does your design observe the SOLID principles? Provide a short description of followed principles giving concrete examples from your classes.
