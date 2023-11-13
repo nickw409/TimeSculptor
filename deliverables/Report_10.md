@@ -23,6 +23,9 @@ Missing participants: None
 
 **Joey:**
 
+ - Made the refined UML class diagram for deliverable 5
+ - Continued researching testing methods mentioned in class to implement in later versions of the project
+
 **Kimberly:**
 
 - Created a UML diagram demonstrating the application of a design pattern
