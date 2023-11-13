@@ -33,6 +33,16 @@ TimeSculptor follows a client-server layered architecture. Each layer can only d
 
 # Design Principles
 
-How does your design observe the SOLID principles? Provide a short description of followed principles giving concrete examples from your classes.
-
-_Grading criteria (6 points): Show correct understanding of SOLID principles; Provide enough details to justify how the design observes the SOLID principles._
+While many aspects of our project do not lend themselves well to object oriented
+design such as the React framework, our design still observes the SOLID
+principles. The class Event found in App.jsx follows the Single-responsibility principle
+because Event only has the responsibility of dealing with events. It does not
+deal with any UI aspects involving Events or anything else outside the nature
+of what an Event is. While not object oriented, the REST API used by the server
+follows the Interface segregation principle. Right now the API only deals with
+HTTP requests for the login page but once completed will be responsible for all
+data operations between the client and server. Each operation will be split into
+different HTTP request paths that function similarly to interfaces in object oriented
+design, abstracting the server code away from the client. Each of these request
+paths are small and do one thing only, so the client code does not have to rely
+on code that is not of use.
