@@ -33,8 +33,8 @@ Missing participants: None
 
 **Nick:**
 
-- Further improvements to RESTful API.
-- Researching database integration into backend.
+- Setting up database tables for settings and schedules
+- Store user authentication in local storage
 
 **Noah:**
 
