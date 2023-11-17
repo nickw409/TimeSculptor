@@ -38,6 +38,10 @@ export default function EventTable( {events, eventController} ) {
     const [viewType, setViewType] = useState("list")
 
     const renderListView = () => {
+        const sorted_events = events.sort((first_event, second_event) =>
+            dayjs(first_event.dateAndTime).isBefore(second_event.dateAndTime) ? -1 : 1
+        );
+
         return (
             <table className='listTable'>
                 <thead>
@@ -51,7 +55,7 @@ export default function EventTable( {events, eventController} ) {
                     </tr>
                 </thead>
                 <tbody>
-                    {events.map(event => (
+                    {sorted_events.map(event => (
                         <tr key={event.id} style={{ backgroundColor: event.color, color: getTextColor(event.color) }}>
                             <td className='statusCol'><input type="checkbox" /></td>
                             <td className='imageCol'><img src={event.icon} alt={event.id} /></td>

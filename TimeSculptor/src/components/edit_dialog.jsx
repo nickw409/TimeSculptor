@@ -50,9 +50,14 @@ export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
 
     return (
         <>
-            <Dialog open={open}>
+            <Dialog 
+                open={open} 
+                maxWidth="md" 
+                fullWidth={true} 
+                PaperProps={{ style: { maxHeight: '80vh' , height: '80vh', maxWidth: '70vh', width: '70vh'} }}
+            >
                 <DialogTitle>Edit an Event</DialogTitle>
-                <DialogContent>
+                <DialogContent className="eventDialog">
                     <TextField
                         // text field for event name
                         id="eventName"
@@ -61,33 +66,33 @@ export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
                         variant="filled"
                         value={name}
                         onChange={nameChange}
+                        sx={{marginBottom: '30px'}}
                     />
-                    <div className="bottom-inputs">
-                        <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <DateTimePicker
-                                sx={{ overflow: "visible" }}
-                                label="Event Date/Time"
-                                disablePast
-                                value={dateTime}
-                                onChange={dateTimeChange}
-                            />
-                        </LocalizationProvider>
-                        <TextField
-                            id="color"
-                            select
-                            label="Color"
-                            type="color"
-                            variant="filled"
-                            value={color}
-                            onChange={colorChange}
-                        >
-                            <MenuItem value="#029356">Green</MenuItem>
-                            <MenuItem value="#009eb0">Cyan</MenuItem>
-                            <MenuItem value="#0073e6">Blue</MenuItem>
-                            <MenuItem value="#606ff3">Purple</MenuItem>
-                            <MenuItem value="#9b8bf4">Lavender</MenuItem>
-                        </TextField>
-                    </div>
+                
+                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                        <DateTimePicker
+                            sx={{ overflow: "visible", marginBottom: "30px" }}
+                            label="Event Date/Time"
+                            disablePast
+                            value={dateTime}
+                            onChange={dateTimeChange}
+                        />
+                    </LocalizationProvider>
+                    <TextField
+                        id="color"
+                        select
+                        label="Color"
+                        type="color"
+                        variant="filled"
+                        value={color}
+                        onChange={colorChange}
+                    >
+                        <MenuItem value="#029356">Green</MenuItem>
+                        <MenuItem value="#009eb0">Cyan</MenuItem>
+                        <MenuItem value="#0073e6">Blue</MenuItem>
+                        <MenuItem value="#606ff3">Purple</MenuItem>
+                        <MenuItem value="#9b8bf4">Lavender</MenuItem>
+                    </TextField>
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={formSubmit}> Submit </Button>
