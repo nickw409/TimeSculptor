@@ -8,6 +8,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DateTimePicker, dateTimePickerTabsClasses } from '@mui/x-date-pickers/DateTimePicker';
 import MenuItem from '@mui/material/MenuItem';
+import './dialog.css'
 
 export default function AddDialog({ open, closeFunction, addEvent }) {
     // This is the dialog box component, 
@@ -45,9 +46,14 @@ export default function AddDialog({ open, closeFunction, addEvent }) {
 
     return (
         <>
-            <Dialog open={open}>
+            <Dialog 
+                open={open} 
+                maxWidth="md" 
+                fullWidth={true} 
+                className = "popupMenu"
+            >
                 <DialogTitle>Add an Event</DialogTitle>
-                <DialogContent>
+                <DialogContent className ='eventDialog'>
                     <TextField
                         id="eventName"
                         label="Event Name"
@@ -55,34 +61,35 @@ export default function AddDialog({ open, closeFunction, addEvent }) {
                         variant="filled"
                         value={name}
                         onChange={nameChange}
+                        sx={{marginBottom: '30px'}}
                     />
                 
-                <div className="bottom-inputs"> 
-                        <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <DateTimePicker
-                                label="Event Date/Time"
-                                sx={{ overflow: "visible" }}
-                                disablePast
-                                value={dateTime}
-                                onChange={dateTimeChange}
-                            />
-                        </LocalizationProvider>
-                        <TextField
-                            id="color"
-                            select
-                            label="Color"
-                            type="color"
-                            variant="filled"
-                            value={color}
-                            onChange={colorChange}
-                        >
-                            <MenuItem value="#029356">Green</MenuItem>
-                            <MenuItem value="#009eb0">Cyan</MenuItem>
-                            <MenuItem value="#0073e6">Blue</MenuItem>
-                            <MenuItem value="#606ff3">Purple</MenuItem>
-                            <MenuItem value="#9b8bf4">Lavender</MenuItem>
-                        </TextField>
-                    </div>
+                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                        <DateTimePicker
+                            label="Event Date/Time"
+                            sx={{ overflow: "visible", marginBottom: "30px", width: "60%" }}
+                            disablePast
+                            value={dateTime}
+                            onChange={dateTimeChange}
+                        />
+                    </LocalizationProvider>
+                    <TextField
+                        id="color"
+                        select
+                        label="Color"
+                        type="color"
+                        variant="filled"
+                        value={color}
+                        onChange={colorChange}
+                        sx={{width: "50%"}}
+                    >
+                        <MenuItem value="#029356">Green</MenuItem>
+                        <MenuItem value="#009eb0">Cyan</MenuItem>
+                        <MenuItem value="#0073e6">Blue</MenuItem>
+                        <MenuItem value="#606ff3">Purple</MenuItem>
+                        <MenuItem value="#9b8bf4">Lavender</MenuItem>
+                    </TextField>
+                
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={formSubmit}> Submit </Button>

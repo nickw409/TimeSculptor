@@ -1,3 +1,18 @@
 .bottom-inputs {
     margin: 10px 0px 10px 0px;
 }
+
+.eventDialog {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 50%; 
+    
+}
+
+.popupMenu .MuiPaper-root {
+    max-height: 80vh;
+    height: 50vh;
+    max-width: 70vh; 
+    width: 70vh;
+}
