@@ -93,7 +93,7 @@ function App() {
   // this useState dynamically updates our list of events
   // when a new event is added
   const [events, setEvents] = useState(setupInitialEvents());
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
   
 
   // class for functions that change events, triggerring a rerender. follows a 

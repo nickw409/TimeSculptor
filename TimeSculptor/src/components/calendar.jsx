@@ -1,6 +1,5 @@
 import './calendar.css';
 import dayjs from 'dayjs';
-import ExpandedDay from './expanded_day';
 import {useState} from 'react';
 
 
@@ -51,18 +50,9 @@ const weekBack = (week, padWith = null) => {
 
 const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
-export default function Calendar({month, year, prevMonth, nextMonth, events, getTextColor}) {
+export default function Calendar({month, year, prevMonth, nextMonth, events, getTextColor, dayClick}) {
     const currMonthObject = dayjs(`${year}-${month}-01`, 'YYYY-MM-DD');
     const weeks = splitWeeks(getDaysInMonth(currMonthObject));
-
-    const [expandDialogOpen, setExpandDialogOpen] = useState(false);
-    const [selectedDay, setSelectedDay] = useState(dayjs(null));
-    const [selectedEvents, setSelectedEvents] = useState([]);
-
-    function closeExpandDialog()
-        {
-            setExpandDialogOpen(false);
-        }
 
     return (
         <div key = {'evencalen'}className='eventCalendar'>
@@ -105,11 +95,7 @@ export default function Calendar({month, year, prevMonth, nextMonth, events, get
                                         <td 
                                             className='dayCell' 
                                             onClick={() =>{
-                                                console.log(currEvents)
-                                                setExpandDialogOpen(true);
-                                                setSelectedDay(dayObject);
-                                                setSelectedEvents(currEvents);
-                                                console.log(selectedEvents); 
+                                                dayClick(dayObject)
                                             }} 
                                             key={(dayObject.format('D'))}
                                         >
@@ -141,7 +127,6 @@ export default function Calendar({month, year, prevMonth, nextMonth, events, get
                     }
                 </tbody>
            </table>
-           <ExpandedDay key = {'expandday'} open={expandDialogOpen} close={closeExpandDialog} day={selectedDay} events={selectedEvents} getTextColor={getTextColor}/>
         </div>
     );
 }

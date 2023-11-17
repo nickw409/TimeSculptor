@@ -50,7 +50,7 @@ export default function AddDialog({ open, closeFunction, addEvent }) {
                 open={open} 
                 maxWidth="md" 
                 fullWidth={true} 
-                PaperProps={{ style: { maxHeight: '80vh' , height: '80vh', maxWidth: '70vh', width: '70vh'} }}
+                className = "popupMenu"
             >
                 <DialogTitle>Add an Event</DialogTitle>
                 <DialogContent className ='eventDialog'>

@@ -9,3 +9,10 @@
     height: 50%; 
     
 }
+
+.popupMenu .MuiPaper-root {
+    max-height: 80vh;
+    height: 50vh;
+    max-width: 70vh; 
+    width: 70vh;
+}

@@ -10,6 +10,7 @@ import './dialog.css'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
     const [name, setName] = useState("");
@@ -54,7 +55,7 @@ export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
                 open={open} 
                 maxWidth="md" 
                 fullWidth={true} 
-                PaperProps={{ style: { maxHeight: '80vh' , height: '80vh', maxWidth: '70vh', width: '70vh'} }}
+                className="popupMenu"
             >
                 <DialogTitle>Edit an Event</DialogTitle>
                 <DialogContent className="eventDialog">
@@ -78,6 +79,9 @@ export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
                             onChange={dateTimeChange}
                         />
                     </LocalizationProvider>
+
+                    
+
                     <TextField
                         id="color"
                         select
