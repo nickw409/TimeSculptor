@@ -6,8 +6,8 @@
 -- --------------
 -- DROP DATABASE IF EXISTS dev_db;
 CREATE DATABASE IF NOT EXISTS dev_db;
-CREATE USER 'dev' @'localhost' IDENTIFIED BY 'TimeSculptor';
-GRANT ALL PRIVILEGES ON dev_db.* TO 'dev' @'localhost';
+CREATE USER IF NOT EXISTS 'dev'@'localhost' IDENTIFIED BY 'TimeSculptor';
+GRANT ALL PRIVILEGES ON dev_db.* TO 'dev'@'localhost';
 USE dev_db;
 CREATE TABLE Credential (
    username VARCHAR(128) NOT NULL,
