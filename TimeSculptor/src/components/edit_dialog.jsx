@@ -1,31 +1,15 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { Dialog, DialogTitle, DialogActions, DialogContent } from "@mui/material";
-import { Button } from "@mui/material";
-import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
-import './dialog.css'
-
 // imports for date/time picker components
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
-// define main function for edit event dialog.
-// parameters:
-//  open: function for opening the dialog
-//  close: function for closing the dialog
-//  editEvent: function for editing a current event in the event list
-//  toEdit(str): id for the current event that is being edited
-export default function EditDialog({ open, close, editEvent, toEdit }) {
-    // setup fields for entry
+export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
     const [name, setName] = useState("");
     const [dateTime, setDateTime] = useState("");
     const [color, setColor] = useState("");
     const [icon, setIcon] = useState("");
 
-    // change default values to start at the current event attributes
     useEffect(() => {
         setName(toEdit.title);
         setDateTime(toEdit.dateAndTime);
@@ -40,15 +24,17 @@ export default function EditDialog({ open, close, editEvent, toEdit }) {
         setDateTime(date.toDate());
     };
 
+    // Set the color state when an option is selected
     const colorChange = (event) => {
         setColor(event.target.value);
     };
-  
+
+    // Set the icon state when an option is selected
     const iconChange = (event) => {
         setIcon(event.target.value);
     }
-    
-    // handle form dubmission, edit event on submission
+
+
     const formSubmit = () => {
         const newEvent = {
             id: toEdit.id,
@@ -60,7 +46,7 @@ export default function EditDialog({ open, close, editEvent, toEdit }) {
 
         editEvent(newEvent);
 
-        close();
+        closeFunction();
     };
 
     return (
@@ -103,7 +89,7 @@ export default function EditDialog({ open, close, editEvent, toEdit }) {
                         type="color"
                         variant="filled"
                         value={color}
-                        onChange={colorChange}
+                        onChange={colorChange} // Call the colorChange function when an option is selected
                     >
                         <MenuItem value="#029356">Green</MenuItem>
                         <MenuItem value="#009eb0">Cyan</MenuItem>
@@ -117,7 +103,7 @@ export default function EditDialog({ open, close, editEvent, toEdit }) {
                         label="Icon"
                         variant="filled"
                         value={icon}
-                        onChange={iconChange}
+                        onChange={iconChange} // Call the iconChange function when an option is selected
                         sx={{width: "50%"}}
                     >
                         <MenuItem value="/assets/images/Fitness.png">Fitness</MenuItem>
@@ -130,9 +116,8 @@ export default function EditDialog({ open, close, editEvent, toEdit }) {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={formSubmit}> Submit </Button>
-                    <Button onClick={() => close()}>Close</Button>
+                    <Button onClick={() => closeFunction()}>Close</Button>
                 </DialogActions>
             </Dialog>
         </>
     );
-}
