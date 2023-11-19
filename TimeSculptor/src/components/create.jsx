@@ -26,7 +26,7 @@ export default function AddEvent( {addEventFunction}) {
             }}>
                 Add Event
             </Button>
-            <AddDialog open={eventDialogOpen} closeFunction={closeDialog} addEvent={addEventFunction}/>
+            <AddDialog open={eventDialogOpen} close={closeDialog} addEvent={addEventFunction}/>
         </Box>
     )
 }
