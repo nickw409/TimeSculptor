@@ -15,6 +15,7 @@ export default function AddDialog({ open, closeFunction, addEvent }) {
     const [name, setName] = useState("");
     const [dateTime, setDateTime] = useState("");
     const [color, setColor] = useState("#029356");
+    const [icon, setIcon] = useState("");
 
     const unique_id = uuid();
 
@@ -30,13 +31,22 @@ export default function AddDialog({ open, closeFunction, addEvent }) {
         setColor(event.target.value);
     }
 
+    const iconChange = (event) => {
+        setIcon(event.target.value);
+    }
+
     const formSubmit = () => {
+        if(!dateTime){
+            alert('Please select a date for the event.');
+            return;
+        }
+
         const newEvent = {
             id: unique_id,
             title: name,
             dateAndTime: dateTime,
             color: color,
-            icon: "/assets/images/login.png"
+            icon: icon
         }
 
         addEvent(newEvent);
@@ -89,7 +99,22 @@ export default function AddDialog({ open, closeFunction, addEvent }) {
                         <MenuItem value="#606ff3">Purple</MenuItem>
                         <MenuItem value="#9b8bf4">Lavender</MenuItem>
                     </TextField>
-                
+                    <TextField
+                        id="icon"
+                        select
+                        label="Icon"
+                        variant="filled"
+                        value={icon}
+                        onChange={iconChange}
+                        sx={{width: "50%"}}
+                    >
+                        <MenuItem value="/assets/images/Fitness.png">Fitness</MenuItem>
+                        <MenuItem value="/assets/images/Work.png">Work</MenuItem>
+                        <MenuItem value="/assets/images/Sleep.png">Sleep</MenuItem>
+                        <MenuItem value="/assets/images/Social.png">Social</MenuItem>
+                        <MenuItem value="/assets/images/Write.png">Write</MenuItem>
+                        <MenuItem value="/assets/images/Entertain.png">Entertain</MenuItem>
+                    </TextField>
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={formSubmit}> Submit </Button>
