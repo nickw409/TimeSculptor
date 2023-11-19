@@ -29,7 +29,8 @@ Missing participants: None
 
 **Kimberly:**
 
-- Looked into adding a settings and notification menu
+- Worked on implementing react router
+- Worked on implementing settings menu
 
 **Nick:**
 
