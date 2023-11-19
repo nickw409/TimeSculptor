@@ -16,6 +16,7 @@ export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
     const [name, setName] = useState("");
     const [dateTime, setDateTime] = useState("");
     const [color, setColor] = useState("");
+    const [icon, setIcon] = useState("");
 
     useEffect(() => {
         setName(toEdit.title);
@@ -35,13 +36,18 @@ export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
         setColor(event.target.value);
     };
 
+    const iconChange = (event) => {
+        setIcon(event.target.value);
+    }
+
+
     const formSubmit = () => {
         const newEvent = {
             id: toEdit.id,
             title: name,
             dateAndTime: dateTime,
             color: color,
-            icon: "/assets/images/login.png"
+            icon: icon
         }
 
         editEvent(newEvent);
@@ -96,6 +102,22 @@ export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
                         <MenuItem value="#0073e6">Blue</MenuItem>
                         <MenuItem value="#606ff3">Purple</MenuItem>
                         <MenuItem value="#9b8bf4">Lavender</MenuItem>
+                    </TextField>
+                    <TextField
+                        id="icon"
+                        select
+                        label="Icon"
+                        variant="filled"
+                        value={icon}
+                        onChange={iconChange}
+                        sx={{width: "50%"}}
+                    >
+                        <MenuItem value="/assets/images/Fitness.png">Fitness</MenuItem>
+                        <MenuItem value="/assets/images/Work.png">Work</MenuItem>
+                        <MenuItem value="/assets/images/Sleep.png">Sleep</MenuItem>
+                        <MenuItem value="/assets/images/Social.png">Social</MenuItem>
+                        <MenuItem value="/assets/images/Write.png">Write</MenuItem>
+                        <MenuItem value="/assets/images/Entertain.png">Entertain</MenuItem>
                     </TextField>
                 </DialogContent>
                 <DialogActions>
