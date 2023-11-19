@@ -23,6 +23,7 @@ export default function EditDialog({ open, close, editEvent, toEdit }) {
     const [name, setName] = useState("");
     const [dateTime, setDateTime] = useState("");
     const [color, setColor] = useState("");
+    const [icon, setIcon] = useState("");
 
     // change default values to start at the current event attributes
     useEffect(() => {
@@ -42,7 +43,11 @@ export default function EditDialog({ open, close, editEvent, toEdit }) {
     const colorChange = (event) => {
         setColor(event.target.value);
     };
-
+  
+    const iconChange = (event) => {
+        setIcon(event.target.value);
+    }
+    
     // handle form dubmission, edit event on submission
     const formSubmit = () => {
         const newEvent = {
@@ -50,7 +55,7 @@ export default function EditDialog({ open, close, editEvent, toEdit }) {
             title: name,
             dateAndTime: dateTime,
             color: color,
-            icon: "/assets/images/login.png"
+            icon: icon
         }
 
         editEvent(newEvent);
@@ -105,6 +110,22 @@ export default function EditDialog({ open, close, editEvent, toEdit }) {
                         <MenuItem value="#0073e6">Blue</MenuItem>
                         <MenuItem value="#606ff3">Purple</MenuItem>
                         <MenuItem value="#9b8bf4">Lavender</MenuItem>
+                    </TextField>
+                    <TextField
+                        id="icon"
+                        select
+                        label="Icon"
+                        variant="filled"
+                        value={icon}
+                        onChange={iconChange}
+                        sx={{width: "50%"}}
+                    >
+                        <MenuItem value="/assets/images/Fitness.png">Fitness</MenuItem>
+                        <MenuItem value="/assets/images/Work.png">Work</MenuItem>
+                        <MenuItem value="/assets/images/Sleep.png">Sleep</MenuItem>
+                        <MenuItem value="/assets/images/Social.png">Social</MenuItem>
+                        <MenuItem value="/assets/images/Write.png">Write</MenuItem>
+                        <MenuItem value="/assets/images/Entertain.png">Entertain</MenuItem>
                     </TextField>
                 </DialogContent>
                 <DialogActions>
