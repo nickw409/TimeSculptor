@@ -7,6 +7,7 @@ import { GlobalContext } from "./main_frame";
 
 export default function SettingsMenu() {
 
+    // information for routing, retrieving information from other pages
     const navigate = useNavigate();
     const globalContext = React.useContext(GlobalContext);
 
@@ -39,6 +40,7 @@ export default function SettingsMenu() {
             <MenuItem value={6}>5 Minutes Before</MenuItem>
         </Select>
         <p/>
+        {/* navigates back to main app screen when clicked */}
         <Button 
         onClick={() => navigate('/')}
         variant="contained"

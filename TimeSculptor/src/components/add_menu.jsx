@@ -5,8 +5,10 @@ import { useNavigate } from "react-router-dom";
 
 export default function AddMenu({ open, closeFunction }) {
 
+    // for use during routing
     const navigate = useNavigate();
 
+    // navigates to the settings menu when clicked
     return(
         <>
         <Menu  
