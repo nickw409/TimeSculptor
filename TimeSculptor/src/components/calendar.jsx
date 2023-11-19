@@ -2,13 +2,17 @@ import './calendar.css';
 import dayjs from 'dayjs';
 import {useState} from 'react';
 
-
-export const getDaysInMonth = monthDay => {
+// gets the current days of the month
+// parameter:
+//  monthDay(dayjs Object): the current month
+export const getDaysInMonth = (monthDay) => {
+    // clone month, set the day object to the first day of the month
     let currMonth = monthDay.clone();
     currMonth.startOf('month');
 
     let days = [];
 
+    // loop through all the days in the month, adding them to days array
     while(currMonth.month() === monthDay.month()) {
         days.push(currMonth.clone());
         currMonth = currMonth.add(1, 'day');
@@ -17,20 +21,23 @@ export const getDaysInMonth = monthDay => {
     return days;
 }
 
-
-export const splitWeeks = dayObjects => {
+// given an array of day objects, splits the days into weeks
+export const splitWeeks = (dayObjects) => {
     let weeks = [];
     let currWeek = [];
 
+    // iterate through days
     for (let day of dayObjects) {
         currWeek.push(day.clone());
 
+        // after saturday is added, split the week
         if (day.format('dddd') == 'Saturday') {
             weeks.push(currWeek);
             currWeek = []
         }
     }
 
+    // add remaining days to their own week
     if (currWeek.length > 0) {
         weeks.push(currWeek);
     }
@@ -50,7 +57,17 @@ const weekBack = (week, padWith = null) => {
 
 const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
+// define default function for displaying a monthly calendar
+// parameters:
+//  month(dayjs object): current month
+//  year(dayjs object): current year
+//  nextMonth: function for moving to next month
+//  prevMonth: function for moving to previous month
+//  events(list(Event)): list of current events in schedule
+//  getTextColor: function to retrieve the text colors from the main app
+//  dayClick: function that enables the expansion of days in calendar
 export default function Calendar({month, year, prevMonth, nextMonth, events, getTextColor, dayClick}) {
+    // format current month, get the weeks to display
     const currMonthObject = dayjs(`${year}-${month}-01`, 'YYYY-MM-DD');
     const weeks = splitWeeks(getDaysInMonth(currMonthObject));
 
@@ -84,6 +101,7 @@ export default function Calendar({month, year, prevMonth, nextMonth, events, get
                                     let currEvents = []
 
                                     if (dayObject) {
+                                        // match events that are on the same day, then sort based on time
                                         currEvents = events
                                             .filter(event => dayObject.isSame(event.dateAndTime, 'day'))
                                             .sort((first_event, second_event) =>

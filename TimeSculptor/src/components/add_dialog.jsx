@@ -10,12 +10,20 @@ import { DateTimePicker, dateTimePickerTabsClasses } from '@mui/x-date-pickers/D
 import MenuItem from '@mui/material/MenuItem';
 import './dialog.css'
 
-export default function AddDialog({ open, closeFunction, addEvent }) {
-    // This is the dialog box component, 
+// define defaul function
+// parameters:
+//  open: open function for the dialog
+//  close: close function for the dialog
+//  addEvent: adds an event to the user's associated events
+export default function AddDialog({ open, close, addEvent }) {
+    
+    // set the fields to be entered in the dialog
     const [name, setName] = useState("");
     const [dateTime, setDateTime] = useState("");
     const [color, setColor] = useState("#029356");
+    const [icon, setIcon] = useState("");
 
+    // create a unique id for the event to be added using uuid
     const unique_id = uuid();
 
     const nameChange = (event) => {
@@ -30,22 +38,33 @@ export default function AddDialog({ open, closeFunction, addEvent }) {
         setColor(event.target.value);
     }
 
+    const iconChange = (event) => {
+        setIcon(event.target.value);
+    }
+    
+    // on submitting, creates event object, adds event, then closes dialog
     const formSubmit = () => {
+        if(!dateTime){
+            alert('Please select a date for the event.');
+            return;
+        }
+
         const newEvent = {
             id: unique_id,
             title: name,
             dateAndTime: dateTime,
             color: color,
-            icon: "/assets/images/login.png"
+            icon: icon
         }
 
         addEvent(newEvent);
 
-        closeFunction();
+        close();
     };
 
     return (
         <>
+            {/* Define dialog */}
             <Dialog 
                 open={open} 
                 maxWidth="md" 
@@ -63,7 +82,7 @@ export default function AddDialog({ open, closeFunction, addEvent }) {
                         onChange={nameChange}
                         sx={{marginBottom: '30px'}}
                     />
-                
+
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                         <DateTimePicker
                             label="Event Date/Time"
@@ -89,11 +108,26 @@ export default function AddDialog({ open, closeFunction, addEvent }) {
                         <MenuItem value="#606ff3">Purple</MenuItem>
                         <MenuItem value="#9b8bf4">Lavender</MenuItem>
                     </TextField>
-                
+                    <TextField
+                        id="icon"
+                        select
+                        label="Icon"
+                        variant="filled"
+                        value={icon}
+                        onChange={iconChange}
+                        sx={{width: "50%"}}
+                    >
+                        <MenuItem value="/assets/images/Fitness.png">Fitness</MenuItem>
+                        <MenuItem value="/assets/images/Work.png">Work</MenuItem>
+                        <MenuItem value="/assets/images/Sleep.png">Sleep</MenuItem>
+                        <MenuItem value="/assets/images/Social.png">Social</MenuItem>
+                        <MenuItem value="/assets/images/Write.png">Write</MenuItem>
+                        <MenuItem value="/assets/images/Entertain.png">Entertain</MenuItem>
+                    </TextField>
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={formSubmit}> Submit </Button>
-                    <Button onClick={() => closeFunction()}>Close</Button>
+                    <Button onClick={() => close()}>Close</Button>
                 </DialogActions>
             </Dialog>
         </>
