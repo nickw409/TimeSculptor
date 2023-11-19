@@ -10,13 +10,20 @@ import { DateTimePicker, dateTimePickerTabsClasses } from '@mui/x-date-pickers/D
 import MenuItem from '@mui/material/MenuItem';
 import './dialog.css'
 
-export default function AddDialog({ open, closeFunction, addEvent }) {
-    // This is the dialog box component, 
+// define defaul function
+// parameters:
+//  open: open function for the dialog
+//  close: close function for the dialog
+//  addEvent: adds an event to the user's associated events
+export default function AddDialog({ open, close, addEvent }) {
+    
+    // set the fields to be entered in the dialog
     const [name, setName] = useState("");
     const [dateTime, setDateTime] = useState("");
     const [color, setColor] = useState("#029356");
     const [icon, setIcon] = useState("");
 
+    // create a unique id for the event to be added using uuid
     const unique_id = uuid();
 
     const nameChange = (event) => {
@@ -34,7 +41,8 @@ export default function AddDialog({ open, closeFunction, addEvent }) {
     const iconChange = (event) => {
         setIcon(event.target.value);
     }
-
+    
+    // on submitting, creates event object, adds event, then closes dialog
     const formSubmit = () => {
         if(!dateTime){
             alert('Please select a date for the event.');
@@ -51,11 +59,12 @@ export default function AddDialog({ open, closeFunction, addEvent }) {
 
         addEvent(newEvent);
 
-        closeFunction();
+        close();
     };
 
     return (
         <>
+            {/* Define dialog */}
             <Dialog 
                 open={open} 
                 maxWidth="md" 
@@ -73,7 +82,7 @@ export default function AddDialog({ open, closeFunction, addEvent }) {
                         onChange={nameChange}
                         sx={{marginBottom: '30px'}}
                     />
-                
+
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                         <DateTimePicker
                             label="Event Date/Time"
@@ -118,7 +127,7 @@ export default function AddDialog({ open, closeFunction, addEvent }) {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={formSubmit}> Submit </Button>
-                    <Button onClick={() => closeFunction()}>Close</Button>
+                    <Button onClick={() => close()}>Close</Button>
                 </DialogActions>
             </Dialog>
         </>

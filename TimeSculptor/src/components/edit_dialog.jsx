@@ -12,12 +12,20 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
-export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
+// define main function for edit event dialog.
+// parameters:
+//  open: function for opening the dialog
+//  close: function for closing the dialog
+//  editEvent: function for editing a current event in the event list
+//  toEdit(str): id for the current event that is being edited
+export default function EditDialog({ open, close, editEvent, toEdit }) {
+    // setup fields for entry
     const [name, setName] = useState("");
     const [dateTime, setDateTime] = useState("");
     const [color, setColor] = useState("");
     const [icon, setIcon] = useState("");
 
+    // change default values to start at the current event attributes
     useEffect(() => {
         setName(toEdit.title);
         setDateTime(toEdit.dateAndTime);
@@ -35,12 +43,12 @@ export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
     const colorChange = (event) => {
         setColor(event.target.value);
     };
-
+  
     const iconChange = (event) => {
         setIcon(event.target.value);
     }
-
-
+    
+    // handle form dubmission, edit event on submission
     const formSubmit = () => {
         const newEvent = {
             id: toEdit.id,
@@ -52,7 +60,7 @@ export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
 
         editEvent(newEvent);
 
-        closeFunction();
+        close();
     };
 
     return (
@@ -122,7 +130,7 @@ export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={formSubmit}> Submit </Button>
-                    <Button onClick={() => closeFunction()}>Close</Button>
+                    <Button onClick={() => close()}>Close</Button>
                 </DialogActions>
             </Dialog>
         </>
