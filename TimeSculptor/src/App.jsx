@@ -86,7 +86,7 @@ function App() {
   const globalContext = React.useContext(GlobalContext);
   const events = globalContext.globalState.events;
 
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
 
   // class for functions that change events, triggerring a rerender. follows a 
   // Singleton design pattern
