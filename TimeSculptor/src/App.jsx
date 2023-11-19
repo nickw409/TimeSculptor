@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react'
 import { redirect, BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/header'
@@ -7,6 +8,7 @@ import Login from './login';
 import './App.css'
 import dayjs from 'dayjs'
 import { unstable_composeClasses } from '@mui/material';
+import { GlobalContext } from './components/main_frame';
 
 class Event {
   constructor(id, title, dateAndTime, icon, color, recurring = false) {
@@ -78,23 +80,13 @@ class RecurringStrategy extends EventCreationStrategy {
   }
 }
 
-const setupInitialEvents = () => {
-  let constructor = new DefaultStrategy
-
-  const initialEvents = [
-    constructor.createEvent("1", "Eat", dayjs(new Date(2023, 12, 24)), "/assets/images/login.png", "#0073e6"),
-    constructor.createEvent("2", "Sleep", dayjs(new Date(2023, 11, 16)), "/assets/images/register.png", "#9b8bf4"),
-  ]
-
-  return initialEvents
-}
-
 function App() {
-  // this useState dynamically updates our list of events
-  // when a new event is added
-  const [events, setEvents] = useState(setupInitialEvents());
+
+  // involved in routing, stores events as a kind of global variable
+  const globalContext = React.useContext(GlobalContext);
+  const events = globalContext.globalState.events;
+
   const [loggedIn, setLoggedIn] = useState(true);
-  
 
   // class for functions that change events, triggerring a rerender. follows a 
   // Singleton design pattern
@@ -123,7 +115,8 @@ function App() {
   
     deleteEvent = (targetId) => {
       const event_name = events[targetId]?.title || "Unknown Event";
-      setEvents(events.filter((event) => event.id !== targetId));
+      const newEvents = events.filter((event) => event.id !== targetId);
+      globalContext.setGlobalState((prevState) => ({...prevState, events:newEvents}));
     };
   
     editEvent = (updatedEvent) => {
@@ -132,7 +125,7 @@ function App() {
       if (index !== -1) {
          const newEvents = [...events];
          newEvents[index] = updatedEvent;
-         setEvents(newEvents);
+         globalContext.setGlobalState((prevState) => ({...prevState, events:newEvents}));
       }
     };
   
@@ -147,7 +140,7 @@ function App() {
           oldEvents.push(this.generateDefaultEvent(newEvent));
        }
 
-       setEvents(oldEvents);
+       globalContext.setGlobalState((prevState) => ({...prevState, events:oldEvents}));
    
     }
 
@@ -164,7 +157,6 @@ function App() {
   // instantiate single event controller
   const eventController = new EventsController()
   
-
   if (loggedIn) {
     // main display
     return (
