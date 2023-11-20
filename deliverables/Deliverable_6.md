@@ -65,7 +65,7 @@ Group 4: **TimeSculptor**
 
 **Implemented by:** Izaac Molina
 
-**Approved by:** Noah Shwartz
+**Approved by:** Noah Schwartz
 
 **Daily View:**    
 ![Daily](../assets/daily_view.png)   
@@ -79,6 +79,33 @@ Group 4: **TimeSculptor**
 **Implemented by:** Nicholas Wiley     
 
 **Approved by:** Izaac Molina
+
+
+
+**Requirement:** Implement icon choosing
+
+**Issue:** [#79](https://github.com/nickw409/TimeSculptor/issues/79)   
+
+**Pull request:** [#80](https://github.com/nickw409/TimeSculptor/pull/80)   
+
+**Implemented by:** Noah Schwartz
+
+**Approved by:** Kimberly Allison
+**Icon Choosing**    
+![Icon Choosing](../assets/Icon_choose.png)   
+
+**Requirement:** Implement Error Message for invalid date/time
+
+**Issue:** [#79](https://github.com/nickw409/TimeSculptor/issues/79)   
+
+**Pull request:** [#80](https://github.com/nickw409/TimeSculptor/pull/80)   
+
+**Implemented by:** Noah Schwartz
+
+**Approved by:** Kimberly Allison
+**Error Message**    
+![Error Message](../assets/error_message.png)   
+
 
 # Tests
 
