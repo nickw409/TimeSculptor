@@ -55,6 +55,11 @@ Give an example
 - Run db_init.sh in build directory
 - npm run api
 
+**OR If running Linux**
+
+- Move to TimeSculptor directory
+- npm run dev-version
+
 ## In order to view online
 
 Go to this link: [TimeSculptor](http://enginick.com:9696/)
