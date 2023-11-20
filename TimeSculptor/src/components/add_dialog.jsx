@@ -1,26 +1,27 @@
-import React from "react";
-import { useState } from "react";
-import { Dialog, DialogTitle, DialogActions, DialogContent } from "@mui/material";
-import { Button } from "@mui/material";
-import TextField from '@mui/material/TextField';
-import { v4 as uuid } from "uuid"
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DateTimePicker, dateTimePickerTabsClasses } from '@mui/x-date-pickers/DateTimePicker';
-import MenuItem from '@mui/material/MenuItem';
+import React, { useState } from 'react'
+import { Dialog, DialogTitle, DialogActions, DialogContent, Button } from '@mui/material'
+import TextField from '@mui/material/TextField'
+import { v4 as uuid } from 'uuid'
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
+import { DateTimePicker} from '@mui/x-date-pickers/DateTimePicker'
+import MenuItem from '@mui/material/MenuItem'
 import './dialog.css'
 
-// This is the dialog box component, 
-export default function AddDialog({ open, closeFunction, addEvent }) {
-    const [name, setName] = useState("");
-    const [dateTime, setDateTime] = useState("");
-    const [color, setColor] = useState("#029356");
-    const [icon, setIcon] = useState(""); // Icon state variable declared here
+// This is the dialog box component for adding events
+//  parameters:
+//    open: function that opens dialog
+//    
+export default function AddDialog({ open, close, addEvent }) {
+    const [name, setName] = useState("")
+    const [dateTime, setDateTime] = useState("")
+    const [color, setColor] = useState("#029356")
+    const [icon, setIcon] = useState("") 
 
-    const unique_id = uuid();
+    const unique_id = uuid()
 
     const nameChange = (event) => {
-        setName(event.target.value);
+        setName(event.target.value)
     };
 
     const dateTimeChange = (date) => {
@@ -31,12 +32,12 @@ export default function AddDialog({ open, closeFunction, addEvent }) {
         setColor(event.target.value);
     }
 
-    const iconChange = (event) => { // Function to handle changes in icon state variable
+    const iconChange = (event) => { 
         setIcon(event.target.value);
     }
 
     const formSubmit = () => {
-        // error handlinfg if invalid dateTime is entered for a new event.
+        // error handling if invalid dateTime is entered for a new event.
         if(!dateTime){
             alert('Please select a date for the event.');
             return;
@@ -52,7 +53,7 @@ export default function AddDialog({ open, closeFunction, addEvent }) {
 
         addEvent(newEvent);
 
-        closeFunction();
+        close();
     };
 
     return (
@@ -119,7 +120,7 @@ export default function AddDialog({ open, closeFunction, addEvent }) {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={formSubmit}> Submit </Button>
-                    <Button onClick={() => closeFunction()}>Close</Button>
+                    <Button onClick={() => close()}>Close</Button>
                 </DialogActions>
             </Dialog>
         </>

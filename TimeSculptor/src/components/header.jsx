@@ -11,8 +11,8 @@ import { useState } from 'react';
 import { ClickAwayListener } from '@mui/base/ClickAwayListener';
 
 import Logo from '../assets/tslogotransparent.png';
-import Login from '../assets/login.png'
-import Register from '../assets/register.png'
+// import Login from '../assets/login.png'
+// import Register from '../assets/register.png'
 
 export default function Header() {
 
@@ -25,7 +25,7 @@ export default function Header() {
     });
 
     // for hamburger menu
-    const [clickOff, clickOffNow] = useState(false);
+    // const [clickOff, clickOffNow] = useState(false);
     const [settingsMenuOpen, setSettingsMenuOpen] = useState(false);
 
     function closeSettingsMenu()
