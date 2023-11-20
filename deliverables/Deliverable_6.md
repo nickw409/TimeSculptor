@@ -28,7 +28,7 @@ Group 4: **TimeSculptor**
 
 **Requirement:** Implement a monthly calendar view for events 
 **Issue:** [#72](https://github.com/nickw409/TimeSculptor/issues/72)     
-**Pull request:** [#71](https://github.com/nickw409/TimeSculptor/pull/71)  
+**Pull request:** [#71](https://github.com/nickw409/TimeSculptor/pull/71)
 **Implemented by:** Izaac Molina
 **Approved by:** Nick Wiley 
 **Monthly View:**    
