@@ -1,3 +1,25 @@
+.dailyView {
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dailyView .listTable {
+  width: 100%;
+}
+
+.changeDayButtons {
+  margin-bottom: 10px;
+  width: 200px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 10px;
+  border: none;
+
+}
+
 .eventsDisplay {
   display: flex;
   height: 100vh;
@@ -7,11 +29,19 @@
   align-items: center;
 }
 
-
 .listTable {
   width: 80%;
   margin-top: 15px;
+  text-align: center;
 }
+
+.listTable img{
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+
 
 .eventsDisplay * {
   border: 1px solid rgba(0, 0, 0, 0.306)
@@ -36,5 +66,3 @@ td {
   cursor: pointer;
   border: none;
 }
-
-

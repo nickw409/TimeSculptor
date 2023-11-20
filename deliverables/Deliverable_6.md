@@ -32,7 +32,11 @@ For the testing of our program we decided to use jest as our automated testing s
 
 link for testing: [Here](https://github.com/nickw409/TimeSculptor/tree/main/TimeSculptor/src/components/__tests__)
 
+an example of a test case is the [calendar.jsx](https://github.com/nickw409/TimeSculptor/tree/main/TimeSculptor/src/components/calendar.jsx) file, in our tests, the first test in the [calendar.test.js](https://github.com/nickw409/TimeSculptor/tree/main/TimeSculptor/src/components/__tests__/calendar.test.js) file is seeing that the correct month is displayed based on a set of mock events and date. 
+
 Below is the output of the current tests being ran:
+
+![testing_output](../assets/deliverable6_testing.PNG)
 
 # Demo
 
