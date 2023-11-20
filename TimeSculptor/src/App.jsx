@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 // import { redirect, BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/header'
 import AddEvent from './components/create'

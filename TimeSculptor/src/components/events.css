@@ -32,7 +32,16 @@
 .listTable {
   width: 80%;
   margin-top: 15px;
+  text-align: center;
 }
+
+.listTable img{
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+
 
 .eventsDisplay * {
   border: 1px solid rgba(0, 0, 0, 0.306)
@@ -57,5 +66,3 @@ td {
   cursor: pointer;
   border: none;
 }
-
-
