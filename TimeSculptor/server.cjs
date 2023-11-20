@@ -27,7 +27,22 @@ app.post("/login", (req, res) => {
   } catch (e) {
     console.error(e);
   }
-})
+});
+
+app.get("/get-event", (req, res) => {
+  try {
+    let id = parseInt(req.query?.id);
+    console.log(typeof(id));
+    getEvent(id).then((event) => {
+      console.log(event);
+      res.json(event);
+    }).catch((e) => {
+      console.error(e);
+    })
+  } catch (e) {
+    console.error(e);
+  }
+});
 
 app.get("/status", (req, res) => {
   const status = { "Status": true };
@@ -75,8 +90,6 @@ async function authUser(username, password) {
 
     credentialQuery = mysql.format(credentialQuery, inserts);
 
-    dbConnection.q
-
     dbConnection.query(credentialQuery,
       (err, results, fields) => {
         if (err) {
@@ -91,6 +104,52 @@ async function authUser(username, password) {
           token.Auth = true;
           dbConnection.end();
           resolve(token);
+        }
+      })
+  })
+}
+
+async function getEvent(id) {
+  return new Promise((resolve, reject) => {
+    let event = 'empty';
+
+    let dbConnection = mysql.createConnection({
+      host: "localhost",
+      user: "dev",
+      password: "TimeSculptor",
+      database: "dev_db"
+    });
+
+    dbConnection.connect((err) => {
+      if (err) throw err;
+      console.log("Connected");
+    });
+
+    let credentialQuery = 'SELECT ?? FROM ?? WHERE ??=??';
+    let inserts = [
+      'event',
+      'Event',
+      'id',
+      id];
+
+    credentialQuery = mysql.format(credentialQuery, inserts);
+    console.log(credentialQuery);
+
+    dbConnection.query(credentialQuery,
+      (err, results, fields) => {
+        if (err) {
+          throw err;
+        }
+        if (results.length == 0) {
+          dbConnection.end();
+          console.log("Bad");
+          reject("Event is not in database");
+        }
+        else if (results[0].event !== undefined) {
+          dbConnection.end();
+          event = results[0].event;
+          console.log(event);
+          resolve(event);
         }
       })
   })
