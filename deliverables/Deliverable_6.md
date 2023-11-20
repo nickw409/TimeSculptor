@@ -35,10 +35,14 @@ Group 4: **TimeSculptor**
 ![Monthly](../assets/monthly_view.png)   
 
 **Requirement:** Implement icons for the table in list view 
-**Issue:** [#90](https://github.com/nickw409/TimeSculptor/issues/90)     
-**Pull request:** [#85](https://github.com/nickw409/TimeSculptor/pull/85)  
+**Issue:** [#90](https://github.com/nickw409/TimeSculptor/issues/90)
+
+**Pull request:** [#85](https://github.com/nickw409/TimeSculptor/pull/85)
+
 **Implemented by:** Gabriel Valentin
+
 **Approved by:** Izaac Molina
+
 **Table Icons:**    
 ![Icons](../assets/chicken-example.png) 
 
