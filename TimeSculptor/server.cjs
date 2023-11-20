@@ -76,7 +76,7 @@ async function authUser(username, password) {
 
     dbConnection.connect((err) => {
       if (err) throw err;
-      console.log("Connected");
+      console.log("Connected to database");
     });
 
     let credentialQuery = 'SELECT ?? FROM ?? WHERE ?? = ? AND ?? = ?';
@@ -125,7 +125,7 @@ async function getEvent(id) {
       console.log("Connected");
     });
 
-    let credentialQuery = 'SELECT ?? FROM ?? WHERE ??=??';
+    let credentialQuery = "SELECT ?? FROM ?? WHERE ??='?'";
     let inserts = [
       'event',
       'Event',
@@ -142,13 +142,11 @@ async function getEvent(id) {
         }
         if (results.length == 0) {
           dbConnection.end();
-          console.log("Bad");
           reject("Event is not in database");
         }
         else if (results[0].event !== undefined) {
           dbConnection.end();
           event = results[0].event;
-          console.log(event);
           resolve(event);
         }
       })
