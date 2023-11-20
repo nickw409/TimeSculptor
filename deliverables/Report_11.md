@@ -14,6 +14,8 @@ Missing participants: None
 
 **Gabriel:**
 
+- Working on implementing table icons to improve accesibility
+
 **Izaac:**
 
 - Created daily view, made some tweaks to add/edit display
@@ -21,11 +23,21 @@ Missing participants: None
 
 **Joey:**
 
+- Developed tests for current release
+
 **Kimberly:**
+
+- Worked on implementing react router
+- Worked on implementing settings menu
 
 **Nick:**
 
+- Setting up database tables for settings and schedules
+- Store user authentication in local storage
+
 **Noah:**
+
+- Worked on setting up a menu for selecting an event icon
 
 ## **Project Retrospective**
 
