@@ -70,6 +70,16 @@ Group 4: **TimeSculptor**
 **Daily View:**    
 ![Daily](../assets/daily_view.png)   
 
+**Requirement:** Create databases to store schedule and event data     
+
+**Issue:** [#88](https://github.com/nickw409/TimeSculptor/issues/88) 
+
+**Pull request:** [#89](https://github.com/nickw409/TimeSculptor/pull/89)    
+
+**Implemented by:** Nicholas Wiley     
+
+**Approved by:** Izaac Molina
+
 # Tests
 
 For the testing of our program we decided to use jest as our automated testing software. 
