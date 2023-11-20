@@ -19,6 +19,7 @@ Group 4: **TimeSculptor**
 # Implemented Requirements
 
 **Requirement:** Implement a settings menu with routing to the new page     
+
 **Issue:** [#78](https://github.com/nickw409/TimeSculptor/issues/78), [#74](https://github.com/nickw409/TimeSculptor/issues/74)     
 
 **Pull request:** [#81](https://github.com/nickw409/TimeSculptor/pull/81)    
@@ -31,6 +32,7 @@ Group 4: **TimeSculptor**
 ![Menu](../assets/settings_menu.png)   
 
 **Requirement:** Implement a monthly calendar view for events 
+
 **Issue:** [#72](https://github.com/nickw409/TimeSculptor/issues/72) 
 
 **Pull request:** [#71](https://github.com/nickw409/TimeSculptor/pull/71)
