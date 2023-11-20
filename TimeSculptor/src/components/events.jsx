@@ -68,12 +68,12 @@ export default function EventTable( {events, eventController} ) {
                 <table className='listTable'>
                     <thead>
                         <tr>
-                            <th className='statusCol'>Status</th>
-                            <th className='imageCol'>Image</th>
-                            <th>Title</th>
-                            <th className='dateCol'>Date</th>
-                            <th className='timeCol'>Time</th>
-                            <th className='actionCol'>Actions</th>
+                            <th className='statusCol'>Status<img src="/public/assets/images/status.png" alt = "Status Icon"/></th>
+                            <th className='imageCol'>Image<img src="/public/assets/images/image.png" alt = "Image Icon"/></th>
+                            <th style={{ fontSize: '40px' }}>Title</th>
+                            <th className='dateCol'>Date<img src="/public/assets/images/date.png" alt = "Date Icon"/></th>
+                            <th className='timeCol'>Time<img src="/public/assets/images/time.png" alt = "Time Icon"/></th>
+                            <th className='actionCol'>Actions<img src="/public/assets/images/action.png" alt = "Action Icon"/></th>
                         </tr>
                     </thead>
                     <tbody>
