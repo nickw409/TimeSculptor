@@ -27,19 +27,29 @@ Group 4: **TimeSculptor**
 ![Menu](../assets/settings_menu.png)   
 
 **Requirement:** Implement a monthly calendar view for events 
-**Issue:** [#72](https://github.com/nickw409/TimeSculptor/issues/72)         
-**Pull request:** [#71](https://github.com/nickw409/TimeSculptor/pull/71)    
+
+**Issue:** [#72](https://github.com/nickw409/TimeSculptor/issues/72)     
+
+**Pull request:** [#71](https://github.com/nickw409/TimeSculptor/pull/71)  
+
 **Implemented by:** Izaac Molina
+
 **Approved by:** Nick Wiley 
+
 **Monthly View:**    
 ![Monthly](../assets/monthly_view.png)   
 
 **Requirement:** Implement a daily view for events 
-**Issue:** [#75](https://github.com/nickw409/TimeSculptor/issues/75)         
-**Pull request:** [#76](https://github.com/nickw409/TimeSculptor/pull/76)    
+
+**Issue:** [#75](https://github.com/nickw409/TimeSculptor/issues/75)   
+
+**Pull request:** [#76](https://github.com/nickw409/TimeSculptor/pull/76)   
+
 **Implemented by:** Izaac Molina
+
 **Approved by:** Noah Shwartz
-**Monthly View:**    
+
+**Daily View:**    
 ![Daily](../assets/daily_view.png)   
 
 # Tests
