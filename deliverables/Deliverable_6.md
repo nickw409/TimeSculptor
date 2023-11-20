@@ -18,35 +18,52 @@ Group 4: **TimeSculptor**
 
 # Implemented Requirements
 
-**Requirement:** Implement a settings menu with routing to the new page      
-**Issue:** [#78](https://github.com/nickw409/TimeSculptor/issues/78), [#74](https://github.com/nickw409/TimeSculptor/issues/74)           
+**Requirement:** Implement a settings menu with routing to the new page     
+**Issue:** [#78](https://github.com/nickw409/TimeSculptor/issues/78), [#74](https://github.com/nickw409/TimeSculptor/issues/74)     
+
 **Pull request:** [#81](https://github.com/nickw409/TimeSculptor/pull/81)    
+
 **Implemented by:** Kimberly Allison      
+
 **Approved by:** Izaac Molina   
+
 **Settings Menu:**    
 ![Menu](../assets/settings_menu.png)   
 
 **Requirement:** Implement a monthly calendar view for events 
-**Issue:** [#72](https://github.com/nickw409/TimeSculptor/issues/72)     
+**Issue:** [#72](https://github.com/nickw409/TimeSculptor/issues/72) 
+
 **Pull request:** [#71](https://github.com/nickw409/TimeSculptor/pull/71)
+
 **Implemented by:** Izaac Molina
+
 **Approved by:** Nick Wiley 
+
 **Monthly View:**    
 ![Monthly](../assets/monthly_view.png)   
 
 **Requirement:** Implement icons for the table in list view 
 **Issue:** [#90](https://github.com/nickw409/TimeSculptor/issues/90)
+
 **Pull request:** [#85](https://github.com/nickw409/TimeSculptor/pull/85)
+
 **Implemented by:** Gabriel Valentin
+
 **Approved by:** Izaac Molina
+
 **Table Icons:**    
 ![Icons](../assets/chicken-example.png) 
 
 **Requirement:** Implement a daily view for events
+
 **Issue:** [#75](https://github.com/nickw409/TimeSculptor/issues/75)   
+
 **Pull request:** [#76](https://github.com/nickw409/TimeSculptor/pull/76)   
+
 **Implemented by:** Izaac Molina
+
 **Approved by:** Noah Shwartz
+
 **Daily View:**    
 ![Daily](../assets/daily_view.png)   
 
@@ -73,5 +90,8 @@ To foster code quality, we implemented a system where all major components and f
 # Lessons Learned
 
 Throughout the course of creating this second release, we have further deepened our knowledge of React. Particularly, we learned a lot about Routing in react, which allowed us to implement the settings page, as well as how to format a calendar in react, which is now part of the events display. Our overall progress in learning these technologies is tangible, which has been great getting to experienve. However, one problem that arose was finding a more streamlined way to implement coding standards, such as a style guide. Implementing the style guide was very time consuming, and in the future, we want to find ways to better automate this process. Additionally, we also had a hard time refactoring the code to follow particular design patterns and principles, so we also want to look more into how we can refactor our code to follow more standardized design. Finally, we started working on implementing a database for the project, but have ultimately ran into issues completely hooking it up to the front end to update the database and preserve login states, which is our biggest priority for next release.
+
+
+
 
 
