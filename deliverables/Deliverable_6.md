@@ -28,6 +28,8 @@ link for testing: [Here](https://github.com/nickw409/TimeSculptor/tree/main/Time
 
 Below is the output of the current tests being ran:
 
+![testing_output](../assets/deliverable6_testing.png)
+
 # Demo
 
 
