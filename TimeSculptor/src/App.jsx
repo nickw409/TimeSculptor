@@ -90,7 +90,7 @@ function App () {
   // involved in routing, stores events as a kind of global variable
   const globalContext = React.useContext(GlobalContext)
   const events = globalContext.globalState.events
-  const [loggedIn, setLoggedIn] = useState(true)
+  const [loggedIn, setLoggedIn] = useState(false)
 
   // class for functions that change (add/edit/delete) events, triggerring a rerender.
   // follows a Singleton design pattern.
