@@ -34,7 +34,7 @@ Group 4: **TimeSculptor**
 **Monthly View:**    
 ![Monthly](../assets/monthly_view.png)   
 
-**Requirement:** Implement a daily view for events 
+**Requirement:** Implement a daily view for events
 **Issue:** [#75](https://github.com/nickw409/TimeSculptor/issues/75)   
 **Pull request:** [#76](https://github.com/nickw409/TimeSculptor/pull/76)   
 **Implemented by:** Izaac Molina
