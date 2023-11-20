@@ -2,7 +2,7 @@
 
 Group 4: **TimeSculptor**
 
-Date and Location: 11/3/2023, Cline Library Room 185
+Date and Location: 11/17/2023, Cline Library Room 182
 
 Present Participants: Izaac Molina, Nicholas Wiley, Kimberly Allison, Joey Banaszak, Gabriel Valentin, Noah Schwartz
 
@@ -14,68 +14,45 @@ Missing participants: None
 
 **Gabriel:**
 
-- Looked into use of MySQL for user database
-
 **Izaac:**
 
-- Created calendar template for event calendar view
+- Created daily view, made some tweaks to add/edit display
 - Handled room reservations
-- Wrote some descriptions for deliverable 4
 
 **Joey:**
 
-- Continuing working on the testing for the program
-- Sent off the tests for deliverable 4
-
 **Kimberly:**
-
-- Looked into adding a settings and notification menu
 
 **Nick:**
 
-- Further improvements to RESTful API.
-- Researching database integration into backend.
-
 **Noah:**
-
-- Created Report 9
-- Did some Database Work in MySQL Workbench
 
 ## **Project Retrospective**
 
 **Appreciations:**
 
-Made it through Deliverable 4, made a lot of progress on the project. Have done a good job of keeping on top of the work.
+- Everyone worked hard on Deliverable 4 & 5
 
 **Successes:**
 
-See above
+- We did great on Deliverable 4
 
 **Failures:**
 
-N/A
+- Not a ton of progress made on the app this week
 
 **Barriers:**
 
-Semester continues to ramp up in terms of workload
+- Unclear tasks for certain members
 
 **What We Should Try Next Time:**
 
-N/A
+- Everyone issues at least 1 pull request every week, and has a clear task for that week
 
 ## **Next Steps**
 
-- Work on Deliverable 5 diagrams
-- Continue working on features to be ready for Deliverable 6
-- Refactor code to be more readable/cleaner by following SOLID
+- Keep iterating on app to be ready for Deliverable 6 and beyond
 
 ## **Decisions**
 
-- Assigned deliverable 5 tasks
-- Joey: Class Diagram
-- Izaac: Architecture
-- Nick: Design Principles
-- Noah: Design Pattern
-- Kimberly: Design Patter
-- Gabriel: Sequence Diagram
-
+- See "What We Should Try Next Time" sections.
