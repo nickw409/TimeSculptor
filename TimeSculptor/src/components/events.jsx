@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 import EditDialog from './edit_dialog';
 import DeleteWarning from './delete_warning';
 import CalendarController from './calendar_controller';
-import { Button } from '@mui/material';
+import { Button } from '@mui/material'
 
 // define text colors, formatted as "color: text-color"
 function getTextColor(hexColor) {
@@ -141,8 +141,8 @@ export default function EventTable( {events, eventController} ) {
                 </h1>
                 <div className='changeDayButtons'>
                     {/* Define buttons for moving to the next/previous days */}
-                    <button onClick={prevDay}> Prev </button>
-                    <button onClick={nextDay}> Next </button>
+                    <Button onClick={prevDay}> Prev </Button>
+                    <Button onClick={nextDay}> Next </Button>
                 </div>
 
                 {/* call list view to display the current day's events */}

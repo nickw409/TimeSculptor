@@ -1,6 +1,7 @@
 import './calendar.css';
 import dayjs from 'dayjs';
 import {useState} from 'react';
+import { Button } from '@mui/material';
 
 // gets the current days of the month
 // parameter:
@@ -78,8 +79,8 @@ export default function Calendar({month, year, prevMonth, nextMonth, events, get
            </h1> 
            
            <div className='changeMonthButtons'>
-                <button onClick={prevMonth}> Prev </button>
-                <button onClick={nextMonth}> Next </button>
+                <Button onClick={prevMonth}> Prev </Button>
+                <Button onClick={nextMonth}> Next </Button>
            </div>
            
            <table className='calendarTable'>

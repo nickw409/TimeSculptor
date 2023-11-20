@@ -1,10 +1,13 @@
 // imports for date/time picker components
+import React, { useState, useEffect } from 'react'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { Dialog, DialogTitle, DialogActions, DialogContent, Button } from "@mui/material";
+import TextField from '@mui/material/TextField';
+import MenuItem from '@mui/material/MenuItem';
 
-export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
+export default function EditDialog({ open, close, editEvent, toEdit }) {
     const [name, setName] = useState("");
     const [dateTime, setDateTime] = useState("");
     const [color, setColor] = useState("");
@@ -46,7 +49,7 @@ export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
 
         editEvent(newEvent);
 
-        closeFunction();
+        close();
     };
 
     return (
@@ -116,8 +119,9 @@ export default function EditDialog({ open, closeFunction, editEvent, toEdit }) {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={formSubmit}> Submit </Button>
-                    <Button onClick={() => closeFunction()}>Close</Button>
+                    <Button onClick={() => close()}>Close</Button>
                 </DialogActions>
             </Dialog>
         </>
     );
+}
