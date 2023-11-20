@@ -44,11 +44,10 @@ Below is the output of the current tests being ran:
 
 # Code Quality
 
-To foster code quality, we implemented a system where all major components and functions are commented with their purpose, along with the parameters they receive and value(s) they return. Additionally, we also refactored our code to specifically follow SOLID principles, such as how the Event class has the single responsibility of holding data for each displayed event.
-
+To foster code quality, we implemented a system where all major components and functions are commented with their purpose, along with the parameters they receive and value(s) they return. Additionally, we also refactored our code to specifically follow SOLID principles, such as how the Event class has the single responsibility of holding data for each displayed event. Finally, we are also using the linter provided by [StandardJS](https://github.com/standard/standard) which is a common linter for .js and .jsx code. This has allowed us to follow a common and uniform style guide for our codebase
 
 # Lessons Learned
 
-Throughout the course of creating this first release, we have learned a lot about the use of react.js, node.js, and jest. In particular, the group learned a great deal about how to design event listeners in React, as well as how to use the React mui library to implement useful features like dropdown menus and add/edit/delete dialogues. In the future, we want to will further improve the UI by thoroughly examining further acessibility requirements and applying them to our design. Additionally, some other immediate next steps for the project are to implement a full user registration and login system, designing a calendar view for events, implementing user settings, and setting up a SQL database for our classes.
+Throughout the course of creating this second release, we have further deepened our knowledge of React. Particularly, we learned a lot about Routing in react, which allowed us to implement the settings page. 
 
 
