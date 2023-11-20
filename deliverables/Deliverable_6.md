@@ -91,6 +91,7 @@ Group 4: **TimeSculptor**
 **Implemented by:** Noah Schwartz
 
 **Approved by:** Kimberly Allison
+
 **Icon Choosing**    
 ![Icon Choosing](../assets/Icon_choose.png)   
 
@@ -103,6 +104,7 @@ Group 4: **TimeSculptor**
 **Implemented by:** Noah Schwartz
 
 **Approved by:** Kimberly Allison
+
 **Error Message**    
 ![Error Message](../assets/error_message.png)   
 
