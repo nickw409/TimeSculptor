@@ -169,7 +169,7 @@ async function getEvent(id) {
   return new Promise((resolve, reject) => {
     let event = 'empty';
 
-    let credentialQuery = "SELECT ?? FROM ?? WHERE ??='?'";
+    let credentialQuery = "SELECT ?? FROM ?? WHERE ??=?";
     let inserts = [
       'event',
       'Event',

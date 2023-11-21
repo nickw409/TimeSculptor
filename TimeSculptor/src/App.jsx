@@ -152,6 +152,22 @@ function App () {
         oldEvents.push(this.generateRecurringEvent(newEvent))
       } else {
         oldEvents.push(this.generateDefaultEvent(newEvent))
+        let data = {
+          schedule_name:"testing",
+          id:newEvent.id,
+          event:newEvent
+        };
+        fetch('/add-event', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        }).then(res => {
+          console.log(res.status);
+        }).catch(err => {
+          console.log("Error");
+        })
       }
 
       globalContext.setGlobalState((prevState) => ({ ...prevState, events: oldEvents }))
