@@ -6,8 +6,62 @@ const app = express();
 const port = 9696;
 let loggedIn = false;
 
-app.use(express.static(path.join(__dirname, 'dist')));
+/*  IMPORTANT
+      Storing the password for the database in code that is public is a very
+      dumb thing to do. I am only doing it here because this is a development
+      database and as such does not matter. The dev user has reduced privileges
+      and is set up for local database stuff only. Before set to production this
+      needs to be changed to a production user and credentials stored elsewhere.
+*/
+const dbPool = mysql.createPool({
+  host: 'localhost',
+  user: 'dev',
+  password: 'TimeSculptor',
+  database: 'dev_db',
+  waitForConnections: true,
+  connectionLimit: 10,
+  maxIdle: 10, // max idle connections
+  idleTimeout: 30000, // 30 sec idle timeout
+  queueLimit: 0,
+  enableKeepAlive: true,
+  keepAliveInitialDelay: 0
+});
+
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'dist')));
+
+app.post("/add-event", (req, res) => {
+  try {
+    let schedule_name = req.body.schedule_name;
+    let id = req.body.id;
+    let event = JSON.stringify(req.body.event);
+    addEvent(schedule_name, id, event).then(() => {
+      console.log("Successfully added event");
+      res.sendStatus(200);
+    }).catch((err) => {
+      console.log("Bad data");
+      res.sendStatus(400);
+    })
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(400);
+  }
+})
+
+app.get("/get-event", (req, res) => {
+  try {
+    let id = req.query?.id;
+    console.log(typeof (id));
+    getEvent(id).then((event) => {
+      console.log(event);
+      res.json(event);
+    }).catch((e) => {
+      console.error(e);
+    })
+  } catch (e) {
+    console.error(e);
+  }
+});
 
 app.post("/login", (req, res) => {
   try {
@@ -29,21 +83,6 @@ app.post("/login", (req, res) => {
   }
 });
 
-app.get("/get-event", (req, res) => {
-  try {
-    let id = parseInt(req.query?.id);
-    console.log(typeof(id));
-    getEvent(id).then((event) => {
-      console.log(event);
-      res.json(event);
-    }).catch((e) => {
-      console.error(e);
-    })
-  } catch (e) {
-    console.error(e);
-  }
-});
-
 app.get("/status", (req, res) => {
   const status = { "Status": true };
   res.json(status);
@@ -53,6 +92,42 @@ app.listen(port, () => {
   console.log(`React Server Listening On Port: ${port}`);
 });
 
+async function addEvent(schedule_name, id, event) {
+  return new Promise((resolve) => {
+    if (schedule_name != null && id != null && event != null) {
+      let sqlString = 'INSERT INTO Event VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE ?? = ?, ?? = ?, ?? = ?;'
+      let inserts = [
+        schedule_name,
+        id,
+        event,
+        'schedule_name',
+        schedule_name,
+        'id',
+        id,
+        'event',
+        event
+      ];
+      sqlString = mysql.format(sqlString, inserts);
+      console.log(sqlString);
+
+      dbPool.query(sqlString,
+        (err, results, fields) => {
+          if (err) {
+            throw err;
+          }
+          else if (results.affectedRows > 0) {
+            console.log("Event inserted");
+            resolve(0);
+          }
+      })
+    }
+    else {
+      console.log("Bad Data");
+      reject(1);
+    }
+  })
+}
+
 async function authUser(username, password) {
   return new Promise((resolve, reject) => {
     let token = {
@@ -60,24 +135,7 @@ async function authUser(username, password) {
       "Auth": false
     };
 
-    /*IMPORTANT
-      Storing the password for the database in code that is public is a very
-      dumb thing to do. I am only doing it here because this is a development
-      database and as such does not matter. The dev user has reduced privileges
-      and is set up for local database stuff only. Before set to production this
-      needs to be changed to a production user and credentials stored elsewhere.
-    */
-    let dbConnection = mysql.createConnection({
-      host: "localhost",
-      user: "dev",
-      password: "TimeSculptor",
-      database: "dev_db"
-    });
-
-    dbConnection.connect((err) => {
-      if (err) throw err;
-      console.log("Connected to database");
-    });
+    console.log(username, password);
 
     let credentialQuery = 'SELECT ?? FROM ?? WHERE ?? = ? AND ?? = ?';
     let inserts = [
@@ -90,19 +148,17 @@ async function authUser(username, password) {
 
     credentialQuery = mysql.format(credentialQuery, inserts);
 
-    dbConnection.query(credentialQuery,
+    dbPool.query(credentialQuery,
       (err, results, fields) => {
         if (err) {
           throw err;
         }
         if (results.length == 0) {
-          dbConnection.end();
           reject("Username or Password did not match");
         }
         else if (results[0].username !== undefined) {
           token.User = results[0].username;
           token.Auth = true;
-          dbConnection.end();
           resolve(token);
         }
       })
@@ -112,18 +168,6 @@ async function authUser(username, password) {
 async function getEvent(id) {
   return new Promise((resolve, reject) => {
     let event = 'empty';
-
-    let dbConnection = mysql.createConnection({
-      host: "localhost",
-      user: "dev",
-      password: "TimeSculptor",
-      database: "dev_db"
-    });
-
-    dbConnection.connect((err) => {
-      if (err) throw err;
-      console.log("Connected");
-    });
 
     let credentialQuery = "SELECT ?? FROM ?? WHERE ??='?'";
     let inserts = [
@@ -135,17 +179,15 @@ async function getEvent(id) {
     credentialQuery = mysql.format(credentialQuery, inserts);
     console.log(credentialQuery);
 
-    dbConnection.query(credentialQuery,
+    dbPool.query(credentialQuery,
       (err, results, fields) => {
         if (err) {
           throw err;
         }
         if (results.length == 0) {
-          dbConnection.end();
           reject("Event is not in database");
         }
         else if (results[0].event !== undefined) {
-          dbConnection.end();
           event = results[0].event;
           resolve(event);
         }
