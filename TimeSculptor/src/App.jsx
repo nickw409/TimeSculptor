@@ -154,7 +154,6 @@ function App () {
         oldEvents.push(this.generateDefaultEvent(newEvent))
         let data = {
           schedule_name:"testing",
-          id:newEvent.id,
           event:newEvent
         };
         fetch('/add-event', {

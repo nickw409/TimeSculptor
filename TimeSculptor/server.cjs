@@ -33,9 +33,8 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.post("/add-event", (req, res) => {
   try {
     let schedule_name = req.body.schedule_name;
-    let id = req.body.id;
-    let event = JSON.stringify(req.body.event);
-    addEvent(schedule_name, id, event).then(() => {
+    let event = req.body.event;
+    addEvent(schedule_name, event).then(() => {
       console.log("Successfully added event");
       res.sendStatus(200);
     }).catch((err) => {
@@ -92,20 +91,29 @@ app.listen(port, () => {
   console.log(`React Server Listening On Port: ${port}`);
 });
 
-async function addEvent(schedule_name, id, event) {
+async function addEvent(schedule_name, event) {
   return new Promise((resolve) => {
-    if (schedule_name != null && id != null && event != null) {
-      let sqlString = 'INSERT INTO Event VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE ?? = ?, ?? = ?, ?? = ?;'
+    if (schedule_name != null && event != null) {
+      let sqlString = 'INSERT INTO Event VALUES (?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?;'
       let inserts = [
         schedule_name,
-        id,
-        event,
+        0,
+        event.title,
+        event.dateAndTime,
+        event.color,
+        event.icon,
         'schedule_name',
         schedule_name,
         'id',
-        id,
-        'event',
-        event
+        0,
+        'title',
+        event.title,
+        'dateAndTime',
+        event.dateAndTime,
+        'color',
+        event.color,
+        'icon',
+        event.icon
       ];
       sqlString = mysql.format(sqlString, inserts);
       console.log(sqlString);
@@ -119,7 +127,7 @@ async function addEvent(schedule_name, id, event) {
             console.log("Event inserted");
             resolve(0);
           }
-      })
+        })
     }
     else {
       console.log("Bad Data");
@@ -163,6 +171,11 @@ async function authUser(username, password) {
         }
       })
   })
+}
+
+function convertDateTime(dateAndTime) {
+  let converted = dateAndTime.substring(0, 11);
+  converted
 }
 
 async function getEvent(id) {
