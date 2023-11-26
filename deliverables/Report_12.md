@@ -14,7 +14,7 @@ Missing participants: Noah Schwartz, Gabriel Valentin
 
 **Gabriel:**
 
-- Looked into use of MySQL for user database
+
 
 **Izaac:**
 
