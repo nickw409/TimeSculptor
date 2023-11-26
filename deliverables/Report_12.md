@@ -4,9 +4,9 @@ Group 4: **TimeSculptor**
 
 Date and Location: 11/25/2023, Discord (remote meeting)
 
-Present Participants: Izaac Molina, Nicholas Wiley, Kimberly Allison, Joey Banaszak
+Present Participants: Izaac Molina, Nicholas Wiley, Kimberly Allison, Joey Banaszak, Noah Schwartz, Gabriel Valentin
 
-Missing participants: Noah Schwartz, Gabriel Valentin
+Missing participants: N/a
 
 [Project repo](https://github.com/nickw409/TimeSculptor)
 
@@ -36,7 +36,8 @@ Missing participants: Noah Schwartz, Gabriel Valentin
 - Set up Schedule and Event tables in database.
 
 **Noah:**
-
+- Implemented icon choosing
+- Implemented date/time error message for invalid event creation
 
 
 ## **Project Retrospective**
