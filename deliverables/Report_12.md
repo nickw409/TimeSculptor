@@ -27,7 +27,8 @@ Missing participants: Noah Schwartz, Gabriel Valentin
 
 **Kimberly:**
 
-
+ - Finished implementing routing
+ - Finished implementing settings menu
 
 **Nick:**
 
