@@ -47,6 +47,14 @@ app.post("/add-event", (req, res) => {
   }
 })
 
+app.get("/events", (req, res) => {
+  try {
+    let schedule_name = req.query?.schedule_name;
+    console.log(schedule_name);
+
+  }
+})
+
 app.get("/get-event", (req, res) => {
   try {
     let id = req.query?.id;
@@ -94,12 +102,13 @@ app.listen(port, () => {
 async function addEvent(schedule_name, event) {
   return new Promise((resolve) => {
     if (schedule_name != null && event != null) {
+      let convertedDateAndTime = convertDateTime(event.dateAndTime);
       let sqlString = 'INSERT INTO Event VALUES (?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?;'
       let inserts = [
         schedule_name,
         0,
         event.title,
-        event.dateAndTime,
+        convertedDateAndTime,
         event.color,
         event.icon,
         'schedule_name',
@@ -109,7 +118,7 @@ async function addEvent(schedule_name, event) {
         'title',
         event.title,
         'dateAndTime',
-        event.dateAndTime,
+        convertedDateAndTime,
         'color',
         event.color,
         'icon',
@@ -125,13 +134,13 @@ async function addEvent(schedule_name, event) {
           }
           else if (results.affectedRows > 0) {
             console.log("Event inserted");
-            resolve(0);
+            resolve(results.insertId);
           }
         })
     }
     else {
       console.log("Bad Data");
-      reject(1);
+      reject(-1);
     }
   })
 }
@@ -174,8 +183,31 @@ async function authUser(username, password) {
 }
 
 function convertDateTime(dateAndTime) {
-  let converted = dateAndTime.substring(0, 11);
-  converted
+  let converted = dateAndTime.substring(0, 10);
+  converted = converted + " " + dateAndTime.substring(12, 19);
+  return converted;
+}
+
+async function getAllEvents(schedule_name) {
+  return new Promise((resolve, reject) => {
+    let sqlString = "SELECT event FROM Event WHERE schedule_name=?";
+    let inserts = [ schedule_name ];
+
+    sqlString = mysql.format(sqlString, inserts);
+
+    dbPool.query(sqlString,
+      (err, results, fields) => {
+        if (err) {
+          throw err;
+        }
+        else if (results.length == 0) {
+          resolve(null);
+        }
+        else {
+
+        }
+      })
+  })
 }
 
 async function getEvent(id) {

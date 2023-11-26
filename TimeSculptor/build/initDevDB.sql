@@ -31,7 +31,3 @@ SET username = 'admin',
 INSERT IGNORE INTO Schedule
 SET schedule_name = 'testing',
    username = 'admin';
-INSERT IGNORE INTO Event
-SET schedule_name = 'testing',
-   id = 0,
-   event = 'placeholder';
