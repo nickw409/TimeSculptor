@@ -31,7 +31,8 @@ Missing participants: Noah Schwartz, Gabriel Valentin
 
 **Nick:**
 
-
+- Implemented retrieval and insertion of events into the database.
+- Set up Schedule and Event tables in database.
 
 **Noah:**
 
