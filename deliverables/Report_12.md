@@ -22,7 +22,8 @@ Missing participants: Noah Schwartz, Gabriel Valentin
 
 **Joey:**
 
-
+ - conducted research for some possible options to widen our accomodations to users
+ - continued developing tests for the app
 
 **Kimberly:**
 
