@@ -14,7 +14,7 @@ Missing participants: Noah Schwartz, Gabriel Valentin
 
 **Gabriel:**
 
-- Looked into use of MySQL for user database
+
 
 **Izaac:**
 
@@ -22,15 +22,18 @@ Missing participants: Noah Schwartz, Gabriel Valentin
 
 **Joey:**
 
-
+ - conducted research for some possible options to widen our accomodations to users
+ - continued developing tests for the app
 
 **Kimberly:**
 
-
+ - Finished implementing routing
+ - Finished implementing settings menu
 
 **Nick:**
 
-
+- Implemented retrieval and insertion of events into the database.
+- Set up Schedule and Event tables in database.
 
 **Noah:**
 
