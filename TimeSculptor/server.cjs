@@ -51,9 +51,18 @@ app.get("/events", (req, res) => {
   try {
     let schedule_name = req.query?.schedule_name;
     console.log(schedule_name);
-
+    getAllEvents(schedule_name).then((results) => {
+      for (let i = 0; i < results.length; i++) {
+        console.log(results[i]);
+      }
+      res.json(results);
+    }).catch((e) => {
+      console.error(e);
+    })
+  } catch (e) {
+    console.error(e);
   }
-})
+});
 
 app.get("/get-event", (req, res) => {
   try {
@@ -100,7 +109,7 @@ app.listen(port, () => {
 });
 
 async function addEvent(schedule_name, event) {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     if (schedule_name != null && event != null) {
       let convertedDateAndTime = convertDateTime(event.dateAndTime);
       let sqlString = 'INSERT INTO Event VALUES (?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?;'
@@ -190,8 +199,8 @@ function convertDateTime(dateAndTime) {
 
 async function getAllEvents(schedule_name) {
   return new Promise((resolve, reject) => {
-    let sqlString = "SELECT event FROM Event WHERE schedule_name=?";
-    let inserts = [ schedule_name ];
+    let sqlString = "SELECT id, title, dateAndTime, color, icon FROM Event WHERE schedule_name=?";
+    let inserts = [schedule_name];
 
     sqlString = mysql.format(sqlString, inserts);
 
@@ -204,7 +213,7 @@ async function getAllEvents(schedule_name) {
           resolve(null);
         }
         else {
-
+          resolve(results);
         }
       })
   })
