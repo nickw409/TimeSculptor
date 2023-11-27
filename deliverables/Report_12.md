@@ -14,7 +14,7 @@ Missing participants: N/a
 
 **Gabriel:**
 
-
+- Researching how to implement search bar for events using react
 
 **Izaac:**
 
