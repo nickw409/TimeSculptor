@@ -63,6 +63,6 @@ Implement Standard.js for all our commits to make sure everything follows a styl
 Complete requirements for Deliverable 7
 
 ## **Decisions**
-Joey: Verification and Acceptance tests for D7
-Noah, Gabe, & Kimberly: Complete an interview for D7
+Joey: Verification and Acceptance tests for D7 <br>
+Noah, Gabe, & Kimberly: Complete an interview for D7 <br>
 Nick & Izaac: Prioritize developing app for final presentation
