@@ -57,10 +57,10 @@ Missing participants: N/a
 
 
 **What We Should Try Next Time:**
-Implement Standard.js for all our commits to make sure everything follows a style guide
+- Implement Standard.js for all our commits to make sure everything follows a style guide
 
 ## **Next Steps**
-Complete requirements for Deliverable 7
+- Complete requirements for Deliverable 7
 
 ## **Decisions**
 Joey: Verification and Acceptance tests for D7 <br>
