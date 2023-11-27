@@ -48,13 +48,11 @@ Missing participants: N/a
 **Successes:**
 - See Above
 
-
 **Failures:**
 - Difficult to get work done this week and communicate due to break
 
 **Barriers:**
 - Break made it harder to communicate and get everyone together at the same time
-
 
 **What We Should Try Next Time:**
 - Implement Standard.js for all our commits to make sure everything follows a style guide
