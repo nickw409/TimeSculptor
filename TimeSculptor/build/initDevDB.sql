@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS Event (
    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
    title VARCHAR(128),
    dateAndTime DATETIME,
+   duration INT,
    color VARCHAR(64),
    icon VARCHAR(64)
 );

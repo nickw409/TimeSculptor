@@ -34,9 +34,9 @@ app.post("/add-event", (req, res) => {
   try {
     let schedule_name = req.body.schedule_name;
     let event = req.body.event;
-    addEvent(schedule_name, event).then(() => {
+    addEvent(schedule_name, event).then((id) => {
       console.log("Successfully added event");
-      res.sendStatus(200);
+      res.send(id);
     }).catch((err) => {
       console.log("Bad data");
       res.sendStatus(400);
@@ -112,12 +112,13 @@ async function addEvent(schedule_name, event) {
   return new Promise((resolve, reject) => {
     if (schedule_name != null && event != null) {
       let convertedDateAndTime = convertDateTime(event.dateAndTime);
-      let sqlString = 'INSERT INTO Event VALUES (?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?;'
+      let sqlString = 'INSERT INTO Event VALUES (?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?;'
       let inserts = [
         schedule_name,
         0,
         event.title,
         convertedDateAndTime,
+        event.duration,
         event.color,
         event.icon,
         'schedule_name',
@@ -128,6 +129,8 @@ async function addEvent(schedule_name, event) {
         event.title,
         'dateAndTime',
         convertedDateAndTime,
+        'duration',
+        event.duration,
         'color',
         event.color,
         'icon',
