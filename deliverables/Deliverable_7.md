@@ -1,7 +1,8 @@
 # Description
-Provide 1-2 paragraphs to describe your system. This will help us to remember what your system is about. 
+TimeSculptor is a scheduling app that aims to provide a seemless and user friendly experience, with a particular emphasis on being accessible for people with learning disabilities. It provides an accessible interface that adheres to guidelines outlined in [Pavlov (2014)](https://www.scirp.org/html/7-9301792_43152.htm) and [Moreno et al. (2023)](https://link.springer.com/article/10.1007/s10209-023-00986-z). The primary expected consumer segment individuals who possess learning disabilities, but this ultimately makes the app accessible for everyone. Upon logging in, you are then given the options to create events or edit your schedule's current events. You can utilize color coding, and assigning different symbols to your events. Additionally, there are three viewing modes: list, monthly, and daily.
 
-Grading criteria (1 point): completeness, language.
+[TimeSculptor](https://github.com/nickw409/TimeSculptor)
+
 
 # Verification
 Verification aims to ensure that you correctly developed the product. 
