@@ -101,6 +101,23 @@ app.post("/login", (req, res) => {
   }
 });
 
+app.post("/register", (req, res) => {
+  try {
+    let username = req.body?.username;
+    let password = req.body?.password;
+
+    register(username, password).then(() => {
+      res.sendStatus(200);
+    }).catch((e) => {
+      console.error(e);
+      res.sendStatus(400);
+    })
+  } catch (e) {
+    console.error(e);
+    res.sendStatus(400);
+  }
+})
+
 app.get("/schedules", (req, res) => {
   try {
     let username = req.query?.username;
@@ -295,6 +312,50 @@ async function getSchedules(username) {
     }
     else {
       reject("Username is not a string");
+    }
+  })
+}
+
+async function register(username, password) {
+  return new Promise((resolve, reject) => {
+    if (typeof(username) === "string" && typeof(password) === "string") {
+      let notTaken = false;
+      let sqlString = "SELECT * FROM Credential WHERE username=?;";
+      let inserts = [ username ];
+
+      sqlString = mysql.format(sqlString, inserts);
+
+      dbPool.query(sqlString,
+        (err, results) => {
+          if (err) {
+            throw err;
+          }
+          else if (results.length > 0) {
+            reject("Username already taken");
+          }
+          else {
+            notTaken = true;
+          }
+        })
+      
+      sqlString = "INSERT INTO Credential VALUES (?, ?);";
+      inserts = [ username, password ];
+
+      sqlString = mysql.format(sqlString, inserts);
+
+      dbPool.query(sqlString, 
+        (err, results) => {
+          if (err) {
+            throw err;
+          }
+          else if (results.affectedRows > 0) {
+            console.log("User registered");
+            resolve(0);
+          }
+          else {
+            reject(1);
+          }
+        })
     }
   })
 }
