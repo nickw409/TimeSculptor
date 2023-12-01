@@ -102,9 +102,20 @@ app.post("/login", (req, res) => {
 });
 
 app.get("/schedules", (req, res) => {
-  let username = req.query?.username;
-  console.log(username);
+  try {
+    let username = req.query?.username;
+    console.log(username);
 
+    getSchedules(username).then((schedules) => {
+      console.log(schedules);
+      res.json(schedules);
+    }).catch((e) => {
+      console.error(e);
+      res.sendStatus(400);
+    })
+  } catch (e) {
+    console.error(e);
+  }
 });
 
 app.get("/status", (req, res) => {
