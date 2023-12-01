@@ -319,7 +319,6 @@ async function getSchedules(username) {
 async function register(username, password) {
   return new Promise((resolve, reject) => {
     if (typeof(username) === "string" && typeof(password) === "string") {
-      let notTaken = false;
       let sqlString = "SELECT * FROM Credential WHERE username=?;";
       let inserts = [ username ];
 
@@ -327,6 +326,7 @@ async function register(username, password) {
 
       dbPool.query(sqlString,
         (err, results) => {
+          console.log(results.length);
           if (err) {
             throw err;
           }
@@ -334,26 +334,24 @@ async function register(username, password) {
             reject("Username already taken");
           }
           else {
-            notTaken = true;
-          }
-        })
-      
-      sqlString = "INSERT INTO Credential VALUES (?, ?);";
-      inserts = [ username, password ];
+            sqlString = "INSERT INTO Credential VALUES (?, ?);";
+            inserts = [ username, password ];
 
-      sqlString = mysql.format(sqlString, inserts);
+            sqlString = mysql.format(sqlString, inserts);
 
-      dbPool.query(sqlString, 
-        (err, results) => {
-          if (err) {
-            throw err;
-          }
-          else if (results.affectedRows > 0) {
-            console.log("User registered");
-            resolve(0);
-          }
-          else {
-            reject(1);
+            dbPool.query(sqlString, 
+              (err, results) => {
+                if (err) {
+                  throw err;
+                }
+                else if (results.affectedRows > 0) {
+                  console.log("User registered");
+                  resolve(0);
+                }
+                else {
+                  reject(1);
+                }
+              })
           }
         })
     }
