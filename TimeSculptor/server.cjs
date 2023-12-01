@@ -99,6 +99,12 @@ app.post("/login", (req, res) => {
   }
 });
 
+app.get("/schedules", (req, res) => {
+  let username = req.query?.username;
+  console.log(username);
+
+});
+
 app.get("/status", (req, res) => {
   const status = { "Status": true };
   res.json(status);
@@ -226,7 +232,7 @@ async function getEvent(id) {
   return new Promise((resolve, reject) => {
     let event = 'empty';
 
-    let credentialQuery = "SELECT ?? FROM ?? WHERE ??=?";
+    let credentialQuery = "SELECT ?? FROM ?? WHERE ??=?;";
     let inserts = [
       'event',
       'Event',
@@ -247,6 +253,55 @@ async function getEvent(id) {
         else if (results[0].event !== undefined) {
           event = results[0].event;
           resolve(event);
+        }
+      })
+  })
+}
+
+async function getSchedules(username) {
+  return new Promise((resolve, reject) => {
+    let validUser = false;
+
+    if (typeof(username) === "string") {
+      let usernameValidation = "SELECT username FROM Credential WHERE username=?;";
+      let inserts = [ username ];
+
+      usernameValidation = mysql.format(usernameValidation, inserts);
+
+      dbPool.query(usernameValidation,
+        (err, results) => {
+          if (err) {
+            throw err;
+          }
+          if (results.length == 0) {
+            reject("Username is not in database");
+          }
+          else {
+            validUser = true;
+          }
+        })
+    }
+    else {
+      reject("Username is not a string");
+    }
+
+    let sqlString = "SELECT schedule_name FROM Schedule WHERE username=?;";
+    let inserts = [ username ];
+
+    sqlString = mysql.format(sqlString, inserts);
+
+    dbPool.query(sqlString,
+      (err, results) => {
+        if (err) {
+          throw err;
+        }
+        if (results.length == 0) {
+          reject("No schedules found for user");
+        }
+        else {
+          let schedules = results;
+          console.log(schedules);
+          resolve(schedules);
         }
       })
   })
