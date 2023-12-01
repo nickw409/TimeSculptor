@@ -107,7 +107,6 @@ app.get("/schedules", (req, res) => {
     console.log(username);
 
     getSchedules(username).then((schedules) => {
-      console.log(schedules);
       res.json(schedules);
     }).catch((e) => {
       console.error(e);
