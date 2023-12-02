@@ -36,7 +36,7 @@ export default function AddEvent ({ addEvent, findTime }) {
       >
         Add Event
       </Button>
-      <AddDialog open={eventDialogOpen} close={closeDialog} addEvent={addEvent} findTime={findTime}/>
+      <AddDialog open={eventDialogOpen} close={closeDialog} addEvent={addEvent} findTime={findTime} />
     </Box>
   )
 }

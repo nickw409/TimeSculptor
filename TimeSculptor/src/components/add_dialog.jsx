@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Dialog, DialogTitle, DialogActions, DialogContent, Button, ClickAwayListener, duration } from '@mui/material'
+import { Dialog, DialogTitle, DialogActions, DialogContent, Button } from '@mui/material'
 import TextField from '@mui/material/TextField'
 import { v4 as uuid } from 'uuid'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
@@ -30,8 +30,8 @@ export default function AddDialog ({ open, close, addEvent, findTime }) {
   }
 
   const dateChange = (date) => {
-    const newStartTime = date.hour(startTime.hour()).minute(startTime.minute());
-    const newEndTime = date.hour(endTime.hour()).minute(endTime.minute());
+    const newStartTime = date.hour(startTime.hour()).minute(startTime.minute())
+    const newEndTime = date.hour(endTime.hour()).minute(endTime.minute())
     setStartTime(newStartTime)
     setEndTime(newEndTime)
 
@@ -40,7 +40,6 @@ export default function AddDialog ({ open, close, addEvent, findTime }) {
     } else {
       setDisablePast(true)
     }
-
   }
 
   const startTimeChange = (time) => {
@@ -60,7 +59,7 @@ export default function AddDialog ({ open, close, addEvent, findTime }) {
   }
 
   const findATime = () => {
-    let duration = endTime.diff(startTime, 'minute')
+    const duration = endTime.diff(startTime, 'minute')
 
     const time = findTime(startTime, duration)
 
@@ -70,11 +69,8 @@ export default function AddDialog ({ open, close, addEvent, findTime }) {
 
       setStartTime(chosenStartTime)
       setEndTime(chosenEndTime)
-    }
-
-    else {
+    } else {
       alert('could not find a valid time')
-      return
     }
   }
 
@@ -87,13 +83,13 @@ export default function AddDialog ({ open, close, addEvent, findTime }) {
 
     // error handling if end time earlier than start time
     if (endTime.isBefore(startTime)) {
-      alert('End Time cannot be earlier than Start Time.');
-      return;
+      alert('End Time cannot be earlier than Start Time.')
+      return
     }
 
     if (!name) {
-      alert('Please enter a Name');
-      return;
+      alert('Please enter a Name')
+      return
     }
 
     const newEvent = {

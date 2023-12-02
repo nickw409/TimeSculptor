@@ -18,8 +18,8 @@ export default function EditDialog ({ open, close, editEvent, toEdit, findTime }
 
   useEffect(() => {
     setName(toEdit.title)
-    setStartTime(dayjs(toEdit.dateAndTime));
-    setEndTime(dayjs(toEdit.dateAndTime).add(toEdit.duration, 'minutes'));
+    setStartTime(dayjs(toEdit.dateAndTime))
+    setEndTime(dayjs(toEdit.dateAndTime).add(toEdit.duration, 'minutes'))
     setColor(toEdit.color)
     setIcon(toEdit.icon)
   }, [toEdit])
@@ -29,8 +29,8 @@ export default function EditDialog ({ open, close, editEvent, toEdit, findTime }
   }
 
   const dateChange = (date) => {
-    const newStartTime = date.hour(startTime.hour()).minute(startTime.minute());
-    const newEndTime = date.hour(endTime.hour()).minute(endTime.minute());
+    const newStartTime = date.hour(startTime.hour()).minute(startTime.minute())
+    const newEndTime = date.hour(endTime.hour()).minute(endTime.minute())
     setStartTime(newStartTime)
     setEndTime(newEndTime)
 
@@ -39,7 +39,6 @@ export default function EditDialog ({ open, close, editEvent, toEdit, findTime }
     } else {
       setDisablePast(true)
     }
-
   }
 
   const endTimeChange = (time) => {
@@ -61,7 +60,7 @@ export default function EditDialog ({ open, close, editEvent, toEdit, findTime }
   }
 
   const findATime = () => {
-    let duration = endTime.diff(startTime, 'minute')
+    const duration = endTime.diff(startTime, 'minute')
     const time = findTime(startTime, duration)
 
     if (time) {
@@ -70,11 +69,8 @@ export default function EditDialog ({ open, close, editEvent, toEdit, findTime }
 
       setStartTime(chosenStartTime)
       setEndTime(chosenEndTime)
-    }
-
-    else {
+    } else {
       alert('could not find a valid time')
-      return
     }
   }
 
@@ -87,13 +83,13 @@ export default function EditDialog ({ open, close, editEvent, toEdit, findTime }
 
     // error handling if end time earlier than start time
     if (endTime.isBefore(startTime)) {
-      alert('End Time cannot be earlier than Start Time.');
-      return;
+      alert('End Time cannot be earlier than Start Time.')
+      return
     }
 
     if (!name) {
-      alert('Please enter a Name');
-      return;
+      alert('Please enter a Name')
+      return
     }
 
     const newEvent = {
@@ -129,33 +125,32 @@ export default function EditDialog ({ open, close, editEvent, toEdit, findTime }
           sx={{ marginBottom: '30px' }}
         />
 
-          <div className='dateTime'>
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DatePicker
-                label='Date'
-                sx={{ overflow: 'visible', marginBottom: '30px', width: '60%' }}
-                disablePast
-                maxDate={dayjs().add(20, 'years')}
-                value={startTime}
-                onChange={dateChange}
-              />
-              <TimePicker
-                label='Start Time'
-                disablePast={disablePast}
-                value={startTime}
-                onChange={startTimeChange}
-              />
-              <TimePicker
-                label='End Time'
-                disablePast={disablePast}
-                value={endTime}
-                onChange={endTimeChange}
-                minTime={startTime}
-              />
-            </LocalizationProvider>
-            <Button onClick={findATime} sx={{ height: '66.66%' }}> Find A Time </Button>
-          </div>
-
+        <div className='dateTime'>
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <DatePicker
+              label='Date'
+              sx={{ overflow: 'visible', marginBottom: '30px', width: '60%' }}
+              disablePast
+              maxDate={dayjs().add(20, 'years')}
+              value={startTime}
+              onChange={dateChange}
+            />
+            <TimePicker
+              label='Start Time'
+              disablePast={disablePast}
+              value={startTime}
+              onChange={startTimeChange}
+            />
+            <TimePicker
+              label='End Time'
+              disablePast={disablePast}
+              value={endTime}
+              onChange={endTimeChange}
+              minTime={startTime}
+            />
+          </LocalizationProvider>
+          <Button onClick={findATime} sx={{ height: '66.66%' }}> Find A Time </Button>
+        </div>
 
         <TextField
           id='color'
