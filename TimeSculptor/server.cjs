@@ -3,6 +3,7 @@ const path = require('path');
 const mysql = require('mysql2');
 const { ErrorOutline } = require('@mui/icons-material');
 const { fabClasses } = require('@mui/material');
+const { resolve } = require('path');
 
 const app = express();
 const port = 9696;
@@ -46,6 +47,25 @@ app.post("/add-event", (req, res) => {
   } catch (e) {
     console.log(e);
     res.sendStatus(400);
+  }
+})
+
+app.post("/add-schedule", (req, res) => {
+  try {
+    let schedule_name = req.body?.schedule_name;
+    let username = req.body?.username;
+    addSchedule(schedule_name, username).then((result) => {
+      if (result) {
+        console.log("Schedule added");
+        res.sendStatus(200);
+      }
+      else {
+        console.log("Failed to add schedule");
+        res.sendStatus(400);
+      }
+    })
+  } catch (e) {
+    console.error(e);
   }
 })
 
@@ -100,6 +120,23 @@ app.post("/login", (req, res) => {
     console.error(e);
   }
 });
+
+app.post("/register", (req, res) => {
+  try {
+    let username = req.body?.username;
+    let password = req.body?.password;
+
+    register(username, password).then(() => {
+      res.sendStatus(200);
+    }).catch((e) => {
+      console.error(e);
+      res.sendStatus(400);
+    })
+  } catch (e) {
+    console.error(e);
+    res.sendStatus(400);
+  }
+})
 
 app.get("/schedules", (req, res) => {
   try {
@@ -172,6 +209,33 @@ async function addEvent(schedule_name, event) {
       console.log("Bad Data");
       reject(-1);
     }
+  })
+}
+
+async function addSchedule(schedule_name, username) {
+  return new Promise((resolve) => {
+    findSchedule(schedule_name, username).then((result) => {
+      if (!result) {
+        sqlString = "INSERT INTO Schedule VALUES (?, ?);";
+        let inserts = [ schedule_name, username ];
+
+        sqlString = mysql.format(sqlString, inserts);
+
+        dbPool.query(sqlString,
+          (err, results) => {
+            if (err) {
+              throw err;
+            }
+            else if (results.affectedRows > 0) {
+              console.log("Schedule added");
+              resolve(true);
+            }
+        })
+      }
+      else {
+        resolve(false);
+      }
+    })
   })
 }
 
@@ -295,6 +359,72 @@ async function getSchedules(username) {
     }
     else {
       reject("Username is not a string");
+    }
+  })
+}
+
+async function register(username, password) {
+  return new Promise((resolve, reject) => {
+    if (typeof(username) === "string" && typeof(password) === "string") {
+      let sqlString = "SELECT * FROM Credential WHERE username=?;";
+      let inserts = [ username ];
+
+      sqlString = mysql.format(sqlString, inserts);
+
+      dbPool.query(sqlString,
+        (err, results) => {
+          console.log(results.length);
+          if (err) {
+            throw err;
+          }
+          else if (results.length > 0) {
+            reject("Username already taken");
+          }
+          else {
+            sqlString = "INSERT INTO Credential VALUES (?, ?);";
+            inserts = [ username, password ];
+
+            sqlString = mysql.format(sqlString, inserts);
+
+            dbPool.query(sqlString, 
+              (err, results) => {
+                if (err) {
+                  throw err;
+                }
+                else if (results.affectedRows > 0) {
+                  console.log("User registered");
+                  resolve(0);
+                }
+                else {
+                  reject(1);
+                }
+              })
+          }
+        })
+    }
+  })
+}
+
+async function findSchedule(schedule_name, username) {
+  return new Promise((resolve) => {
+    if (typeof(schedule_name) === "string" && typeof(username) === "string") {
+      let sqlString = "SELECT * FROM Schedule WHERE schedule_name=? AND username=?;";
+      let inserts = [ schedule_name, username ];
+
+      sqlString = mysql.format(sqlString, inserts);
+
+      dbPool.query(sqlString,
+        (err, results) => {
+          if (err) {
+            throw err;
+          }
+          else if (results.length === 0) {
+            resolve(false);
+          }
+          else {
+            resolve(true);
+          }
+        })
     }
   })
 }
