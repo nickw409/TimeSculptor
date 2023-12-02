@@ -14,8 +14,9 @@ CREATE TABLE IF NOT EXISTS Credential (
    password VARCHAR(128) NOT NULL
 );
 CREATE TABLE IF NOT EXISTS Schedule (
-   schedule_name VARCHAR(128) PRIMARY KEY NOT NULL,
-   username VARCHAR(128) NOT NULL
+   schedule_name VARCHAR(128) NOT NULL,
+   username VARCHAR(128) NOT NULL,
+   PRIMARY KEY (schedule_name, username)
 );
 CREATE TABLE IF NOT EXISTS Event (
    schedule_name VARCHAR(128) NOT NULL,
