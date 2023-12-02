@@ -27,6 +27,7 @@
     "mysql2": "^3.6.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
+    "react-click-away-listener": "^2.2.3",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.17.0",
@@ -43,6 +44,8 @@
     "vite": "^4.5.0"
   },
   "standard": {
-    "globals": ["alert"]
+    "globals": [
+      "alert"
+    ]
   }
 }
