@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 const mysql = require('mysql2');
+const { ErrorOutline } = require('@mui/icons-material');
+const { fabClasses } = require('@mui/material');
 
 const app = express();
 const port = 9696;
@@ -99,6 +101,22 @@ app.post("/login", (req, res) => {
   }
 });
 
+app.get("/schedules", (req, res) => {
+  try {
+    let username = req.query?.username;
+    console.log(username);
+
+    getSchedules(username).then((schedules) => {
+      res.json(schedules);
+    }).catch((e) => {
+      console.error(e);
+      res.sendStatus(400);
+    })
+  } catch (e) {
+    console.error(e);
+  }
+});
+
 app.get("/status", (req, res) => {
   const status = { "Status": true };
   res.json(status);
@@ -110,7 +128,7 @@ app.listen(port, () => {
 
 async function addEvent(schedule_name, event) {
   return new Promise((resolve, reject) => {
-    if (schedule_name != null && event != null) {
+    if (validateScheduleName(schedule_name) && event != null) {
       let convertedDateAndTime = convertDateTime(event.dateAndTime);
       let sqlString = 'INSERT INTO Event VALUES (?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?;'
       let inserts = [
@@ -226,7 +244,7 @@ async function getEvent(id) {
   return new Promise((resolve, reject) => {
     let event = 'empty';
 
-    let credentialQuery = "SELECT ?? FROM ?? WHERE ??=?";
+    let credentialQuery = "SELECT ?? FROM ?? WHERE ??=?;";
     let inserts = [
       'event',
       'Event',
@@ -250,4 +268,59 @@ async function getEvent(id) {
         }
       })
   })
+}
+
+async function getSchedules(username) {
+  return new Promise((resolve, reject) => {
+    if (typeof(username) === "string") {
+      let sqlString = "SELECT schedule_name FROM Schedule WHERE username=?;";
+      let inserts = [ username ];
+
+      sqlString = mysql.format(sqlString, inserts);
+
+      dbPool.query(sqlString,
+        (err, results) => {
+          if (err) {
+            throw err;
+          }
+          if (results.length == 0) {
+            reject("No schedules found for user");
+          }
+          else {
+            let schedules = results;
+            console.log(schedules);
+            resolve(schedules);
+          }
+        })
+    }
+    else {
+      reject("Username is not a string");
+    }
+  })
+}
+
+// Returns true if schedule_name found in database, else false
+function validateScheduleName(schedule_name) {
+  if (typeof(schedule_name) === "string") {
+    let sqlString = "SELECT schedule_name FROM Schedule WHERE schedule_name=?;";
+    let inserts = [schedule_name];
+
+    sqlString = mysql.format(sqlString, inserts);
+
+    dbPool.query(sqlString,
+      (err, results => {
+        if (err) {
+          throw err;
+        }
+        if (results.length === 0) {
+          return false;
+        }
+        else {
+          return true;
+        }
+      }))
+  }
+  else {
+    return false;
+  }
 }
