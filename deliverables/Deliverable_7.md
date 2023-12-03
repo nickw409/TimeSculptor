@@ -59,10 +59,14 @@ On a scale of 1-10, how likely would you be to use TimeSculptor?
 1 2 3 4 5 6 7 8 9 10
 
 **Results:** 
+
 *Interview 1:*
 Interviewer: Noah Schwartz
+
 Interviewee: Graham Jacoby (does has diagnosed ADHD)
+
 General Overview of Interview: 
+
 - Liked the calendar view
 - Disliked the navigation to color and icon choosing
 - Liked the color customization to differentiate between events
