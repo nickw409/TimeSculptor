@@ -5,15 +5,15 @@ TimeSculptor is a scheduling app that aims to provide a seemless and user friend
 
 
 # Verification
-Verification aims to ensure that you correctly developed the product. 
+For the testing of our program we decided to use jest as our automated testing software. 
 
-For this deliverable, show an example of a unit test that uses mock objects to isolate the class from the rest of the system. 
+link for testing: [Here](https://github.com/nickw409/TimeSculptor/tree/main/TimeSculptor/src/components/__tests__)
 
-Test framework you used to develop your tests (e.g., JUnit, unittest, pytest, etc.)
-Link to your GitHub folder where your automated unit tests are located.
-An example of a test case that makes use of mock objects. Include in your answer a GitHub link to the class being tested and to the test.
-A print screen showing the result of the unit tests execution. 
-Grading criteria (5 points): adequate choice of a test framework, coverage of the tests, quality of the tests, adequate use of Mock objects, and a print screen showing successful test execution.
+an example of a test case is the [calendar.jsx](https://github.com/nickw409/TimeSculptor/tree/main/TimeSculptor/src/components/calendar.jsx) file, in our tests, the first test in the [calendar.test.js](https://github.com/nickw409/TimeSculptor/tree/main/TimeSculptor/src/components/__tests__/calendar.test.js) file is seeing that the correct month is displayed based on a set of mock events and date. 
+
+Below is the output of the current tests being ran:
+
+![testing_output](../assets/deliverable6_testing.PNG)
 
 # Acceptance Test
 An acceptance test is a test that verifies the correct implementation of a feature from the user interface perspective. An acceptance test is a black box test (the system is tested without knowledge about its internal implementation). Provide the following information:
