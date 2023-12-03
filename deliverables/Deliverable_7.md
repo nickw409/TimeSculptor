@@ -67,7 +67,7 @@ On a scale of 1-10, how likely would you be to use TimeSculptor?
 
 Interviewer: Noah Schwartz
 
-Interviewee: Graham Jacoby (does has diagnosed ADHD)
+Interviewee: Graham Jacoby (does have diagnosed ADHD)
 
 General Overview of Interview: 
 
@@ -77,7 +77,22 @@ General Overview of Interview:
 - Thinks the "Pick a Time" button would be nice for those events hard to prioritize due to ADHD 
 - Found the icons to not be super useful, maybe due in part to size or limited choices
 - Doesn't think he'd use it over his current choice of application just due to the fact that it's still a prototype
+    
+*Interview 2:*
 
+Interviewer: Kimberly Allison
+
+Interviewee: Kelsey Allison (does have diagnosed ADHD)
+
+General Overview of Interview: 
+
+- Disliked that event dates and times couldn't be manually entered
+- Noted that the titles for the settings options weren't explained and could be a little confusing
+- Liked the different ways that events could be viewed, specifically the list view
+- Thinks that icons were nice but couldn't see herself using them personally
+- Suggested having a box to check that makes an event last all day
+- Suggested having more font options
+- Prefers using her phone calendar over TimeSculptor in its current state
 
 **Reflections:** Reflect on what you observed. Some questions that you can explore: What features worked well? What can be changed? How is the learning curve of your system? Did the users perform the tasks as you expected? Did the users’ actions produce the results they expected? What did the users like the most? Is your value proposition accomplished? 
 
