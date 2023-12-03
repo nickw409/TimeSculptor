@@ -25,11 +25,51 @@ A print screen/video showing the acceptance test execution.
 Grading criteria (7 points): adequate choice of a test framework, coverage of the tests, quality of the tests, adequate example of an acceptance test, print screen/video showing successful tests execution.
 
 # Validation
-At the beginning of the semester, you talked to the clients/potential users to understand their needs. Now it is time to check if you are on the right track by conducting some user evaluation on the actual system. Include in this deliverable the following information:
+**Script:**
+User Tasks
+1. Ask the user to log in to TimeSculptor
+Notes/Observations:____________________________________
+1. Ask the user to create an event
+Notes/Observations:__________________________________________
+2. Ask the user to navigate between task and calendar view
+Notes/Observations:__________________
+3. Ask the user to edit their event
+Notes/Observations:_______________________________
+4. Ask the user to delete their event
+Notes/Observations:_______________________________
+5. Ask the user to change and save new settings preferences
+Notes/Observations:____________________________________________
+Questions
+1. On a scale of 1-10, how user-friendly is TimeSculptor?
+1 2 3 4 5 6 7 8 9 10
+2. How were TimeSculptors customization options?
+____________________________________________________________________________
+What customization options did you like?
+________________________________
+What customization options did you dislike?
+___________________________________________
+How does TimeSculptor compare to other task management apps such as Google
+Calendar/Outlook?
+______________________
+Are there any features of TimeSculptor that you liked?
+_____________
+Are there any features of TimeSculptor that you disliked?
+_______________
+On a scale of 1-10, how likely would you be to use TimeSculptor?
+1 2 3 4 5 6 7 8 9 10
 
-**Script:** The script should have the tasks that you gave to the user, what data you collected, and the questions you asked. In particular, do not forget to add questions about the users’ general impressions. You can ask open questions (e.g., How would you describe the homepage of our app? How do you compare our system to the competitor X?) or closed questions (On a scale of 1 to 10, how would you rate the layout of our application? On the same scale, how likely would you use the system in its current state?). Take a look at the inception and requirements deliverables to help create the script. Design a script to check if you are achieving your initial goals and if the features are implemented in a satisfactory way. 
+**Results:** 
+*Interview 1:*
+Interviewer: Noah Schwartz
+Interviewee: Graham Jacoby (does has diagnosed ADHD)
+General Overview of Interview: 
+- Liked the calendar view
+- Disliked the navigation to color and icon choosing
+- Liked the color customization to differentiate between events
+- Thinks the "Pick a Time" button would be nice for those events hard to prioritize due to ADHD 
+- Found the icons to not be super useful, maybe due in part to size or limited choices
+- Doesn't think he'd use it over his current choice of application just due to the fact that it's still a prototype
 
-**Results:** Conduct the user evaluation with at least 3 users. Report the data that you collected.
 
 **Reflections:** Reflect on what you observed. Some questions that you can explore: What features worked well? What can be changed? How is the learning curve of your system? Did the users perform the tasks as you expected? Did the users’ actions produce the results they expected? What did the users like the most? Is your value proposition accomplished? 
 
