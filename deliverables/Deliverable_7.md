@@ -20,7 +20,7 @@ For our acceptance test we used selenium to test our program
 
 link for testing: [Here](https://github.com/nickw409/TimeSculptor/tree/main/TimeSculptor/src/components/__tests__)
 
-an example of an acceptance test is in the [loginTest.js](https://github.com/nickw409/TimeSculptor/tree/main/TimeSculptor/src/components/__tests__/loginTest.js) file, where we test that the login page, created in the [login.jsc](https://github.com/nickw409/TimeSculptor/tree/main/TimeSculptor/src/login.jsx) file correctly gets the credentials from the user and logs in.
+An example of an acceptance test is in the [loginTest.js](https://github.com/nickw409/TimeSculptor/tree/main/TimeSculptor/src/components/__tests__/loginTest.js) file, where we test that the login page, created in the [login.jsc](https://github.com/nickw409/TimeSculptor/tree/main/TimeSculptor/src/login.jsx) file correctly gets the credentials from the user and logs in.
 
 Below is the output of the test being conducted:
 
