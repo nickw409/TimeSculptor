@@ -16,13 +16,16 @@ Below is the output of the current tests being ran:
 ![testing_output](../assets/deliverable6_testing.PNG)
 
 # Acceptance Test
-An acceptance test is a test that verifies the correct implementation of a feature from the user interface perspective. An acceptance test is a black box test (the system is tested without knowledge about its internal implementation). Provide the following information:
+For our acceptance test we used selenium to test our program
 
-Test framework you used to develop your tests (e.g., Selenium, Katalon Studio, Espresso2, Cucumber, etc.)
-Link to your GitHub folder where your automated acceptance tests are located.
-An example of an acceptance test. Include in your answer a GitHub link to the test and an explanation about the tested feature.
-A print screen/video showing the acceptance test execution. 
-Grading criteria (7 points): adequate choice of a test framework, coverage of the tests, quality of the tests, adequate example of an acceptance test, print screen/video showing successful tests execution.
+link for testing: [Here](https://github.com/nickw409/TimeSculptor/tree/main/TimeSculptor/src/components/__tests__)
+
+an example of an acceptance test is in the [loginTest.js](https://github.com/nickw409/TimeSculptor/tree/main/TimeSculptor/src/components/__tests__/loginTest.js) file, where we test that the login page, created in the [login.jsc](https://github.com/nickw409/TimeSculptor/tree/main/TimeSculptor/src/login.jsx) file correctly gets the credentials from the user and logs in.
+
+Below is the output of the test being conducted:
+
+![testing_output](../assets/acceptance_test.PNG)
+
 
 # Validation
 **Script:**
