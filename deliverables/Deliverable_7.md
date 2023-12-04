@@ -94,6 +94,21 @@ General Overview of Interview:
 - Suggested having more font options
 - Prefers using her phone calendar over TimeSculptor in its current state
 
+*Interview 3:*
+
+Interviewer: Gabriel Valentin
+
+Interviewee: Jahlil Johnson (Diagnosed with ADHD)
+
+General Overview of Interview: 
+
+- Would appreciate the "Pick a Time" button so that he can easily see where he could put things into his schedule.
+- Liked the calendar view and how the windows pop out to show that you can interact with them.
+- Liked the different icons but suggested adding more icons for versatility.
+- Suggested adding colors to icons themselves as an alternative.
+- Suggested adding a color/icon preview in the pop-up menu when choosing colors and icons.
+- Settings menu could some descriptions to tell about.
+
 **Reflections:** Reflect on what you observed. Some questions that you can explore: What features worked well? What can be changed? How is the learning curve of your system? Did the users perform the tasks as you expected? Did the users’ actions produce the results they expected? What did the users like the most? Is your value proposition accomplished? 
 
 Grading criteria (17 points): adequate script, adequate report of the results, adequate reflection, language.
