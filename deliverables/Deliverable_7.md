@@ -107,8 +107,14 @@ General Overview of Interview:
 - Liked the different icons but suggested adding more icons for versatility.
 - Suggested adding colors to icons themselves as an alternative.
 - Suggested adding a color/icon preview in the pop-up menu when choosing colors and icons.
-- Settings menu could some descriptions to tell about.
+- Settings menu could use some descriptions to tell about.
 
-**Reflections:** Reflect on what you observed. Some questions that you can explore: What features worked well? What can be changed? How is the learning curve of your system? Did the users perform the tasks as you expected? Did the users’ actions produce the results they expected? What did the users like the most? Is your value proposition accomplished? 
+**Reflections:** 
 
-Grading criteria (17 points): adequate script, adequate report of the results, adequate reflection, language.
+The interviews provided valuable insights into the user experience of TimeSculptor. The users generally found the application user-friendly and appreciated features like the “Pick a Time” button and the different views (calendar and list). However, they also pointed out areas for improvement such as the navigation to color and icon choosing, the lack of manual entry for event dates and times, and the need for more intuitive controls for editing events.
+
+The users liked the color customization options but found the icons to be of limited use. They suggested adding more versatile icons and color options. They also noted that the titles for the settings options weren’t explained and could be a little confusing.
+
+In terms of comparison with other task management apps such as Google Calendar and Outlook, the users found TimeSculptor to be a good prototype but would prefer using their current applications due to the maturity of those platforms.
+
+Overall, the feedback from the users suggests that while TimeSculptor has some promising features, there are several areas that could be improved to enhance the user experience and make the application more competitive with existing task management apps.
