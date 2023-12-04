@@ -21,13 +21,16 @@ export default function Login ({ loggedIn, setLoggedIn }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const token = await loginUser({
+    const auth_token = await loginUser({
       username,
       password
     })
-    setLoggedIn(token.Auth)
+    setLoggedIn(auth_token.Auth)
     setUserName('')
     setPassword('')
+
+    // Stores auth_token locally.
+    sessionStorage.setItem("auth_token", auth_token)
   }
   return (
     <div className='login-wrapper'>
