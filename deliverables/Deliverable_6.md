@@ -18,6 +18,95 @@ Group 4: **TimeSculptor**
 
 # Implemented Requirements
 
+**Requirement:** Implement a settings menu with routing to the new page     
+
+**Issue:** [#78](https://github.com/nickw409/TimeSculptor/issues/78), [#74](https://github.com/nickw409/TimeSculptor/issues/74)     
+
+**Pull request:** [#81](https://github.com/nickw409/TimeSculptor/pull/81)    
+
+**Implemented by:** Kimberly Allison      
+
+**Approved by:** Izaac Molina   
+
+**Settings Menu:**    
+![Menu](../assets/settings_menu.png)   
+
+**Requirement:** Implement a monthly calendar view for events 
+
+**Issue:** [#72](https://github.com/nickw409/TimeSculptor/issues/72) 
+
+**Pull request:** [#71](https://github.com/nickw409/TimeSculptor/pull/71)
+
+**Implemented by:** Izaac Molina
+
+**Approved by:** Nick Wiley 
+
+**Monthly View:**    
+![Monthly](../assets/monthly_view.png)   
+
+**Requirement:** Implement icons for the table in list view 
+
+**Issue:** [#90](https://github.com/nickw409/TimeSculptor/issues/90)
+
+**Pull request:** [#85](https://github.com/nickw409/TimeSculptor/pull/85)
+
+**Implemented by:** Gabriel Valentin
+
+**Approved by:** Izaac Molina
+
+**Table Icons:**    
+![Icons](../assets/chicken-example.png) 
+
+**Requirement:** Implement a daily view for events
+
+**Issue:** [#75](https://github.com/nickw409/TimeSculptor/issues/75)   
+
+**Pull request:** [#76](https://github.com/nickw409/TimeSculptor/pull/76)   
+
+**Implemented by:** Izaac Molina
+
+**Approved by:** Noah Schwartz
+
+**Daily View:**    
+![Daily](../assets/daily_view.png)   
+
+**Requirement:** Create databases to store schedule and event data     
+
+**Issue:** [#88](https://github.com/nickw409/TimeSculptor/issues/88) 
+
+**Pull request:** [#89](https://github.com/nickw409/TimeSculptor/pull/89)    
+
+**Implemented by:** Nicholas Wiley     
+
+**Approved by:** Izaac Molina
+
+
+
+**Requirement:** Implement icon choosing
+
+**Issue:** [#79](https://github.com/nickw409/TimeSculptor/issues/79)   
+
+**Pull request:** [#80](https://github.com/nickw409/TimeSculptor/pull/80)   
+
+**Implemented by:** Noah Schwartz
+
+**Approved by:** Kimberly Allison
+
+**Icon Choosing**    
+![Icon Choosing](../assets/Icon_choose.png)   
+
+**Requirement:** Implement Error Message for invalid date/time
+
+**Issue:** [#79](https://github.com/nickw409/TimeSculptor/issues/79)   
+
+**Pull request:** [#80](https://github.com/nickw409/TimeSculptor/pull/80)   
+
+**Implemented by:** Noah Schwartz
+
+**Approved by:** Kimberly Allison
+
+**Error Message**    
+![Error Message](../assets/error_message.png)   
 
 
 # Tests
@@ -34,15 +123,17 @@ Below is the output of the current tests being ran:
 
 # Demo
 
-
+[Demo](https://us04web.zoom.us/clips/share/SwbawxA1KAiCpHuebTZCkCR0U-Pn1oW3tHPXa2yLovXwg_m7n0s6alARVRxbFzWSXEOVV3SPp8QAQ9SSstK6dMAYGQ.hzczNCS0nzes6ZGF)
 
 # Code Quality
 
-To foster code quality, we implemented a system where all major components and functions are commented with their purpose, along with the parameters they receive and value(s) they return. Additionally, we also refactored our code to specifically follow SOLID principles, such as how the Event class has the single responsibility of holding data for each displayed event.
-
+To foster code quality, we implemented a system where all major components and functions are commented with their purpose, along with the parameters they receive and value(s) they return. Additionally, we also refactored our code to specifically follow SOLID principles, such as how the Event class has the single responsibility of holding data for each displayed event. Finally, we are also using the linter provided by [StandardJS](https://github.com/standard/standard) which is a common linter for .js and .jsx code. This has allowed us to follow a common and uniform style guide for our codebase.
 
 # Lessons Learned
 
-Throughout the course of creating this first release, we have learned a lot about the use of react.js, node.js, and jest. In particular, the group learned a great deal about how to design event listeners in React, as well as how to use the React mui library to implement useful features like dropdown menus and add/edit/delete dialogues. In the future, we want to will further improve the UI by thoroughly examining further acessibility requirements and applying them to our design. Additionally, some other immediate next steps for the project are to implement a full user registration and login system, designing a calendar view for events, implementing user settings, and setting up a SQL database for our classes.
+Throughout the course of creating this second release, we have further deepened our knowledge of React. Particularly, we learned a lot about Routing in react, which allowed us to implement the settings page, as well as how to format a calendar in react, which is now part of the events display. Our overall progress in learning these technologies is tangible, which has been great getting to experienve. However, one problem that arose was finding a more streamlined way to implement coding standards, such as a style guide. Implementing the style guide was very time consuming, and in the future, we want to find ways to better automate this process. Additionally, we also had a hard time refactoring the code to follow particular design patterns and principles, so we also want to look more into how we can refactor our code to follow more standardized design. Finally, we started working on implementing a database for the project, but have ultimately ran into issues completely hooking it up to the front end to update the database and preserve login states, which is our biggest priority for next release.
+
+
+
 
 
