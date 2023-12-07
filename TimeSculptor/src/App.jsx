@@ -104,7 +104,8 @@ function App () {
   // involved in routing, stores events as a kind of global variable
   const globalContext = React.useContext(GlobalContext)
   const events = globalContext.globalState.events
-  const [loggedIn, setLoggedIn] = useState(true)
+  const [loggedIn, setLoggedIn] = useState(false)
+  let auth_token = sessionStorage.getItem("auth_token");
 
   // class for functions that change (add/edit/delete) events, triggerring a rerender.
   // follows a Singleton design pattern.
@@ -168,21 +169,28 @@ function App () {
         oldEvents.push(this.generateRecurringEvent(newEvent))
       } else {
         oldEvents.push(this.generateDefaultEvent(newEvent))
-        const data = {
-          schedule_name: 'testing',
-          event: newEvent
+
+        auth_token = sessionStorage.getItem("auth_token");
+
+        if (auth_token === null) {
+          console.log(auth_token);
+        } else {
+          let data = {
+            schedule_name:"testing",
+            event:newEvent
+          };
+          fetch('/add-event', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          }).then(res => {
+            console.log(res.status);
+          }).catch(err => {
+            console.log("Error");
+          })
         }
-        fetch('/add-event', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-        }).then(res => {
-          console.log(res.status)
-        }).catch(err => {
-          console.log('Error')
-        })
       }
 
       globalContext.setGlobalState((prevState) => ({ ...prevState, events: oldEvents }))
@@ -236,8 +244,11 @@ function App () {
   // instantiate single event controller
   const eventController = new EventsController()
 
-  // display app if user is logged in
-  if (loggedIn) {
+  auth_token = sessionStorage.getItem("auth_token")
+
+  if (auth_token === null) {
+    return <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+  } else {
     // main display
     return (
       <div className='appContainer'>
@@ -248,8 +259,6 @@ function App () {
         <Events events={events} eventController={eventController} />
       </div>
     )
-  } else {
-    return <Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
   }
 }
 

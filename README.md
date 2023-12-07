@@ -50,15 +50,13 @@ Give an example
 ## For local deployment (development)
 
 - Move to TimeSculptor directory
-- npm install
-- npm run build
 - Run db_init.sh in build directory
-- npm run api
+- npm run rebuild
 
 **OR If running Linux**
 
 - Move to TimeSculptor directory
-- npm run dev-version
+- npm run database-rebuild
 
 ## In order to view online
 
