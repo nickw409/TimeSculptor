@@ -4,8 +4,9 @@ import TextField from '@mui/material/TextField'
 import { v4 as uuid } from 'uuid'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
-import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker'
+import { DatePicker, TimePicker } from '@mui/x-date-pickers'
 import MenuItem from '@mui/material/MenuItem'
+import dayjs from 'dayjs'
 import './dialog.css'
 
 // This is the dialog box component for adding events
@@ -13,11 +14,14 @@ import './dialog.css'
 //  open: function that opens dialog
 //  close: function that closes dialog
 //  addEvent: function for adding events to main page
-export default function AddDialog ({ open, close, addEvent }) {
+export default function AddDialog ({ open, close, addEvent, findTime }) {
   const [name, setName] = useState('')
-  const [dateTime, setDateTime] = useState('')
+  const [startTime, setStartTime] = useState(dayjs().startOf('hour').add(1, 'hour').second(0))
+  const [endTime, setEndTime] = useState(dayjs().startOf('hour').add(2, 'hour').second(0))
+  const [disablePast, setDisablePast] = useState(true)
   const [color, setColor] = useState('#029356')
-  const [icon, setIcon] = useState('')
+  const [icon, setIcon] = useState('/assets/images/Work.png')
+  // TODO: const [dynamicAddMenu, setDynamicAddMenu] = useState(false)
 
   const uniqueId = uuid()
 
@@ -25,8 +29,25 @@ export default function AddDialog ({ open, close, addEvent }) {
     setName(event.target.value)
   }
 
-  const dateTimeChange = (date) => {
-    setDateTime(date)
+  const dateChange = (date) => {
+    const newStartTime = date.hour(startTime.hour()).minute(startTime.minute())
+    const newEndTime = date.hour(endTime.hour()).minute(endTime.minute())
+    setStartTime(newStartTime)
+    setEndTime(newEndTime)
+
+    if (date.isAfter(dayjs(), 'day')) {
+      setDisablePast(false)
+    } else {
+      setDisablePast(true)
+    }
+  }
+
+  const startTimeChange = (time) => {
+    setStartTime(time)
+  }
+
+  const endTimeChange = (time) => {
+    setEndTime(time)
   }
 
   const colorChange = (event) => {
@@ -37,17 +58,45 @@ export default function AddDialog ({ open, close, addEvent }) {
     setIcon(event.target.value)
   }
 
+  const findATime = () => {
+    const duration = endTime.diff(startTime, 'minute')
+
+    const time = findTime(startTime, duration)
+
+    if (time) {
+      const chosenStartTime = time
+      const chosenEndTime = time.add(duration, 'minutes')
+
+      setStartTime(chosenStartTime)
+      setEndTime(chosenEndTime)
+    } else {
+      alert('could not find a valid time')
+    }
+  }
+
   const formSubmit = () => {
-    // error handling if invalid dateTime is entered for a new event.
-    if (!dateTime) {
+    // error handling if invalid date is entered for a new event.
+    if (!startTime) {
       alert('Please select a date for the event.')
+      return
+    }
+
+    // error handling if end time earlier than start time
+    if (endTime.isBefore(startTime)) {
+      alert('End Time cannot be earlier than Start Time.')
+      return
+    }
+
+    if (!name) {
+      alert('Please enter a Name')
       return
     }
 
     const newEvent = {
       id: uniqueId,
       title: name,
-      dateAndTime: dateTime,
+      dateAndTime: startTime,
+      duration: endTime.diff(startTime, 'minute'),
       color,
       icon
     }
@@ -75,16 +124,33 @@ export default function AddDialog ({ open, close, addEvent }) {
             onChange={nameChange}
             sx={{ marginBottom: '30px' }}
           />
+          <div className='dateTime'>
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DatePicker
+                label='Date'
+                sx={{ overflow: 'visible', marginBottom: '30px', width: '60%' }}
+                disablePast
+                maxDate={dayjs().add(20, 'years')}
+                value={startTime}
+                onChange={dateChange}
+              />
+              <TimePicker
+                label='Start Time'
+                disablePast={disablePast}
+                value={startTime}
+                onChange={startTimeChange}
+              />
+              <TimePicker
+                label='End Time'
+                disablePast={disablePast}
+                value={endTime}
+                onChange={endTimeChange}
+                minTime={startTime}
+              />
+            </LocalizationProvider>
+            <Button onClick={findATime} sx={{ height: '66.66%' }}> Find A Time </Button>
+          </div>
 
-          <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <DateTimePicker
-              label='Event Date/Time'
-              sx={{ overflow: 'visible', marginBottom: '30px', width: '60%' }}
-              disablePast
-              value={dateTime}
-              onChange={dateTimeChange}
-            />
-          </LocalizationProvider>
           <TextField
             id='color'
             select
