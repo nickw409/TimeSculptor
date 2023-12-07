@@ -6,7 +6,7 @@ import AddDialog from './add_dialog'
 // defines the add event button
 // parameter:
 //  addEventFunction: function that adds an event to the display
-export default function AddEvent ({ addEvent, findTime }) {
+export default function AddEvent ({ addEventFunction }) {
   // useState that opens the event dialog component when the state is changed
   const [eventDialogOpen, setEventDialogOpen] = useState(false)
 
@@ -36,7 +36,7 @@ export default function AddEvent ({ addEvent, findTime }) {
       >
         Add Event
       </Button>
-      <AddDialog open={eventDialogOpen} close={closeDialog} addEvent={addEvent} findTime={findTime} />
+      <AddDialog open={eventDialogOpen} close={closeDialog} addEvent={addEventFunction} />
     </Box>
   )
 }
