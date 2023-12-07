@@ -67,7 +67,7 @@ export default function EventTable ({ events, eventController }) {
                 <td className='imageCol'><img src={event.icon} alt={event.id} /></td>
                 <td>{event.title}</td>
                 <td className='dateCol'>{dayjs(event.dateAndTime).format('L')}</td>
-                <td className='timeCol'>{dayjs(event.dateAndTime).format('LT')} - {dayjs(event.dateAndTime.add(event.duration, 'minutes')).format('LT')}</td>
+                <td className='timeCol'>{dayjs(event.dateAndTime).format('LT')}</td>
                 <td className='actionCol'>
                   <BsFillTrashFill
                     className='actionButton'
@@ -141,7 +141,7 @@ export default function EventTable ({ events, eventController }) {
 
       {viewType === 'list' ? renderListView(events) : viewType === 'calendar' ? renderCalendarView() : renderDailyView()}
 
-      <EditDialog open={eventDialogOpen} close={closeEditDialog} editEvent={eventController.editEvent} toEdit={selectedEvent} findTime={eventController.findTime} />
+      <EditDialog open={eventDialogOpen} close={closeEditDialog} editEvent={eventController.editEvent} toEdit={selectedEvent} />
       <DeleteWarning open={deleteWarningOpen} close={closeWarning} deleteEvent={eventController.deleteEvent} toDelete={selectedEvent} />
     </div>
   )

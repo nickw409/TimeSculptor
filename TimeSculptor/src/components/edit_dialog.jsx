@@ -2,51 +2,29 @@
 import React, { useState, useEffect } from 'react'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
-import { DatePicker, TimePicker } from '@mui/x-date-pickers'
+import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker'
 import { Dialog, DialogTitle, DialogActions, DialogContent, Button } from '@mui/material'
 import TextField from '@mui/material/TextField'
 import MenuItem from '@mui/material/MenuItem'
-import dayjs from 'dayjs'
 
-export default function EditDialog ({ open, close, editEvent, toEdit, findTime }) {
+export default function EditDialog ({ open, close, editEvent, toEdit }) {
   const [name, setName] = useState('')
-  const [startTime, setStartTime] = useState(dayjs().startOf('hour').add(1, 'hour').second(0))
-  const [endTime, setEndTime] = useState(dayjs().startOf('hour').add(2, 'hour').second(0))
-  const [disablePast, setDisablePast] = useState(true)
+  const [dateTime, setDateTime] = useState('')
   const [color, setColor] = useState('')
   const [icon, setIcon] = useState('')
 
   useEffect(() => {
     setName(toEdit.title)
-    setStartTime(dayjs(toEdit.dateAndTime))
-    setEndTime(dayjs(toEdit.dateAndTime).add(toEdit.duration, 'minutes'))
+    setDateTime(toEdit.dateAndTime)
     setColor(toEdit.color)
-    setIcon(toEdit.icon)
   }, [toEdit])
 
   const nameChange = (event) => {
     setName(event.target.value)
   }
 
-  const dateChange = (date) => {
-    const newStartTime = date.hour(startTime.hour()).minute(startTime.minute())
-    const newEndTime = date.hour(endTime.hour()).minute(endTime.minute())
-    setStartTime(newStartTime)
-    setEndTime(newEndTime)
-
-    if (date.isAfter(dayjs(), 'day')) {
-      setDisablePast(false)
-    } else {
-      setDisablePast(true)
-    }
-  }
-
-  const endTimeChange = (time) => {
-    setEndTime(time)
-  }
-
-  const startTimeChange = (time) => {
-    setStartTime(time)
+  const dateTimeChange = (date) => {
+    setDateTime(date.toDate())
   }
 
   // Set the color state when an option is selected
@@ -59,44 +37,11 @@ export default function EditDialog ({ open, close, editEvent, toEdit, findTime }
     setIcon(event.target.value)
   }
 
-  const findATime = () => {
-    const duration = endTime.diff(startTime, 'minute')
-    const time = findTime(startTime, duration)
-
-    if (time) {
-      const chosenStartTime = time
-      const chosenEndTime = time.add(duration, 'minutes')
-
-      setStartTime(chosenStartTime)
-      setEndTime(chosenEndTime)
-    } else {
-      alert('could not find a valid time')
-    }
-  }
-
   const formSubmit = () => {
-    // error handling if invalid date is entered for a new event.
-    if (!startTime) {
-      alert('Please select a date for the event.')
-      return
-    }
-
-    // error handling if end time earlier than start time
-    if (endTime.isBefore(startTime)) {
-      alert('End Time cannot be earlier than Start Time.')
-      return
-    }
-
-    if (!name) {
-      alert('Please enter a Name')
-      return
-    }
-
     const newEvent = {
       id: toEdit.id,
       title: name,
-      dateAndTime: startTime,
-      duration: endTime.diff(startTime, 'minute'),
+      dateAndTime: dateTime,
       color,
       icon
     }
@@ -125,32 +70,15 @@ export default function EditDialog ({ open, close, editEvent, toEdit, findTime }
           sx={{ marginBottom: '30px' }}
         />
 
-        <div className='dateTime'>
-          <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <DatePicker
-              label='Date'
-              sx={{ overflow: 'visible', marginBottom: '30px', width: '60%' }}
-              disablePast
-              maxDate={dayjs().add(20, 'years')}
-              value={startTime}
-              onChange={dateChange}
-            />
-            <TimePicker
-              label='Start Time'
-              disablePast={disablePast}
-              value={startTime}
-              onChange={startTimeChange}
-            />
-            <TimePicker
-              label='End Time'
-              disablePast={disablePast}
-              value={endTime}
-              onChange={endTimeChange}
-              minTime={startTime}
-            />
-          </LocalizationProvider>
-          <Button onClick={findATime} sx={{ height: '66.66%' }}> Find A Time </Button>
-        </div>
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <DateTimePicker
+            sx={{ overflow: 'visible', marginBottom: '30px' }}
+            label='Event Date/Time'
+            disablePast
+            value={dateTime}
+            onChange={dateTimeChange}
+          />
+        </LocalizationProvider>
 
         <TextField
           id='color'

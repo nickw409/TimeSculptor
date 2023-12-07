@@ -53,11 +53,8 @@
   border: none;
 }
 
-.statusCol, .imageCol, .actionCol {
+.statusCol, .imageCol, .timeCol, .dateCol, .actionCol {
   width: 50px
-}
-.dateCol, .timeCol {
-  width: 100px;
 }
 
 td {
