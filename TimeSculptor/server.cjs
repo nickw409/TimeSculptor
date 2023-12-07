@@ -39,9 +39,9 @@ app.post("/add-event", (req, res) => {
     let event = req.body.event;
     addEvent(schedule_name, event).then((id) => {
       console.log("Successfully added event");
-      res.send(id);
+      res.send({"id": id});
     }).catch((err) => {
-      console.log("Bad data");
+      console.log(err);
       res.sendStatus(400);
     })
   } catch (e) {
@@ -165,6 +165,8 @@ app.listen(port, () => {
 
 async function addEvent(schedule_name, event) {
   return new Promise((resolve, reject) => {
+    console.log(schedule_name);
+    console.log(event);
     if (validateScheduleName(schedule_name) && event != null) {
       let convertedDateAndTime = convertDateTime(event.dateAndTime);
       let sqlString = 'INSERT INTO Event VALUES (?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?;'
@@ -206,8 +208,7 @@ async function addEvent(schedule_name, event) {
         })
     }
     else {
-      console.log("Bad Data");
-      reject(-1);
+      reject("Failed to add event, Bad Data");
     }
   })
 }
@@ -217,7 +218,7 @@ async function addSchedule(schedule_name, username) {
     findSchedule(schedule_name, username).then((result) => {
       if (!result) {
         sqlString = "INSERT INTO Schedule VALUES (?, ?);";
-        let inserts = [ schedule_name, username ];
+        let inserts = [schedule_name, username];
 
         sqlString = mysql.format(sqlString, inserts);
 
@@ -230,7 +231,7 @@ async function addSchedule(schedule_name, username) {
               console.log("Schedule added");
               resolve(true);
             }
-        })
+          })
       }
       else {
         resolve(false);
@@ -284,7 +285,7 @@ function convertDateTime(dateAndTime) {
 
 async function getAllEvents(schedule_name) {
   return new Promise((resolve, reject) => {
-    let sqlString = "SELECT id, title, dateAndTime, color, icon FROM Event WHERE schedule_name=?";
+    let sqlString = "SELECT id, title, dateAndTime, duration, color, icon FROM Event WHERE schedule_name=?";
     let inserts = [schedule_name];
 
     sqlString = mysql.format(sqlString, inserts);
@@ -336,9 +337,9 @@ async function getEvent(id) {
 
 async function getSchedules(username) {
   return new Promise((resolve, reject) => {
-    if (typeof(username) === "string") {
+    if (typeof (username) === "string") {
       let sqlString = "SELECT schedule_name FROM Schedule WHERE username=?;";
-      let inserts = [ username ];
+      let inserts = [username];
 
       sqlString = mysql.format(sqlString, inserts);
 
@@ -365,9 +366,9 @@ async function getSchedules(username) {
 
 async function register(username, password) {
   return new Promise((resolve, reject) => {
-    if (typeof(username) === "string" && typeof(password) === "string") {
+    if (typeof (username) === "string" && typeof (password) === "string") {
       let sqlString = "SELECT * FROM Credential WHERE username=?;";
-      let inserts = [ username ];
+      let inserts = [username];
 
       sqlString = mysql.format(sqlString, inserts);
 
@@ -382,11 +383,11 @@ async function register(username, password) {
           }
           else {
             sqlString = "INSERT INTO Credential VALUES (?, ?);";
-            inserts = [ username, password ];
+            inserts = [username, password];
 
             sqlString = mysql.format(sqlString, inserts);
 
-            dbPool.query(sqlString, 
+            dbPool.query(sqlString,
               (err, results) => {
                 if (err) {
                   throw err;
@@ -407,9 +408,9 @@ async function register(username, password) {
 
 async function findSchedule(schedule_name, username) {
   return new Promise((resolve) => {
-    if (typeof(schedule_name) === "string" && typeof(username) === "string") {
+    if (typeof (schedule_name) === "string" && typeof (username) === "string") {
       let sqlString = "SELECT * FROM Schedule WHERE schedule_name=? AND username=?;";
-      let inserts = [ schedule_name, username ];
+      let inserts = [schedule_name, username];
 
       sqlString = mysql.format(sqlString, inserts);
 
@@ -430,27 +431,30 @@ async function findSchedule(schedule_name, username) {
 }
 
 // Returns true if schedule_name found in database, else false
-function validateScheduleName(schedule_name) {
-  if (typeof(schedule_name) === "string") {
-    let sqlString = "SELECT schedule_name FROM Schedule WHERE schedule_name=?;";
-    let inserts = [schedule_name];
-
-    sqlString = mysql.format(sqlString, inserts);
-
-    dbPool.query(sqlString,
-      (err, results => {
-        if (err) {
-          throw err;
-        }
-        if (results.length === 0) {
-          return false;
-        }
-        else {
-          return true;
-        }
-      }))
-  }
-  else {
-    return false;
-  }
+async function validateScheduleName(schedule_name) {
+  return new Promise((resolve, reject) => {
+    if (typeof (schedule_name) === "string") {
+      let sqlString = "SELECT schedule_name FROM Schedule WHERE schedule_name=?;";
+      let inserts = [schedule_name];
+  
+      sqlString = mysql.format(sqlString, inserts);
+  
+      dbPool.query(sqlString,
+        (err, results) => {
+          if (err) {
+            throw err;
+          }
+          if (results.length === 0) {
+            reject("No schedule with that name");
+          }
+          else {
+            resolve(true);
+          }
+        })
+    }
+    else {
+      reject("schedule_name not a string");
+    }
+  })
+  
 }
