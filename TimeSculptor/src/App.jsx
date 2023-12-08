@@ -4,6 +4,7 @@ import Header from './components/header'
 import AddEvent from './components/create'
 import Events from './components/events'
 import Login from './login'
+import dayjs from 'dayjs'
 import './App.css'
 import { GlobalContext } from './components/main_frame'
 
@@ -16,10 +17,11 @@ import { GlobalContext } from './components/main_frame'
 //  recurring: optional parameter to define a recurring event
 class Event {
   // object definition
-  constructor (id, title, dateAndTime, icon, color, recurring = false) {
+  constructor (id, title, dateAndTime, duration, icon, color, recurring = false) {
     this._id = id
     this._title = title
     this._dateAndTime = dateAndTime
+    this._duration = duration
     this._icon = icon
     this._color = color
     this._recurring = recurring
@@ -50,6 +52,14 @@ class Event {
     this._dateAndTime = newDateAndTime
   }
 
+  get duration () {
+    return this._duration
+  }
+
+  set duration (newDuration) {
+    this._duration = newDuration
+  }
+
   get icon () {
     return this._icon
   }
@@ -75,18 +85,22 @@ class EventCreationStrategy {
 }
 
 class DefaultStrategy extends EventCreationStrategy {
-  createEvent (id, title, dateAndTime, icon, color) {
-    return new Event(id, title, dateAndTime, icon, color)
+  createEvent (id, title, dateAndTime, duration, icon, color) {
+    return new Event(id, title, dateAndTime, duration, icon, color)
   }
 }
 
 class RecurringStrategy extends EventCreationStrategy {
-  createEvent (id, title, dateAndTime, icon, color) {
-    return new Event(id, title, dateAndTime, icon, color, true)
+  createEvent (id, title, dateAndTime, duration, icon, color) {
+    return new Event(id, title, dateAndTime, duration, icon, color, true)
   }
 }
 
 function App () {
+  // for calculating times
+  const EIGHT_PM = 20
+  const EIGHT_AM = 8
+
   // involved in routing, stores events as a kind of global variable
   const globalContext = React.useContext(GlobalContext)
   const events = globalContext.globalState.events
@@ -103,7 +117,7 @@ function App () {
     constructDefault = new DefaultStrategy()
     constructRecurring = new RecurringStrategy()
 
-    // only contstruct if this is the first instance
+    // only construct if this is the first instance
     constructor () {
       if (EventsController.single_instance) {
         return EventsController.single_instance
@@ -112,15 +126,17 @@ function App () {
       EventsController.single_instance = this
 
       this.addEvent = this.addEvent.bind(this)
+
+      this.findTime = this.findTime.bind(this)
     }
 
     // create an event, implement default and recurring strategy
     generateDefaultEvent (eventData) {
-      return this.constructDefault.createEvent(eventData.id, eventData.title, eventData.dateAndTime, eventData.icon, eventData.color)
+      return this.constructDefault.createEvent(eventData.id, eventData.title, eventData.dateAndTime, eventData.duration, eventData.icon, eventData.color)
     }
 
     generateRecurringEvent (eventData) {
-      return this.constructRecurring.createEvent(eventData.id, eventData.title, eventData.dateAndTime, eventData.icon, eventData.color)
+      return this.constructRecurring.createEvent(eventData.id, eventData.title, eventData.dateAndTime, eventData.duration, eventData.icon, eventData.color)
     }
 
     // accepts an event object id, deleting it
@@ -179,6 +195,45 @@ function App () {
 
       globalContext.setGlobalState((prevState) => ({ ...prevState, events: oldEvents }))
     }
+
+    findTime (day, duration) {
+      let currTime = day.hour(EIGHT_AM).minute(0).second(0)
+
+      if (day.isSame(dayjs(), 'day')) {
+        currTime = dayjs()
+      }
+
+      const sortedEvents = events
+        .filter((event) =>
+          dayjs(event.dateAndTime).isSame(currTime, 'day') &&
+          (dayjs(event.dateAndTime).isAfter(currTime, 'minute') || dayjs(event.dateAndTime.isSame(currTime, 'minute')))
+        )
+        .sort((firstEvent, secondEvent) =>
+          dayjs(firstEvent.dateAndTime).isBefore(secondEvent.dateAndTime) ? -1 : 1
+        )
+
+      for (let eventIndex = 0; eventIndex < sortedEvents.length; eventIndex++) {
+        const currEventTime = sortedEvents[eventIndex].dateAndTime
+        const currEventDuration = sortedEvents[eventIndex].duration
+        let window = 0
+
+        if (currEventTime.isAfter(currTime.add(duration, 'minute'))) {
+          window = currEventTime.diff(currTime, 'minute')
+        }
+
+        if (window >= duration) {
+          return currTime
+        } else {
+          currTime = currEventTime.add(currEventDuration, 'minute')
+        }
+      }
+
+      if (currTime.hour() < EIGHT_PM) {
+        return currTime
+      }
+
+      return null
+    }
   }
 
   // record successful login
@@ -199,7 +254,7 @@ function App () {
       <div className='appContainer'>
         <Header />
         {/* Button for adding events */}
-        <AddEvent addEventFunction={eventController.addEvent} />
+        <AddEvent addEvent={eventController.addEvent} findTime={eventController.findTime} />
         {/* Full events display */}
         <Events events={events} eventController={eventController} />
       </div>
