@@ -36,9 +36,9 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 app.post("/add-event", (req, res) => {
   try {
-    let schedule_name = req.body.schedule_name;
+    let schedule_id = req.body.schedule_id;
     let event = req.body.event;
-    addEvent(schedule_name, event).then((id) => {
+    addEvent(schedule_id, event).then((id) => {
       console.log("Successfully added event");
       res.send({"id": id});
     }).catch((err) => {
@@ -91,9 +91,9 @@ app.post("/remove-event", (req, res) => {
 
 app.get("/events", (req, res) => {
   try {
-    let schedule_name = req.query?.schedule_name;
-    console.log(schedule_name);
-    getAllEvents(schedule_name).then((results) => {
+    let schedule_id = req.query?.schedule_id;
+    console.log(schedule_id);
+    getAllEvents(schedule_id).then((results) => {
       for (let i = 0; i < results.length; i++) {
         console.log(results[i]);
       }
@@ -183,25 +183,25 @@ app.listen(port, () => {
   console.log(`React Server Listening On Port: ${port}`);
 });
 
-async function addEvent(schedule_name, event) {
+async function addEvent(schedule_id, event) {
   return new Promise((resolve, reject) => {
-    console.log(schedule_name);
+    console.log(schedule_id);
     console.log(event);
-    if (validateScheduleName(schedule_name) && event != null) {
+    if (validateScheduleName(schedule_id) && event != null) {
       let convertedDateAndTime = convertDateTime(event.dateAndTime);
       let sqlString = 'INSERT INTO Event VALUES (?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?;'
       let inserts = [
-        schedule_name,
-        0,
+        schedule_id,
+        event.id,
         event.title,
         convertedDateAndTime,
         event.duration,
         event.color,
         event.icon,
-        'schedule_name',
-        schedule_name,
+        'sched_id',
+        schedule_id,
         'id',
-        0,
+        event.id,
         'title',
         event.title,
         'dateAndTime',
@@ -303,10 +303,10 @@ function convertDateTime(dateAndTime) {
   return formattedDateTime;
 }
 
-async function getAllEvents(schedule_name) {
+async function getAllEvents(schedule_id) {
   return new Promise((resolve, reject) => {
-    let sqlString = "SELECT id, title, dateAndTime, duration, color, icon FROM Event WHERE schedule_name=?";
-    let inserts = [schedule_name];
+    let sqlString = "SELECT id, title, dateAndTime, duration, color, icon FROM Event WHERE sched_id=?";
+    let inserts = [schedule_id];
 
     sqlString = mysql.format(sqlString, inserts);
 
@@ -478,12 +478,12 @@ async function findSchedule(schedule_name, username) {
   })
 }
 
-// Returns true if schedule_name found in database, else false
-async function validateScheduleName(schedule_name) {
+// Returns true if schedule found in database, else false
+async function validateScheduleName(schedule_id) {
   return new Promise((resolve, reject) => {
-    if (typeof (schedule_name) === "string") {
-      let sqlString = "SELECT schedule_name FROM Schedule WHERE schedule_name=?;";
-      let inserts = [schedule_name];
+    if (typeof (schedule_id) === "number") {
+      let sqlString = "SELECT sched_id FROM Schedule WHERE sched_id=?;";
+      let inserts = [schedule_id];
 
       sqlString = mysql.format(sqlString, inserts);
 
@@ -493,7 +493,7 @@ async function validateScheduleName(schedule_name) {
             throw err;
           }
           if (results.length === 0) {
-            reject("No schedule with that name");
+            reject("No schedule with that id");
           }
           else {
             resolve(true);
@@ -501,7 +501,7 @@ async function validateScheduleName(schedule_name) {
         })
     }
     else {
-      reject("schedule_name not a string");
+      reject("schedule_id not a string");
     }
   })
 }
