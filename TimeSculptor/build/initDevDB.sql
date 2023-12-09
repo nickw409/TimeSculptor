@@ -16,8 +16,7 @@ CREATE TABLE IF NOT EXISTS Credential (
 CREATE TABLE IF NOT EXISTS Schedule (
    schedule_name VARCHAR(128) NOT NULL,
    username VARCHAR(128) NOT NULL,
-   sched_id INT NOT NULL AUTO_INCREMENT,
-   PRIMARY KEY (schedule_name, username)
+   sched_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT
 );
 CREATE TABLE IF NOT EXISTS Event (
    sched_id INT NOT NULL,
@@ -28,7 +27,7 @@ CREATE TABLE IF NOT EXISTS Event (
    color VARCHAR(64),
    icon VARCHAR(64),
    FOREIGN KEY (sched_id)
-      REFERENCES Schedule(sched_int)
+      REFERENCES Schedule(sched_id)
       ON DELETE CASCADE
 );
 INSERT IGNORE INTO Credential
