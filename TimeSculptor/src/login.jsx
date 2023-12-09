@@ -1,3 +1,4 @@
+/* global sessionStorage */
 import React, { useState } from 'react'
 import './login.css'
 
@@ -21,16 +22,16 @@ export default function Login ({ loggedIn, setLoggedIn }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const auth_token = await loginUser({
+    const authToken = await loginUser({
       username,
       password
     })
-    setLoggedIn(auth_token.Auth)
+    setLoggedIn(authToken.Auth)
     setUserName('')
     setPassword('')
 
-    // Stores auth_token locally.
-    sessionStorage.setItem("auth_token", auth_token)
+    // Stores authToken locally.
+    sessionStorage.setItem('authToken', authToken)
   }
   return (
     <div className='login-wrapper'>

@@ -40,6 +40,7 @@ app.post("/add-event", (req, res) => {
     let event = req.body.event;
     addEvent(schedule_id, event).then((id) => {
       console.log("Successfully added event");
+      console.log(id)
       res.send({ "id": id });
     }).catch((err) => {
       console.log(err);

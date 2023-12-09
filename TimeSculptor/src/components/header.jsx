@@ -14,7 +14,7 @@ import Logo from '../assets/tslogotransparent.png'
 // import Login from '../assets/login.png'
 // import Register from '../assets/register.png'
 
-export default function Header ({logout}) {
+export default function Header ({ logout }) {
   const theme = createTheme({
     palette: {
       primary: {

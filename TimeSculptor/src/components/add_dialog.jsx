@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Dialog, DialogTitle, DialogActions, DialogContent, Button } from '@mui/material'
 import TextField from '@mui/material/TextField'
-import { v4 as uuid } from 'uuid'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import { DatePicker, TimePicker } from '@mui/x-date-pickers'
@@ -22,7 +21,6 @@ export default function AddDialog ({ open, close, addEvent, findTime }) {
   const [color, setColor] = useState('#029356')
   const [icon, setIcon] = useState('/assets/images/Work.png')
   // TODO: const [dynamicAddMenu, setDynamicAddMenu] = useState(false)
-
 
   const nameChange = (event) => {
     setName(event.target.value)
