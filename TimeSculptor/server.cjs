@@ -299,7 +299,6 @@ async function authUser(username, password) {
 
 function convertDateTime(dateAndTime) {
   const formattedDateTime = dayjs(dateAndTime).format('YYYY-MM-DD HH:mm:ss');
-  console.log(formattedDateTime);
   return formattedDateTime;
 }
 

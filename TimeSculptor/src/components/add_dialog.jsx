@@ -23,7 +23,6 @@ export default function AddDialog ({ open, close, addEvent, findTime }) {
   const [icon, setIcon] = useState('/assets/images/Work.png')
   // TODO: const [dynamicAddMenu, setDynamicAddMenu] = useState(false)
 
-  const uniqueId = uuid()
 
   const nameChange = (event) => {
     setName(event.target.value)
@@ -93,7 +92,7 @@ export default function AddDialog ({ open, close, addEvent, findTime }) {
     }
 
     const newEvent = {
-      id: uniqueId,
+      id: 0,
       title: name,
       dateAndTime: startTime,
       duration: endTime.diff(startTime, 'minute'),

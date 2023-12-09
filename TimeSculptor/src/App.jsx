@@ -121,7 +121,7 @@ function App () {
   };
 
   useEffect(() => {
-    fetch('/events?schedule_name=testing')
+    fetch('/events?schedule_id=1')
       .then(response => response.json())
       .then(eventsJson => {
         const convertedEvents = eventsJson.map((eventJson) => {
@@ -216,7 +216,7 @@ function App () {
         globalContext.setGlobalState((prevState) => ({ ...prevState, events: newEvents }))
 
         let data = {
-          schedule_name: "testing",
+          schedule_id: 1,
           event: updatedEvent
         };
 
@@ -250,8 +250,8 @@ function App () {
           console.log(auth_token);
         } else {
           let data = {
-            schedule_name:"testing",
-            event:newEvent
+            schedule_id: 1,
+            event: newEvent
           };
           fetch('/add-event', {
             method: 'POST',
