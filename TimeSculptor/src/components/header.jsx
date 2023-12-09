@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'
 import SettingsIcon from '@mui/icons-material/Settings'
 import AddMenu from './add_menu'
+import { Button } from '@mui/material'
 import { useState } from 'react'
 import { ClickAwayListener } from '@mui/base/ClickAwayListener'
 
@@ -13,7 +14,7 @@ import Logo from '../assets/tslogotransparent.png'
 // import Login from '../assets/login.png'
 // import Register from '../assets/register.png'
 
-export default function Header () {
+export default function Header ({ logout }) {
   const theme = createTheme({
     palette: {
       primary: {
@@ -52,6 +53,8 @@ export default function Header () {
           >
             Time Sculptor
           </Typography>
+
+          <Button sx={{ color: 'black' }} onClick={logout}>LOG OUT</Button>
 
           <ClickAwayListener
             onClickAway={closeSettingsMenu}

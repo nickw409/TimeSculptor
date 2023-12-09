@@ -1,7 +1,8 @@
 const express = require('express');
 const path = require('path');
 const mysql = require('mysql2');
-const { ErrorOutline } = require('@mui/icons-material');
+const dayjs = require('dayjs')
+const { ErrorOutline, SubscriptionsOutlined } = require('@mui/icons-material');
 const { fabClasses } = require('@mui/material');
 const { resolve } = require('path');
 
@@ -39,6 +40,7 @@ app.post("/add-event", (req, res) => {
     let event = req.body.event;
     addEvent(schedule_id, event).then((id) => {
       console.log("Successfully added event");
+      console.log(id)
       res.send({ "id": id });
     }).catch((err) => {
       console.log(err);
@@ -66,6 +68,25 @@ app.post("/add-schedule", (req, res) => {
     })
   } catch (e) {
     console.error(e);
+  }
+})
+
+app.post("/remove-event", (req, res) => {
+  try {
+    let removeId = req.body?.id
+    removeEvent(removeId)
+      .then((result) => {
+        if (result) {
+          console.log("Event removed")
+          res.sendStatus(200)
+        }
+        else {
+          console.log("Failed to remove event")
+          res.sendStatus(400)
+        }
+      })
+  } catch (e) {
+    console.error(e)
   }
 })
 
@@ -277,9 +298,8 @@ async function authUser(username, password) {
 }
 
 function convertDateTime(dateAndTime) {
-  let converted = dateAndTime.substring(0, 10);
-  converted = converted + " " + dateAndTime.substring(12, 19);
-  return converted;
+  const formattedDateTime = dayjs(dateAndTime).format('YYYY-MM-DD HH:mm:ss');
+  return formattedDateTime;
 }
 
 async function getAllEvents(schedule_id) {
@@ -288,6 +308,8 @@ async function getAllEvents(schedule_id) {
     let inserts = [schedule_id];
 
     sqlString = mysql.format(sqlString, inserts);
+
+    console.log(sqlString)
 
     dbPool.query(sqlString,
       (err, results, fields) => {
@@ -333,6 +355,32 @@ async function getEvent(id) {
           console.log(results[0])
           event = results[0];
           resolve(event);
+        }
+      })
+  })
+}
+
+async function removeEvent(id) {
+  return new Promise((resolve, reject) => {
+    let event = 'empty'
+
+    let credentialQuery = 'DELETE FROM Event WHERE id=?'
+    let inserts = [id]
+
+    credentialQuery = mysql.format(credentialQuery, inserts)
+    console.log(credentialQuery)
+
+    dbPool.query(credentialQuery,
+      (err, results, fields) => {
+        if (err) {
+          throw err
+        }
+        if (results.length == 0) {
+          reject("Event is not in database");
+        }
+        else if (results !== undefined) {
+          event = results
+          resolve(event)
         }
       })
   })
@@ -459,5 +507,4 @@ async function validateScheduleName(schedule_id) {
       reject("schedule_id not a string");
     }
   })
-
 }
