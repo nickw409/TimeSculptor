@@ -40,7 +40,7 @@ app.post("/add-event", (req, res) => {
     let event = req.body.event;
     addEvent(schedule_id, event).then((id) => {
       console.log("Successfully added event");
-      res.send({"id": id});
+      res.send({ "id": id });
     }).catch((err) => {
       console.log(err);
       res.sendStatus(400);
@@ -111,7 +111,6 @@ app.get("/get-event", (req, res) => {
     let id = req.query?.id;
     console.log(typeof (id));
     getEvent(id).then((event) => {
-      console.log(event);
       res.json(event);
     }).catch((e) => {
       console.error(e);
@@ -328,17 +327,20 @@ async function getAllEvents(schedule_id) {
 
 async function getEvent(id) {
   return new Promise((resolve, reject) => {
-    let event = 'empty';
+    let event = "";
 
-    let credentialQuery = "SELECT ?? FROM ?? WHERE ??=?;";
+    let credentialQuery = "SELECT ??, ??, ??, ??, ??, ?? FROM Event WHERE id=?;";
     let inserts = [
-      'event',
-      'Event',
-      'id',
-      id];
+      "id",
+      "title",
+      "dateAndTime",
+      "duration",
+      "color",
+      "icon",
+      id
+    ];
 
     credentialQuery = mysql.format(credentialQuery, inserts);
-    console.log(credentialQuery);
 
     dbPool.query(credentialQuery,
       (err, results, fields) => {
@@ -348,8 +350,9 @@ async function getEvent(id) {
         if (results.length == 0) {
           reject("Event is not in database");
         }
-        else if (results[0].event !== undefined) {
-          event = results[0].event;
+        else {
+          console.log(results[0])
+          event = results[0];
           resolve(event);
         }
       })
@@ -385,7 +388,7 @@ async function removeEvent(id) {
 async function getSchedules(username) {
   return new Promise((resolve, reject) => {
     if (typeof (username) === "string") {
-      let sqlString = "SELECT schedule_name FROM Schedule WHERE username=?;";
+      let sqlString = "SELECT * FROM Schedule WHERE username=?;";
       let inserts = [username];
 
       sqlString = mysql.format(sqlString, inserts);
