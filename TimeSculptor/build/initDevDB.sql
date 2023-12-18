@@ -16,13 +16,9 @@ CREATE TABLE IF NOT EXISTS Credential (
 CREATE TABLE IF NOT EXISTS Schedule (
    schedule_name VARCHAR(128) NOT NULL,
    username VARCHAR(128) NOT NULL,
-<<<<<<< HEAD
    sched_id INT NOT NULL AUTO_INCREMENT,
    PRIMARY KEY (sched_id),
    UNIQUE KEY (schedule_name, username)
-=======
-   sched_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT
->>>>>>> 1395ab48aab5529d7870e93cf55ac9f30997a6f5
 );
 CREATE TABLE IF NOT EXISTS Event (
    sched_id INT NOT NULL,

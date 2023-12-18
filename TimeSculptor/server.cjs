@@ -302,6 +302,30 @@ function convertDateTime(dateAndTime) {
   return formattedDateTime;
 }
 
+async function findSchedule(schedule_name, username) {
+  return new Promise((resolve) => {
+    if (typeof (schedule_name) === "string" && typeof (username) === "string") {
+      let sqlString = "SELECT * FROM Schedule WHERE schedule_name=? AND username=?;";
+      let inserts = [schedule_name, username];
+
+      sqlString = mysql.format(sqlString, inserts);
+
+      dbPool.query(sqlString,
+        (err, results) => {
+          if (err) {
+            throw err;
+          }
+          else if (results.length === 0) {
+            resolve(false);
+          }
+          else {
+            resolve(true);
+          }
+        })
+    }
+  })
+}
+
 async function getAllEvents(schedule_id) {
   return new Promise((resolve, reject) => {
     let sqlString = "SELECT id, title, dateAndTime, duration, color, icon FROM Event WHERE sched_id=?";
@@ -355,32 +379,6 @@ async function getEvent(id) {
           console.log(results[0])
           event = results[0];
           resolve(event);
-        }
-      })
-  })
-}
-
-async function removeEvent(id) {
-  return new Promise((resolve, reject) => {
-    let event = 'empty'
-
-    let credentialQuery = 'DELETE FROM Event WHERE id=?'
-    let inserts = [id]
-
-    credentialQuery = mysql.format(credentialQuery, inserts)
-    console.log(credentialQuery)
-
-    dbPool.query(credentialQuery,
-      (err, results, fields) => {
-        if (err) {
-          throw err
-        }
-        if (results.length == 0) {
-          reject("Event is not in database");
-        }
-        else if (results !== undefined) {
-          event = results
-          resolve(event)
         }
       })
   })
@@ -457,24 +455,25 @@ async function register(username, password) {
   })
 }
 
-async function findSchedule(schedule_name, username) {
-  return new Promise((resolve) => {
-    if (typeof (schedule_name) === "string" && typeof (username) === "string") {
-      let sqlString = "SELECT * FROM Schedule WHERE schedule_name=? AND username=?;";
-      let inserts = [schedule_name, username];
+async function removeEvent(id) {
+  return new Promise((resolve, reject) => {
+    if (typeof (id) === "number") {
+      let credentialQuery = 'DELETE FROM Event WHERE id=?'
+      let inserts = [id]
 
-      sqlString = mysql.format(sqlString, inserts);
+      credentialQuery = mysql.format(credentialQuery, inserts)
+      console.log(credentialQuery)
 
-      dbPool.query(sqlString,
-        (err, results) => {
+      dbPool.query(credentialQuery,
+        (err, results, fields) => {
           if (err) {
-            throw err;
+            throw err
           }
-          else if (results.length === 0) {
-            resolve(false);
+          if (results.affectedRows > 0) {
+            resolve(true);
           }
           else {
-            resolve(true);
+            reject(false);
           }
         })
     }
