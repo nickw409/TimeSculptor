@@ -80,10 +80,9 @@ app.post("/remove-event", (req, res) => {
           console.log("Event removed")
           res.sendStatus(200)
         }
-        else {
-          console.log("Failed to remove event")
-          res.sendStatus(400)
-        }
+      }).catch((err) => {
+        console.log("Error removing event");
+        res.sendStatus(400);
       })
   } catch (e) {
     console.error(e)
@@ -491,11 +490,13 @@ async function removeEvent(id) {
             resolve(true);
           }
           else {
+            console.log("No rows affected");
             reject(false);
           }
         })
     }
     else {
+      console.log("Given value is not a number");
       reject(false);
     }
   })
