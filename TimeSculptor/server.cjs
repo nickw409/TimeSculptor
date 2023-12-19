@@ -158,6 +158,24 @@ app.post("/register", (req, res) => {
   }
 })
 
+app.post("/remove-schedule", (req, res) => {
+  try {
+    let sched_id = req.body?.sched_id;
+
+    removeSchedule(sched_id).then((result) => {
+      if (result) {
+        console.log("Schedule removed");
+        res.sendStatus(200);
+      }
+    }).catch((err) => {
+      console.error(err);
+      res.sendStatus(400);
+    })
+  } catch (err) {
+    console.error(err);
+  }
+})
+
 app.get("/schedules", (req, res) => {
   try {
     let username = req.query?.username;
@@ -476,6 +494,36 @@ async function removeEvent(id) {
             reject(false);
           }
         })
+    }
+    else {
+      reject(false);
+    }
+  })
+}
+
+async function removeSchedule(sched_id) {
+  return new Promise((resolve, reject) => {
+    if (typeof (id) === "number") {
+      let sqlString = "DELETE FROM Schedule WHERE sched_id=?;";
+      let inserts = [sched_id];
+
+      sqlString = mysql.format(sqlString, inserts);
+
+      dbPool.query(sqlString,
+        (err, results) => {
+          if (err) {
+            throw err;
+          }
+          if (results.affectedRows > 0) {
+            resolve(true);
+          }
+          else {
+            reject(false);
+          }
+        })
+    }
+    else {
+      reject(false);
     }
   })
 }
