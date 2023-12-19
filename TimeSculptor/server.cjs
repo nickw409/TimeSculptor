@@ -482,7 +482,7 @@ async function removeEvent(id) {
       console.log(credentialQuery)
 
       dbPool.query(credentialQuery,
-        (err, results, fields) => {
+        (err, results) => {
           if (err) {
             throw err
           }
@@ -490,13 +490,11 @@ async function removeEvent(id) {
             resolve(true);
           }
           else {
-            console.log("No rows affected");
             reject(false);
           }
         })
     }
     else {
-      console.log("Given value is not a number");
       reject(false);
     }
   })
@@ -504,7 +502,7 @@ async function removeEvent(id) {
 
 async function removeSchedule(sched_id) {
   return new Promise((resolve, reject) => {
-    if (typeof (id) === "number") {
+    if (typeof (sched_id) === "number") {
       let sqlString = "DELETE FROM Schedule WHERE sched_id=?;";
       let inserts = [sched_id];
 
