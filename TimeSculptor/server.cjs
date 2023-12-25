@@ -358,7 +358,7 @@ async function getAllEvents(schedule_id) {
           throw err;
         }
         else if (results.length == 0) {
-          resolve(null);
+          reject(`No Events Found In schedule_id: ${schedule_id}`);
         }
         else {
           resolve(results);
