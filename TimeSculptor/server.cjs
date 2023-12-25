@@ -92,6 +92,7 @@ app.post("/remove-event", (req, res) => {
 app.get("/events", (req, res) => {
   try {
     let schedule_id = req.query?.schedule_id;
+    console.log(req.query);
     console.log(schedule_id);
     getAllEvents(schedule_id).then((results) => {
       for (let i = 0; i < results.length; i++) {
