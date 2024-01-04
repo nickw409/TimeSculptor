@@ -38,6 +38,7 @@ app.post("/add-event", (req, res) => {
   try {
     let schedule_id = req.body.schedule_id;
     let event = req.body.event;
+    console.log(`Request Body: ${req.body}`)
     addEvent(schedule_id, event).then((id) => {
       console.log("Successfully added event");
       console.log(id)
