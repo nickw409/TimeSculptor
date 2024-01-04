@@ -205,7 +205,7 @@ async function addEvent(schedule_id, event) {
   return new Promise((resolve, reject) => {
     console.log(schedule_id);
     console.log(event);
-    if (validateScheduleName(schedule_id) && event != null) {
+    if (validateScheduleId(schedule_id) && event != null) {
       let convertedDateAndTime = convertDateTime(event.dateAndTime);
       let sqlString = 'INSERT INTO Event VALUES (?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?;'
       let inserts = [
@@ -529,9 +529,12 @@ async function removeSchedule(sched_id) {
 }
 
 // Returns true if schedule found in database, else false
-async function validateScheduleName(schedule_id) {
+async function validateScheduleId(schedule_id) {
   return new Promise((resolve, reject) => {
-    if (typeof (schedule_id) === "number") {
+    if (typeof (schedule_id) === "string") {
+      schedule_id = parseInt(schedule_id);
+    }
+    if (typeof (schedule_id) != NaN) {
       let sqlString = "SELECT sched_id FROM Schedule WHERE sched_id=?;";
       let inserts = [schedule_id];
 
@@ -551,7 +554,7 @@ async function validateScheduleName(schedule_id) {
         })
     }
     else {
-      reject("schedule_id not a string");
+      reject("schedule_id not a number");
     }
   })
 }
