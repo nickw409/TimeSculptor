@@ -205,6 +205,8 @@ async function addEvent(schedule_id, event) {
     console.log(`Event: ${event}`);
     if (validateScheduleId(schedule_id) && event != null) {
       let convertedDateAndTime = convertDateTime(event.dateAndTime);
+      console.log(`Event ID: ${event.id}`);
+      console.log(`Event ID: ${event['id']}`);
       let sqlString = 'INSERT INTO Event VALUES (?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?;'
       let inserts = [
         schedule_id,
