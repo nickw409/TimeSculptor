@@ -2,9 +2,6 @@ const express = require('express');
 const path = require('path');
 const mysql = require('mysql2');
 const dayjs = require('dayjs')
-const { ErrorOutline, SubscriptionsOutlined } = require('@mui/icons-material');
-const { fabClasses } = require('@mui/material');
-const { resolve } = require('path');
 
 const app = express();
 const port = 9696;
@@ -39,7 +36,6 @@ app.post("/add-event", (req, res) => {
   try {
     let schedule_id = req.body.schedule_id;
     let event = req.body.event;
-    console.log(`Request Body: ${req.body}`)
     addEvent(schedule_id, event).then((id) => {
       console.log("Successfully added event");
       console.log(id)
@@ -287,8 +283,6 @@ async function authUser(username, password) {
       "Auth": false
     };
 
-    console.log(username, password);
-
     let credentialQuery = 'SELECT ?? FROM ?? WHERE ?? = ? AND ?? = ?';
     let inserts = [
       'username',
@@ -353,8 +347,6 @@ async function getAllEvents(schedule_id) {
 
     sqlString = mysql.format(sqlString, inserts);
 
-    console.log(sqlString)
-
     dbPool.query(sqlString,
       (err, results, fields) => {
         if (err) {
@@ -396,7 +388,6 @@ async function getEvent(id) {
           reject("Event is not in database");
         }
         else {
-          console.log(results[0])
           event = results[0];
           resolve(event);
         }
@@ -422,7 +413,6 @@ async function getSchedules(username) {
           }
           else {
             let schedules = results;
-            console.log(schedules);
             resolve(schedules);
           }
         })
