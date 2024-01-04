@@ -205,8 +205,8 @@ app.listen(port, () => {
 
 async function addEvent(schedule_id, event) {
   return new Promise((resolve, reject) => {
-    console.log(schedule_id);
-    console.log(event);
+    console.log(`Schedule ID: ${schedule_id}`);
+    console.log(`Event: ${event}`);
     if (validateScheduleId(schedule_id) && event != null) {
       let convertedDateAndTime = convertDateTime(event.dateAndTime);
       let sqlString = 'INSERT INTO Event VALUES (?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?, ?? = ?;'
